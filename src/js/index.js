@@ -157,13 +157,18 @@ function isValidEmail(email) {
 }
 
 // Plan button click handlers
+// Redireciona para o WhatsApp conforme o plano escolhido
+const WHATSAPP_NUMBER = '5547992893609';
+const WHATSAPP_BASE_URL = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=';
+
 document.addEventListener('DOMContentLoaded', function() {
     const planButtons = document.querySelectorAll('.plan-card button');
     
     planButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const planName = this.closest('.plan-card').querySelector('h3').textContent;
-            alert(`Você selecionou o plano ${planName}. Em breve entraremos em contato para finalizar sua assinatura!`);
+            const planName = this.closest('.plan-card').querySelector('h3').textContent.trim();
+            const message = encodeURIComponent(`Olá! Gostaria de assinar o plano ${planName}.`);
+            window.open(WHATSAPP_BASE_URL + message, '_blank');
         });
     });
 });
@@ -202,3 +207,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 }); 
+
+// Animações de entrada CSS puro
+function handleScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.fade-in, .fade-up, .fade-right, .fade-left');
+    const windowHeight = window.innerHeight;
+    animatedElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < windowHeight - 60) {
+            el.classList.add('visible');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', handleScrollAnimations);
+window.addEventListener('scroll', handleScrollAnimations); 

@@ -1,8 +1,8 @@
-# 🚀 VWTech Dev - Site Institucional
+# 🚀 VWTech Dev - Site
 
-Site institucional moderno e responsivo para a VWTech Dev, empresa especializada em desenvolvimento web, sistemas e soluções tecnológicas.
+Site moderno e responsivo para a VWTech Dev, empresa especializada em desenvolvimento web, sistemas e soluções tecnológicas.
 
-![VWTech Dev](src/img/logo.png)
+![VWTech Dev](src/img/vwtechdev-github.png)
 
 ## 📋 Índice
 
@@ -18,11 +18,10 @@ Site institucional moderno e responsivo para a VWTech Dev, empresa especializada
 
 ## 🎯 Sobre o Projeto
 
-O VWTech Dev é um site institucional moderno desenvolvido com foco em experiência do usuário e design responsivo. O projeto apresenta os serviços da empresa de forma profissional e atrativa, incluindo:
+O VWTech Dev é um site moderno desenvolvido com foco em experiência do usuário e design responsivo. O projeto apresenta os serviços da empresa de forma profissional e atrativa, incluindo:
 
 - **Desenvolvimento Web** - Sites e aplicações responsivas
 - **Aplicativos Mobile** - Apps nativos para Android
-- **PC Gamer** - Montagem de computadores gamers
 - **Suporte Técnico** - Remoto e presencial
 
 ## 🛠️ Tecnologias Utilizadas
@@ -46,9 +45,12 @@ O VWTech Dev é um site institucional moderno desenvolvido com foco em experiên
 ### 🎨 Design & UX
 - ✅ **Tema escuro** moderno e profissional
 - ✅ **Layout responsivo** para todos os dispositivos
-- ✅ **Animações suaves** com AOS
 - ✅ **Navegação intuitiva** com scroll suave
 - ✅ **Hover effects** interativos
+
+### 🖼️ Recursos Visuais
+- ✅ **Animação pulse** nos botões de destaque (WhatsApp e “Conheça nossos planos”)
+- ✅ **SVG animado** na hero section
 
 ### 📧 Formulário de Contato
 - ✅ **Validação em tempo real**
@@ -66,7 +68,7 @@ O VWTech Dev é um site institucional moderno desenvolvido com foco em experiên
 ### 🔗 Integrações
 - ✅ **WhatsApp Business** - Contato direto
 - ✅ **Google Reviews** - Widget de avaliações
-- ✅ **Redes Sociais** - Facebook e Instagram
+- ✅ **Redes Sociais** - Facebook, Instagram e GitHub
 - ✅ **EmailJS** - Envio de emails
 
 ## 📁 Estrutura do Projeto
@@ -77,15 +79,15 @@ vwtechdev/
 ├── README.md                  # Documentação
 ├── src/
 │   ├── css/
-│   │   └── base.css          # Estilos customizados
+│   │   └── base.css           # Estilos customizados
 │   ├── js/
-│   │   ├── index.js          # JavaScript principal
-│   │   └── emailjs-config.js # Configuração EmailJS
+│   │   ├── index.js           # JavaScript principal
+│   │   └── emailjs-config.js  # Configuração EmailJS
 │   └── img/
-│       ├── logo.png          # Logo da empresa
-│       ├── background.webp   # Imagem de fundo
-│       ├── project-01.png    # Projeto Delta
-│       └── vwtechdev.png     # Logo alternativa
+│       ├── logo.png           # Logo da empresa
+│       ├── background.png     # Imagem de fundo
+│       ├── code-apps.svg      # SVG animado na hero section
+│       ├── project-01.png     # Projeto Delta
 ```
 
 ## 🚀 Instalação
@@ -186,7 +188,7 @@ http://localhost:8000
 4. Email será enviado automaticamente
 
 ### Botões Flutuantes
-- **WhatsApp:** Contato direto via WhatsApp
+- **WhatsApp:** Contato direto via WhatsApp (com animação pulse)
 - **Voltar ao topo:** Navegação rápida
 
 ## 🤝 Contribuição
@@ -218,6 +220,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ### Redes Sociais
 - [Facebook](https://www.facebook.com/vwtechdev/)
 - [Instagram](https://www.instagram.com/vwtechdev/)
+- [GitHub](https://github.com/vwtechdev)
 
 ## 🙏 Agradecimentos
 

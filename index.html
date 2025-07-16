@@ -55,9 +55,9 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative py-32 px-6 overflow-hidden min-h-screen flex items-center" data-aos="fade-in">
+    <section id="home" class="relative py-32 px-6 overflow-hidden min-h-screen flex items-center fade-in">
         <div class="absolute inset-0 z-0 hero-bg">
-            <div class="absolute inset-0 bg-[url('src/img/background.webp')] bg-cover bg-center opacity-30"></div>
+            <div class="absolute inset-0 bg-[url('src/img/background.png')] bg-cover bg-center opacity-30"></div>
             <div class="absolute inset-0 bg-gradient-to-r from-custom-black via-custom-black/90 to-transparent"></div>
         </div>
         <div class="container mx-auto flex flex-col md:flex-row items-center relative z-10">
@@ -65,17 +65,19 @@
                 <h2 class="hero-title font-bold mb-6">Desenvolvimento <span class="text-custom-orange">Web</span> & Soluções Tech</h2>
                 <p class="hero-subtitle text-gray-300 leading-relaxed">💻 Soluções em Tecnologia</p>
                 <p class="hero-subtitle text-gray-300 leading-relaxed">🚀 Desenvolvimento de Sistemas</p>
-                <p class="hero-subtitle text-gray-300 leading-relaxed">💡 Transformando Ideias em Código</p>
-                <p class="hero-subtitle text-gray-300 leading-relaxed">🖥️ Montagem de Computadores Gamer</p>
-                <p class="hero-subtitle mb-10 text-gray-300 leading-relaxed">📞 Suporte Técnico Remoto e Presencial</p>
+                <p class="hero-subtitle mb-10 text-gray-300 leading-relaxed">💡 Transformando Ideias em Código</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
-                    <a href="#plans" class="bg-custom-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center flex items-center justify-center gap-2">
+                    <a href="#plans" class="pulse-white bg-custom-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center flex items-center justify-center gap-2">
                         <i class="fas fa-rocket"></i> Conheça nossos planos
                     </a>
                     <a href="#contact" class="border border-custom-orange hover:bg-custom-orange hover:text-custom-black text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center flex items justify-center gap-2">
                         <i class="fas fa-comment-dots"></i> Fale conosco
                     </a>
                 </div>
+            </div>
+            <!-- Imagem flutuante code-apps.svg -->
+            <div class="hidden md:flex md:w-1/2 justify-center items-center relative">
+                <img src="src/img/code-apps.svg" alt="Code Apps" class="w-[600px] max-w-full floating-svg" style="min-width:240px;"/>
             </div>
         </div>
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
@@ -91,15 +93,15 @@
             <h2 class="text-3xl font-bold text-center mb-12">Nossos <span class="text-custom-orange">Serviços</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition fade-up card-hover-zoom">
                     <div class="text-custom-orange text-4xl mb-4">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Desenvolvimento Web</h3>
                     <p class="text-gray-300">Criamos sites e aplicações web responsivas, otimizadas para performance e conversão, utilizando as melhores tecnologias do mercado.</p>
                 </div>
                 <!-- Service 2 -->
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition fade-up card-hover-zoom">
                     <div class="text-custom-orange text-4xl mb-4">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -107,20 +109,13 @@
                     <p class="text-gray-300">Desenvolvemos aplicativos nativos e híbridos para Android, com foco em experiência do usuário e funcionalidades exclusivas.</p>
                 </div>
                 <!-- Service 3 -->
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition fade-up card-hover-zoom">
                     <div class="text-custom-orange text-4xl mb-4">
-                        <i class="fas fa-computer"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">PC Gamer</h3>
-                    <p class="text-gray-300">Somos especializados em montagem de computadores gamers, com preços acessíveis e performance garantida.</p>
-                </div>
-                <!-- Service 4 -->
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-custom-orange text-4xl mb-4">
-                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-rocket"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Suporte Técnico</h3>
-                    <p class="text-gray-300">Suporte técnico remoto via Anydesk e presencial em Canoinhas/SC. Instalação de softwares e remoção de vírus.</p>                </div>
+                    <p class="text-gray-300">Suporte remoto rápido e eficiente! Chame no WhatsApp e resolva tudo por AnyDesk. </p>
+                </div>
             </div>
         </div>
     </section>
@@ -133,7 +128,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Basic Plan -->
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card fade-up card-hover-zoom">
                     <div class="bg-gray-700 py-4 px-6">
                         <h3 class="text-xl font-bold text-center">Basic</h3>
                     </div>
@@ -160,14 +155,14 @@
                                 <span>1 Revisão Mensal</span>
                             </li>
                         </ul>
-                        <button class="w-full bg-custom-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded transition-all duration-300 transform hover:scale-[1.02] hover:shadow-md">
+                        <button class="w-full bg-custom-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded transition duration-300">
                             Assinar Plano
                         </button>
                     </div>
                 </div>
                 
                 <!-- Normal Plan (Featured) -->
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card transition duration-300 transform scale-105" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card fade-up card-hover-zoom">
                     <div class="bg-custom-orange py-4 px-6">
                         <h3 class="text-xl font-bold text-center text-white">Normal</h3>
                     </div>
@@ -201,7 +196,7 @@
                 </div>
                 
                 <!-- Full Plan -->
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card fade-up card-hover-zoom">
                     <div class="bg-gray-700 py-4 px-6">
                         <h3 class="text-xl font-bold text-center">Full</h3>
                     </div>
@@ -245,7 +240,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Project 1 -->
-                <div class="project-item rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-item rounded-lg overflow-hidden fade-up card-hover-zoom">
                     <img src="src/img/project-01.png" alt="Delta Monitoramento Canoinhas" class="w-full h-64 object-cover">
                     <div class="project-overlay">
                         <h3 class="text-xl font-bold text-white mb-2">Delta Monitoramento Canoinhas</h3>
@@ -278,7 +273,7 @@
             
             <div class="flex flex-col lg:flex-row gap-12">
                 <div class="lg:w-1/2" data-aos="fade-right" data-aos-delay="100">
-                    <form id="contact-form" class="space-y-6">
+                    <form id="contact-form" class="space-y-6 fade-right">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
                             <input type="text" name="user_name" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" placeholder="Seu nome" required>
@@ -302,7 +297,7 @@
                 </div>
                 
                 <div class="lg:w-1/2" data-aos="fade-left" data-aos-delay="200">
-                    <div class="bg-gray-800 p-8 rounded-lg h-full">
+                    <div class="bg-gray-800 p-8 rounded-lg h-full fade-left">
                         <h3 class="text-xl font-bold mb-6">Informações de Contato</h3>
                         
                         <div class="space-y-6">
@@ -356,6 +351,9 @@
                                 <a target="_blank" href="https://www.instagram.com/vwtechdev/" class="text-gray-300 hover:text-custom-orange text-2xl transition">
                                     <i class="fab fa-instagram"></i>
                                 </a>
+                                <a target="_blank" href="https://github.com/vwtechdev" class="text-gray-300 hover:text-custom-orange text-2xl transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -381,17 +379,15 @@
     </footer>
 
     <!-- Floating Buttons -->
-    <div class="fixed right-6 bottom-6 flex flex-col items-center space-y-3 z-50">
+    <div class="fixed floating-buttons-container flex flex-col items-center space-y-3 z-50">
         <!-- Back to Top Button -->
         <button id="back-to-top" class="bg-custom-orange text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-orange-600 hover:scale-110 group">
             <i class="fas fa-arrow-up transition-transform duration-300 group-hover:-translate-y-1"></i>
         </button>
         
         <!-- WhatsApp Button -->
-        <a href="https://wa.me/5547992893609?text=Olá! Gostaria de saber mais sobre os serviços da VWTech Dev." target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 group relative overflow-hidden hover:scale-110 whatsapp-button">
-            <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 group-hover:scale-150 transition-all duration-500 rounded-full"></div>
+        <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20um%20plano%20da%20VWTech%20Dev." target="_blank" rel="noopener noreferrer" class="pulse-animation bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center group relative whatsapp-button">
             <i class="fab fa-whatsapp text-2xl relative z-10"></i>
-            <span class="absolute inset-0 border-2 border-transparent group-hover:border-white/30 rounded-full transition-all duration-300 scale-90 group-hover:scale-100"></span>
         </a>
     </div>
 
