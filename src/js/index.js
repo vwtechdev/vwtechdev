@@ -173,19 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Project overlay click handlers
-document.addEventListener('DOMContentLoaded', function() {
-    const projectLinks = document.querySelectorAll('.project-overlay a');
-    
-    projectLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const projectTitle = this.closest('.project-overlay').querySelector('h3').textContent;
-            alert(`Detalhes do projeto: ${projectTitle}\n\nEste é um projeto demonstrativo. Entre em contato conosco para ver mais projetos reais!`);
-        });
-    });
-});
-
 // WhatsApp button functionality
 document.addEventListener('DOMContentLoaded', function() {
     const whatsappButton = document.querySelector('.whatsapp-button');
