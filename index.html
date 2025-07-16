@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VWTech Dev</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="src/img/logo.png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/css/base.css">
+</head>
+<body class="bg-custom-black text-white font-sans">
+    <!-- Header/Navbar -->
+    <header class="bg-custom-black py-4 px-6 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-custom-orange flex items-center justify-center mr-2">
+                    <img src="src/img/logo.png" alt="VWTech Dev" class="w-full h-full object-cover" >
+                </div>
+                <h1 class="text-2xl font-bold">VW<span class="text-custom-orange">Tech</span> Dev</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Home</a>
+                <a href="#services" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Serviços</a>
+                <a href="#plans" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Planos</a>
+                <a href="#projects" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Projetos</a>
+                <a href="#testimonials" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Depoimentos</a>
+                <a href="#contact" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Contato</a>
+            </nav>
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-custom-black py-4" id="mobile-menu">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="#home" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Home</a>
+                <a href="#services" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Serviços</a>
+                <a href="#plans" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Planos</a>
+                <a href="#projects" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Projetos</a>
+                <a href="#testimonials" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Depoimentos</a>
+                <a href="#contact" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative py-32 px-6 overflow-hidden min-h-screen flex items-center" data-aos="fade-in">
+        <div class="absolute inset-0 z-0 hero-bg">
+            <div class="absolute inset-0 bg-[url('src/img/background.webp')] bg-cover bg-center opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-custom-black via-custom-black/90 to-transparent"></div>
+        </div>
+        <div class="container mx-auto flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-16 md:mb-0" data-aos="fade-right" data-aos-delay="200">
+                <h2 class="hero-title font-bold mb-6">Desenvolvimento <span class="text-custom-orange">Web</span> & Soluções Tech</h2>
+                <p class="hero-subtitle text-gray-300 leading-relaxed">💻 Soluções em Tecnologia</p>
+                <p class="hero-subtitle text-gray-300 leading-relaxed">🚀 Desenvolvimento de Sistemas</p>
+                <p class="hero-subtitle text-gray-300 leading-relaxed">💡 Transformando Ideias em Código</p>
+                <p class="hero-subtitle text-gray-300 leading-relaxed">🖥️ Montagem de Computadores Gamer</p>
+                <p class="hero-subtitle mb-10 text-gray-300 leading-relaxed">📞 Suporte Técnico Remoto e Presencial</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#plans" class="bg-custom-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center flex items-center justify-center gap-2">
+                        <i class="fas fa-rocket"></i> Conheça nossos planos
+                    </a>
+                    <a href="#contact" class="border border-custom-orange hover:bg-custom-orange hover:text-custom-black text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center flex items justify-center gap-2">
+                        <i class="fas fa-comment-dots"></i> Fale conosco
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
+            <a href="#services" class="animate-bounce text-custom-orange text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-6 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Nossos <span class="text-custom-orange">Serviços</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-custom-orange text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Desenvolvimento Web</h3>
+                    <p class="text-gray-300">Criamos sites e aplicações web responsivas, otimizadas para performance e conversão, utilizando as melhores tecnologias do mercado.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-custom-orange text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Aplicativos Mobile</h3>
+                    <p class="text-gray-300">Desenvolvemos aplicativos nativos e híbridos para Android, com foco em experiência do usuário e funcionalidades exclusivas.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-custom-orange text-4xl mb-4">
+                        <i class="fas fa-computer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">PC Gamer</h3>
+                    <p class="text-gray-300">Somos especializados em montagem de computadores gamers, com preços acessíveis e performance garantida.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-custom-orange text-4xl mb-4">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Suporte Técnico</h3>
+                    <p class="text-gray-300">Suporte técnico remoto via Anydesk e presencial em Canoinhas/SC. Instalação de softwares e remoção de vírus.</p>                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="plans" class="py-16 px-6 bg-custom-black">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">Nossos <span class="text-custom-orange">Planos</span></h2>
+            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">Escolha o plano que melhor se adapta às necessidades do seu negócio. Todos incluem suporte especializado.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gray-700 py-4 px-6">
+                        <h3 class="text-xl font-bold text-center">Basic</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold">R$ 129,90</span>
+                            <span class="block text-gray-300">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Landing Page</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Domínio Grátis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Suporte por WhatsApp</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>1 Revisão Mensal</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-custom-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded transition-all duration-300 transform hover:scale-[1.02] hover:shadow-md">
+                            Assinar Plano
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Normal Plan (Featured) -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card transition duration-300 transform scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-custom-orange py-4 px-6">
+                        <h3 class="text-xl font-bold text-center text-white">Normal</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold">R$ 169,90</span>
+                            <span class="block text-gray-300">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Sistema Web Personalizado</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Domínio + Hospedagem Grátis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Suporte por WhatsApp</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>2 Revisões Mensais</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-custom-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded transition duration-300">
+                            Assinar Plano
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Full Plan -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gray-700 py-4 px-6">
+                        <h3 class="text-xl font-bold text-center">Full</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold">R$ 229,90</span>
+                            <span class="block text-gray-300">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Sistemas Web Personalizado + App Mobile</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Domínio + Hospedagem Grátis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Suporte por WhatsApp 24/7</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Revisões Semanais</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-custom-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded transition duration-300">
+                            Assinar Plano
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">Nossos <span class="text-custom-orange">Projetos</span></h2>
+            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">Alguns dos projetos que desenvolvemos para nossos clientes satisfeitos.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="project-item rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="src/img/project-01.png" alt="Delta Monitoramento Canoinhas" class="w-full h-64 object-cover">
+                    <div class="project-overlay">
+                        <h3 class="text-xl font-bold text-white mb-2">Delta Monitoramento Canoinhas</h3>
+                        <p class="text-gray-300 text-center px-4">Sistema Web de Geração de Recibos Automáticos</p>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-6 bg-custom-black">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">O que dizem <span class="text-custom-orange">nossos clientes</span></h2>
+                        
+            <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-adece873-304f-457f-aa47-db1527fcc652" data-elfsight-app-lazy></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">Entre em <span class="text-custom-orange">Contato</span></h2>
+            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">Tem um projeto em mente? Preencha o formulário abaixo e nossa equipe entrará em contato em breve.</p>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2" data-aos="fade-right" data-aos-delay="100">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Nome Completo</label>
+                            <input type="text" name="user_name" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" placeholder="Seu nome" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">E-mail</label>
+                            <input type="email" name="user_email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" placeholder="seu@email.com" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-300 mb-1">Telefone</label>
+                            <input type="tel" name="user_phone" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" placeholder="(00) 00000-0000">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Mensagem</label>
+                            <textarea name="message" id="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-orange" placeholder="Descreva seu projeto ou dúvida" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-custom-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left" data-aos-delay="200">
+                    <div class="bg-gray-800 p-8 rounded-lg h-full">
+                        <h3 class="text-xl font-bold mb-6">Informações de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-custom-orange text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Endereço</h4>
+                                    <p class="text-gray-300">Estrada Dona Francisca, 988<br>Canoinhas/SC - CEP 89462-044</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-custom-orange text-xl mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Telefone</h4>
+                                    <p class="text-gray-300">+55 47 99289-3609</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-custom-orange text-xl mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">E-mail</h4>
+                                    <p class="text-gray-300">vieirateam.contact@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-custom-orange text-xl mr-4 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Horário de Atendimento</h4>
+                                    <p class="text-gray-300">Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Siga-nos nas redes sociais</h4>
+                            <div class="flex space-x-4">
+                                <a target="_blank" href="https://www.facebook.com/vwtechdev/" class="text-gray-300 hover:text-custom-orange text-2xl transition">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a target="_blank" href="https://www.instagram.com/vwtechdev/" class="text-gray-300 hover:text-custom-orange text-2xl transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-custom-black py-8 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <img src="src/img/logo.png" alt="VWTech Dev" class="w-10 h-10 mr-2">
+                    <h2 class="text-2xl font-bold">VW<span class="text-custom-orange">Tech</span> Dev</h2>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="text-gray-400 mb-4 text-center md:text-right">© 2025 VWTech Dev. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="fixed right-6 bottom-6 flex flex-col items-center space-y-3 z-50">
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="bg-custom-orange text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-orange-600 hover:scale-110 group">
+            <i class="fas fa-arrow-up transition-transform duration-300 group-hover:-translate-y-1"></i>
+        </button>
+        
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/5547992893609?text=Olá! Gostaria de saber mais sobre os serviços da VWTech Dev." target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 group relative overflow-hidden hover:scale-110 whatsapp-button">
+            <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 group-hover:scale-150 transition-all duration-500 rounded-full"></div>
+            <i class="fab fa-whatsapp text-2xl relative z-10"></i>
+            <span class="absolute inset-0 border-2 border-transparent group-hover:border-white/30 rounded-full transition-all duration-300 scale-90 group-hover:scale-100"></span>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- EmailJS Config -->
+    <script src="src/js/emailjs-config.js"></script>
+    <!-- Custom JS -->
+    <script src="src/js/index.js"></script>
+</body>
+</html>
