@@ -18,10 +18,18 @@
     <link rel="icon" href="src/img/logo.png">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="src/css/base.css">
+     <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRTLCBQKSG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VRTLCBQKSG');
+    </script>
 </head>
 <body class="bg-custom-black text-white font-sans">
     <!-- Header/Navbar -->
-    <header class="bg-custom-black py-4 px-6 shadow-md sticky top-0 z-50">
+    <header class="bg-custom-black py-4 px-6 shadow-md fixed top-0 left-0 w-full z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
                 <div class="w-10 h-10 rounded-full bg-custom-orange flex items-center justify-center mr-2">
@@ -31,6 +39,7 @@
             </div>
             <nav class="hidden md:flex space-x-8">
                 <a href="#home" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Home</a>
+                <a href="#about" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Quem Somos</a>
                 <a href="#services" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Serviços</a>
                 <a href="#plans" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Planos</a>
                 <a href="#projects" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Projetos</a>
@@ -45,6 +54,7 @@
         <div class="md:hidden hidden bg-custom-black py-4" id="mobile-menu">
             <div class="flex flex-col space-y-4 px-6">
                 <a href="#home" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Home</a>
+                <a href="#about" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Quem Somos</a>
                 <a href="#services" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Serviços</a>
                 <a href="#plans" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Planos</a>
                 <a href="#projects" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Projetos</a>
@@ -53,6 +63,7 @@
             </div>
         </div>
     </header>
+    <div class="pt-24"></div>
 
     <!-- Hero Section -->
     <section id="home" class="relative py-32 px-6 overflow-hidden min-h-screen flex items-center fade-in">
@@ -80,10 +91,37 @@
                 <img src="src/img/code-apps.svg" alt="Code Apps" class="w-[600px] max-w-full floating-svg" style="min-width:240px;"/>
             </div>
         </div>
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
-            <a href="#services" class="animate-bounce text-custom-orange text-2xl">
-                <i class="fas fa-chevron-down"></i>
-            </a>
+    </section>
+
+    <!-- Quem Somos Section -->
+    <section id="about" class="py-16 px-6 bg-gray-900">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
+                <img src="src/img/vwtechdev-github.png" alt="VWTech Dev" class="w-[500px] h-[400px] object-cover rounded-2xl shadow-lg border-4 border-custom-orange bg-white" />
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-4 text-custom-orange">Quem Somos</h2>
+                <p class="text-gray-300 mb-6">
+                    Fundada em 2019 na cidade de Canoinhas-SC, Brasil, a VWTech Dev nasceu da visão dos irmãos Vinicius Vieira (fundador) e Wellinton Vieira (co-fundador). Inicialmente conhecida como Vieirateam, a empresa busca aprimorar o desenvolvimento de sistemas web, aplicativos móveis com soluções tecnológicas inovadoras.
+                </p>
+                <p class="text-gray-300 mb-6">
+                    Nossa missão é transformar ideias em soluções digitais de alto impacto, combinando atendimento personalizado com excelência técnica. Com um compromisso constante com a qualidade e a inovação, buscamos entregar projetos que não apenas atendam, mas superem as expectativas dos nossos clientes.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-8 items-center">
+                    <div class="flex flex-col items-center">
+                        <img src="https://avatars.githubusercontent.com/u/38732035?v=4" alt="Vinicius Vieira" class="w-32 h-32 object-cover rounded-full border-4 border-custom-orange mb-2 bg-white" />
+                        <span class="text-lg font-semibold text-white">Vinicius Vieira</span>
+                        <span class="text-gray-400 text-sm">Fundador</span>
+                        <a href="https://github.com/viniciusvsantos" target="_blank" class="mt-2 text-gray-300 hover:text-custom-orange text-2xl transition" title="GitHub Vinicius"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://avatars.githubusercontent.com/u/23120330?v=4" alt="Wellinton Vieira" class="w-32 h-32 object-cover rounded-full border-4 border-custom-orange mb-2 bg-white" />
+                        <span class="text-lg font-semibold text-white">Wellinton Vieira</span>
+                        <span class="text-gray-400 text-sm">Co-fundador</span>
+                        <a href="https://github.com/nellowint" target="_blank" class="mt-2 text-gray-300 hover:text-custom-orange text-2xl transition" title="GitHub Wellinton"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -397,7 +435,7 @@
                 </div>
                 
                 <div class="flex flex-col items-center md:items-end">
-                    <p class="text-gray-400 mb-4 text-center md:text-right">© 2025 VWTech Dev. Todos os direitos reservados.</p>
+                    <p class="text-gray-400 mb-4 text-center md:text-right">© 2019-2025 VWTech Dev. Todos os direitos reservados.</p>
                 </div>
             </div>
         </div>
