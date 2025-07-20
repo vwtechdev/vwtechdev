@@ -12,8 +12,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Favicon -->
     <link rel="icon" href="src/img/logo.png">
     <!-- Custom CSS -->
@@ -32,12 +30,12 @@
     <header class="bg-custom-black py-4 px-6 shadow-md fixed top-0 left-0 w-full z-50">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <div class="w-10 h-10 rounded-full bg-custom-orange flex items-center justify-center mr-2">
+                <div class="w-14 h-14 rounded-full bg-custom-orange flex items-center justify-center mr-2">
                     <img src="src/img/logo.png" alt="VWTech Dev" class="w-full h-full object-cover" >
                 </div>
-                <h1 class="text-2xl font-bold">VW<span class="text-custom-orange">Tech</span> Dev</h1>
+                <h1 class="text-2xl font-bold px-2 py-2">VW<span class="text-custom-orange">Tech</span> Dev</h1>
             </div>
-            <nav class="hidden md:flex space-x-8">
+            <nav class="hidden md:flex space-x-8" aria-label="Navegação principal">
                 <a href="#home" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Home</a>
                 <a href="#about" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Quem Somos</a>
                 <a href="#services" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Serviços</a>
@@ -46,12 +44,12 @@
                 <a href="#testimonials" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Depoimentos</a>
                 <a href="#contact" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Contato</a>
             </nav>
-            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle" aria-label="Abrir menu de navegação">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-custom-black py-4" id="mobile-menu">
+        <div class="md:hidden hidden bg-custom-black py-4" id="mobile-menu" aria-label="Menu mobile">
             <div class="flex flex-col space-y-4 px-6">
                 <a href="#home" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Home</a>
                 <a href="#about" class="hover:text-custom-orange hover:bg-custom-orange hover:text-custom-black px-3 py-2 rounded transition">Quem Somos</a>
@@ -188,7 +186,7 @@
             <h2 class="text-3xl font-bold text-center mb-4">Nossos <span class="text-custom-orange">Planos</span></h2>
             <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">Escolha o plano que melhor se adapta às necessidades do seu negócio. Todos incluem suporte especializado.</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <!-- Basic Plan -->
                 <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card fade-up card-hover-zoom">
                     <div class="bg-gray-700 py-4 px-6">
@@ -223,10 +221,10 @@
                     </div>
                 </div>
                 
-                <!-- Normal Plan (Featured) -->
+                <!-- Silver Plan (Featured) -->
                 <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card fade-up card-hover-zoom">
                     <div class="bg-custom-orange py-4 px-6">
-                        <h3 class="text-xl font-bold text-center text-white">Normal</h3>
+                        <h3 class="text-xl font-bold text-center text-white">Silver</h3>
                     </div>
                     <div class="p-6">
                         <div class="text-center mb-6">
@@ -257,14 +255,48 @@
                     </div>
                 </div>
                 
-                <!-- Full Plan -->
+                <!-- Gold Plan -->
                 <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card fade-up card-hover-zoom">
                     <div class="bg-gray-700 py-4 px-6">
-                        <h3 class="text-xl font-bold text-center">Full</h3>
+                        <h3 class="text-xl font-bold text-center">Gold</h3>
                     </div>
                     <div class="p-6">
                         <div class="text-center mb-6">
                             <span class="text-4xl font-bold">R$ 329,90</span>
+                            <span class="block text-gray-300">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Sistemas Web Personalizado</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Domínio + Hospedagem Grátis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Suporte por WhatsApp 24/7</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-custom-orange mr-2"></i>
+                                <span>Revisões Semanais</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-custom-orange hover:bg-orange-600 text-white font-bold py-3 px-4 rounded transition duration-300">
+                            Assinar Plano
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Platinum Plan -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg plan-card fade-up card-hover-zoom">
+                    <div class="bg-gray-700 py-4 px-6">
+                        <h3 class="text-xl font-bold text-center">Platinum</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold">R$ 429,90</span>
                             <span class="block text-gray-300">/mês</span>
                         </div>
                         <ul class="space-y-3 mb-8">
@@ -430,7 +462,7 @@
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center mb-6 md:mb-0">
-                    <img src="src/img/logo.png" alt="VWTech Dev" class="w-10 h-10 mr-2">
+                    <img src="src/img/logo.png" alt="VWTech Dev" class="w-14 h-14 mr-2">
                     <h2 class="text-2xl font-bold">VW<span class="text-custom-orange">Tech</span> Dev</h2>
                 </div>
                 
@@ -444,12 +476,12 @@
     <!-- Floating Buttons -->
     <div class="fixed floating-buttons-container flex flex-col items-center space-y-3 z-50">
         <!-- Back to Top Button -->
-        <button id="back-to-top" class="bg-custom-orange text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-orange-600 hover:scale-110 group">
+        <button id="back-to-top" class="bg-custom-orange text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-orange-600 hover:scale-110 group" aria-label="Voltar ao topo">
             <i class="fas fa-arrow-up transition-transform duration-300 group-hover:-translate-y-1"></i>
         </button>
         
         <!-- WhatsApp Button -->
-        <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20um%20plano%20da%20VWTech%20Dev." target="_blank" rel="noopener noreferrer" class="pulse-animation bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center group relative whatsapp-button">
+        <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20um%20plano%20da%20VWTech%20Dev." target="_blank" rel="noopener noreferrer" class="pulse-animation bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center group relative whatsapp-button" aria-label="Conversar pelo WhatsApp">
             <i class="fab fa-whatsapp text-2xl relative z-10"></i>
         </a>
     </div>
