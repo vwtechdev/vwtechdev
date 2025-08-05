@@ -30,6 +30,28 @@ html, body {
     color: #070808;
 }
 
+/* Lazy Loading Styles */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Placeholder para imagens carregando */
+img[loading="lazy"]:not(.loaded) {
+    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
 /* Cards de planos */
 .plan-card {
     transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
@@ -300,4 +322,50 @@ html, body {
   0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
   70% { box-shadow: 0 0 0 10px rgba(255,255,255,0); }
   100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+
+/* Performance optimizations */
+* {
+    box-sizing: border-box;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #ca692d;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .floating-buttons-container,
+    .whatsapp-button,
+    #back-to-top {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .bg-custom-black,
+    .bg-gray-900 {
+        background: white !important;
+        color: black !important;
+    }
 }

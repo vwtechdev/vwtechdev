@@ -12,6 +12,7 @@ Site moderno e responsivo para a VWTech Dev, empresa especializada em desenvolvi
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Instalação](#instalação)
 - [Configuração](#configuração)
+- [SEO e Performance](#seo-e-performance)
 - [Uso](#uso)
 - [Contribuição](#contribuição)
 - [Licença](#licença)
@@ -49,8 +50,10 @@ O VWTech Dev é um site moderno desenvolvido com foco em experiência do usuári
 - ✅ **Hover effects** interativos
 
 ### 🖼️ Recursos Visuais
-- ✅ **Animação pulse** nos botões de destaque (WhatsApp e “Conheça nossos planos”)
+- ✅ **Animação pulse** nos botões de destaque (WhatsApp e "Conheça nossos planos")
 - ✅ **SVG animado** na hero section
+- ✅ **Lazy Loading** otimizado para imagens
+- ✅ **Placeholder animado** durante carregamento
 
 ### 📧 Formulário de Contato
 - ✅ **Validação em tempo real**
@@ -71,11 +74,22 @@ O VWTech Dev é um site moderno desenvolvido com foco em experiência do usuári
 - ✅ **Redes Sociais** - Facebook, Instagram e GitHub
 - ✅ **EmailJS** - Envio de emails
 
+### 🚀 Performance e SEO
+- ✅ **Lazy Loading** nativo e customizado
+- ✅ **Meta tags** otimizadas para SEO
+- ✅ **Sitemap.xml** para indexação
+- ✅ **Robots.txt** para crawlers
+- ✅ **Preload** de imagens críticas
+- ✅ **Debounce** em eventos de scroll
+- ✅ **IntersectionObserver** para performance
+
 ## 📁 Estrutura do Projeto
 
 ```
 vwtechdev/
 ├── index.html                 # Página principal
+├── sitemap.xml               # Sitemap para SEO
+├── robots.txt                # Instruções para crawlers
 ├── README.md                  # Documentação
 ├── src/
 │   ├── css/
@@ -87,7 +101,10 @@ vwtechdev/
 │       ├── logo.png           # Logo da empresa
 │       ├── background.png     # Imagem de fundo
 │       ├── code-apps.svg      # SVG animado na hero section
-│       ├── project-01.png     # Projeto Delta
+│       ├── projects/
+│       │   ├── project-01.png # Projeto Delta
+│       │   └── project-02.png # Projeto Alpha
+│       └── vwtechdev-github.png # Imagem do README
 ```
 
 ## 🚀 Instalação
@@ -170,6 +187,32 @@ http://localhost:8000
 <p class="text-gray-300">Estrada Dona Francisca, 988<br>Canoinhas/SC</p>
 ```
 
+## 🔍 SEO e Performance
+
+### Meta Tags Implementadas
+- **Title** otimizado com palavras-chave
+- **Description** com resumo da empresa
+- **Keywords** relevantes para o negócio
+- **Author** e **robots** para indexação
+- **Canonical URL** para evitar conteúdo duplicado
+
+### Lazy Loading
+- **Nativo**: Atributo `loading="lazy"` em todas as imagens
+- **Customizado**: IntersectionObserver para melhor controle
+- **Placeholder**: Animação de shimmer durante carregamento
+- **Preload**: Imagens críticas carregadas antecipadamente
+
+### Performance
+- **Debounce**: Eventos de scroll otimizados
+- **IntersectionObserver**: Carregamento sob demanda
+- **Preload**: Recursos críticos carregados primeiro
+- **Reduced Motion**: Respeita preferências de acessibilidade
+
+### Arquivos SEO
+- **sitemap.xml**: Mapa do site para crawlers
+- **robots.txt**: Instruções para bots de busca
+- **Meta tags**: Otimizadas para Google e outros motores
+
 ## 📖 Uso
 
 ### Navegação
@@ -191,6 +234,12 @@ http://localhost:8000
 - **WhatsApp:** Contato direto via WhatsApp (com animação pulse)
 - **Voltar ao topo:** Navegação rápida
 
+### Performance
+- **Lazy Loading:** Imagens carregam conforme necessário
+- **Smooth Scrolling:** Navegação suave entre seções
+- **Debounced Events:** Performance otimizada em scroll
+- **Accessibility:** Suporte a preferências de movimento reduzido
+
 ## 🤝 Contribuição
 
 1. **Fork o projeto**
@@ -204,6 +253,8 @@ http://localhost:8000
 - Mantenha **CSS organizado** em arquivos separados
 - Use **JavaScript modular**
 - Siga as **convenções de nomenclatura**
+- Implemente **lazy loading** em novas imagens
+- Adicione **alt text** descritivo
 
 ## 📄 Licença
 

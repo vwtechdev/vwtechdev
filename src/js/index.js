@@ -8,6 +8,33 @@ AOS.init({
     mirror: true
 });
 
+// Lazy Loading melhorado para imagens
+function initLazyLoading() {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('loaded');
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback para navegadores que não suportam IntersectionObserver
+        images.forEach(img => {
+            img.classList.add('loaded');
+        });
+    }
+}
+
 // Mobile Menu Toggle
 document.getElementById('menu-toggle').addEventListener('click', function() {
     const menu = document.getElementById('mobile-menu');
@@ -207,5 +234,48 @@ function handleScrollAnimations() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', handleScrollAnimations);
-window.addEventListener('scroll', handleScrollAnimations); 
+// Performance optimization: Debounce scroll events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Initialize all functions when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initLazyLoading();
+    handleScrollAnimations();
+    
+    // Debounced scroll handler for better performance
+    const debouncedScrollHandler = debounce(handleScrollAnimations, 10);
+    window.addEventListener('scroll', debouncedScrollHandler);
+});
+
+// Preload critical images
+function preloadCriticalImages() {
+    const criticalImages = [
+        'src/img/logo.png',
+        'src/img/background.png'
+    ];
+    
+    criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+    });
+}
+
+// Initialize preloading
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', preloadCriticalImages);
+} else {
+    preloadCriticalImages();
+} 
