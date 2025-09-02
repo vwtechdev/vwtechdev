@@ -1,288 +1,178 @@
-# 🚀 VWTech Dev - Site
+# VWTech Dev - Site Oficial
 
-Site moderno e responsivo para a VWTech Dev, empresa especializada em desenvolvimento web, sistemas e soluções tecnológicas.
+Site oficial da VWTech Dev, empresa especializada em desenvolvimento web, aplicativos mobile e soluções tecnológicas em Canoinhas/SC.
 
-![VWTech Dev](src/img/vwtechdev-github.png)
+## 🚀 Sobre o Projeto
 
-## 📋 Índice
+Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo uma experiência de usuário excepcional em todos os dispositivos. Totalmente otimizado para performance, SEO e acessibilidade.
 
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Funcionalidades](#funcionalidades)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Instalação](#instalação)
-- [Configuração](#configuração)
-- [SEO e Performance](#seo-e-performance)
-- [Uso](#uso)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
+## ✨ Características
 
-## 🎯 Sobre o Projeto
-
-O VWTech Dev é um site moderno desenvolvido com foco em experiência do usuário e design responsivo. O projeto apresenta os serviços da empresa de forma profissional e atrativa, incluindo:
-
-- **Desenvolvimento Web** - Sites e aplicações responsivas
-- **Aplicativos Mobile** - Apps nativos para Android
-- **Suporte Técnico** - Remoto e presencial
+- **Design Responsivo**: Adapta-se perfeitamente a todos os tamanhos de tela
+- **Performance Otimizada**: Carregamento rápido e eficiente
+- **SEO Avançado**: Meta tags, structured data e sitemap otimizados
+- **Acessibilidade**: Navegação por teclado, leitores de tela e ARIA labels
+- **Navigation Drawer**: Menu mobile moderno que desliza da direita
+- **Animações Suaves**: Transições e efeitos visuais elegantes
+- **Formulário de Contato**: Integração com EmailJS para envio de mensagens
+- **Integração WhatsApp**: Botão flutuante para contato direto
+- **Modais Interativos**: Sistema de planos com animações fluidas
+- **Lazy Loading**: Carregamento otimizado de imagens
 
 ## 🛠️ Tecnologias Utilizadas
 
-### Frontend
-- **HTML5** - Estrutura semântica
-- **CSS3** - Estilos customizados
-- **JavaScript** - Interatividade e animações
-- **Tailwind CSS** - Framework CSS utilitário
-- **Bootstrap 5.3.0** - Componentes e grid system
-- **Font Awesome 6.4.0** - Ícones
-- **AOS (Animate On Scroll)** - Animações de scroll
+- **HTML5**: Estrutura semântica e acessível
+- **CSS3**: Estilos modernos com variáveis CSS e Flexbox/Grid
+- **JavaScript ES6+**: Funcionalidades interativas e validações
+- **Font Awesome 6.4.0**: Ícones vetoriais de alta qualidade
+- **Google Fonts (Inter)**: Tipografia moderna e legível
+- **AOS (Animate On Scroll)**: Animações baseadas em scroll
+- **EmailJS**: Sistema de envio de emails via JavaScript
 
-### Integrações
-- **EmailJS** - Envio de emails via formulário
-- **Elfsight** - Widget de Google Reviews
-- **WhatsApp API** - Botão de contato direto
+## 📱 Seções do Site
 
-## ✨ Funcionalidades
+1. **Hero Section**: Apresentação principal com call-to-action
+2. **Quem Somos**: História e fundadores da empresa
+3. **Serviços**: Portfólio de soluções oferecidas
+4. **Planos**: Opções de assinatura com preços
+5. **Projetos**: Casos de sucesso e trabalhos realizados
+6. **Depoimentos**: Avaliações de clientes (Google Reviews)
+7. **Contato**: Formulário e informações de contato
+8. **Footer**: Informações da empresa e links importantes
 
-### 🎨 Design & UX
-- ✅ **Tema escuro** moderno e profissional
-- ✅ **Layout responsivo** para todos os dispositivos
-- ✅ **Navegação intuitiva** com scroll suave
-- ✅ **Hover effects** interativos
+## 🎨 Design System
 
-### 🖼️ Recursos Visuais
-- ✅ **Animação pulse** nos botões de destaque (WhatsApp e "Conheça nossos planos")
-- ✅ **SVG animado** na hero section
-- ✅ **Lazy Loading** otimizado para imagens
-- ✅ **Placeholder animado** durante carregamento
+### Cores
+- **Laranja Principal**: `#ca692d` - Cor de destaque e CTAs
+- **Preto**: `#070808` - Fundo principal
+- **Cinzas**: Variações para textos e elementos secundários
 
-### 📧 Formulário de Contato
-- ✅ **Validação em tempo real**
-- ✅ **Integração com EmailJS**
-- ✅ **Notificações visuais**
-- ✅ **Estado de loading**
-- ✅ **Reset automático**
+### Tipografia
+- **Fonte Principal**: Inter (300, 400, 500, 600, 700, 800)
+- **Hierarquia**: Títulos, subtítulos e corpo de texto bem definidos
 
-### 📱 Recursos Mobile
-- ✅ **Menu hambúrguer** responsivo
-- ✅ **Botão WhatsApp** flutuante
-- ✅ **Botão "Voltar ao topo"**
-- ✅ **Touch-friendly** interface
-
-### 🔗 Integrações
-- ✅ **WhatsApp Business** - Contato direto
-- ✅ **Google Reviews** - Widget de avaliações
-- ✅ **Redes Sociais** - Facebook, Instagram e GitHub
-- ✅ **EmailJS** - Envio de emails
-
-### 🚀 Performance e SEO
-- ✅ **Lazy Loading** nativo e customizado
-- ✅ **Meta tags** otimizadas para SEO
-- ✅ **Sitemap.xml** para indexação
-- ✅ **Robots.txt** para crawlers
-- ✅ **Preload** de imagens críticas
-- ✅ **Debounce** em eventos de scroll
-- ✅ **IntersectionObserver** para performance
+### Componentes
+- **Cards**: Design consistente com efeitos hover
+- **Botões**: Estilos primário e secundário com animações
+- **Formulários**: Campos estilizados com validação visual
+- **Navegação**: Menu responsivo com dropdown mobile
 
 ## 📁 Estrutura do Projeto
 
 ```
 vwtechdev/
-├── index.html                 # Página principal
-├── sitemap.xml               # Sitemap para SEO
-├── robots.txt                # Instruções para crawlers
-├── README.md                  # Documentação
+├── index.html              # Página principal
 ├── src/
 │   ├── css/
-│   │   └── base.css           # Estilos customizados
+│   │   └── base.css       # Estilos principais
 │   ├── js/
-│   │   ├── index.js           # JavaScript principal
-│   │   └── emailjs-config.js  # Configuração EmailJS
-│   └── img/
-│       ├── logo.png           # Logo da empresa
-│       ├── background.png     # Imagem de fundo
-│       ├── code-apps.svg      # SVG animado na hero section
-│       ├── projects/
-│       │   ├── project-01.png # Projeto Delta
-│       │   └── project-02.png # Projeto Alpha
-│       └── vwtechdev-github.png # Imagem do README
+│   │   ├── index.js       # JavaScript principal
+│   │   └── emailjs-config.js # Configuração EmailJS
+│   └── img/               # Imagens e assets
+├── README.md              # Documentação
+└── LICENSE                # Licença do projeto
 ```
 
-## 🚀 Instalação
+## 🚀 Como Executar
 
-### Pré-requisitos
-- Navegador web moderno
-- Servidor web (opcional para desenvolvimento local)
-
-### Passos
-
-1. **Clone o repositório**
-```bash
-git clone https://github.com/seu-usuario/vwtechdev.git
-cd vwtechdev
-```
-
-2. **Abra o projeto**
-```bash
-# Opção 1: Abrir diretamente no navegador
-open index.html
-
-# Opção 2: Usar servidor local (recomendado)
-python -m http.server 8000
-# ou
-npx serve .
-```
-
-3. **Acesse o site**
-```
-http://localhost:8000
-```
-
-## ⚙️ Configuração
-
-### EmailJS Setup
-
-1. **Criar conta no EmailJS**
-   - Acesse: https://www.emailjs.com/
-   - Crie uma conta gratuita
-
-2. **Configurar Email Service**
-   - Dashboard → Email Services → Add New Service
-   - Escolha seu provedor (Gmail, Outlook, etc.)
-   - Anote o **Service ID**
-
-3. **Criar Email Template**
-   - Dashboard → Email Templates → Create New Template
-   - Use o template fornecido
-   - Anote o **Template ID**
-
-4. **Obter Public Key**
-   - Dashboard → Account → API Keys
-   - Copie sua **Public Key**
-
-5. **Atualizar Configuração**
-   ```javascript
-   // src/js/emailjs-config.js
-   const EMAILJS_CONFIG = {
-       PUBLIC_KEY: "sua_public_key",
-       SERVICE_ID: "seu_service_id", 
-       TEMPLATE_ID: "seu_template_id"
-   };
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/vwtechdev/vwtechdev.git
+   cd vwtechdev
    ```
 
-### Personalização
+2. **Abra o arquivo**:
+   - Abra `index.html` em qualquer navegador moderno
+   - Ou use um servidor local:
+     ```bash
+     python3 -m http.server 8000
+     # Acesse http://localhost:8000
+     ```
 
-#### Cores
-```css
-/* src/css/base.css */
-.bg-custom-black { background-color: #070808; }
-.text-custom-orange { color: #ca692d; }
-.bg-custom-orange { background-color: #ca692d; }
-```
+## 📱 Responsividade
 
-#### Informações de Contato
-```html
-<!-- index.html -->
-<p class="text-gray-300">+55 47 99289-3609</p>
-<p class="text-gray-300">vieirateam.contact@gmail.com</p>
-<p class="text-gray-300">Estrada Dona Francisca, 988<br>Canoinhas/SC</p>
-```
+O site é totalmente responsivo e funciona perfeitamente em:
+- **Desktop**: 1200px+
+- **Tablet**: 768px - 1199px
+- **Mobile**: 320px - 767px
 
-## 🔍 SEO e Performance
+## 🔧 Funcionalidades JavaScript
 
-### Meta Tags Implementadas
-- **Title** otimizado com palavras-chave
-- **Description** com resumo da empresa
-- **Keywords** relevantes para o negócio
-- **Author** e **robots** para indexação
-- **Canonical URL** para evitar conteúdo duplicado
+- **Menu Mobile**: Toggle responsivo para dispositivos móveis
+- **Scroll Suave**: Navegação interna com animação
+- **Lazy Loading**: Carregamento otimizado de imagens
+- **Validação de Formulário**: Verificação em tempo real
+- **Integração EmailJS**: Envio automático de mensagens
+- **Botão WhatsApp**: Redirecionamento direto para contato
+- **Back to Top**: Navegação rápida para o topo da página
 
-### Lazy Loading
-- **Nativo**: Atributo `loading="lazy"` em todas as imagens
-- **Customizado**: IntersectionObserver para melhor controle
-- **Placeholder**: Animação de shimmer durante carregamento
-- **Preload**: Imagens críticas carregadas antecipadamente
+## 📧 Configuração EmailJS
 
-### Performance
-- **Debounce**: Eventos de scroll otimizados
-- **IntersectionObserver**: Carregamento sob demanda
-- **Preload**: Recursos críticos carregados primeiro
-- **Reduced Motion**: Respeita preferências de acessibilidade
+Para configurar o sistema de envio de emails:
 
-### Arquivos SEO
-- **sitemap.xml**: Mapa do site para crawlers
-- **robots.txt**: Instruções para bots de busca
-- **Meta tags**: Otimizadas para Google e outros motores
+1. Crie uma conta em [EmailJS](https://www.emailjs.com/)
+2. Configure um serviço de email
+3. Crie um template de email
+4. Atualize as configurações em `src/js/emailjs-config.js`
 
-## 📖 Uso
+## 🎯 SEO e Performance
 
-### Navegação
-- **Header:** Menu de navegação com hover effects
-- **Hero Section:** Apresentação principal da empresa
-- **Serviços:** Cards com os serviços oferecidos
-- **Planos:** Tabela de preços e recursos
-- **Projetos:** Portfolio com overlay
-- **Depoimentos:** Widget de Google Reviews
-- **Contato:** Formulário funcional
+- **Meta Tags**: Título, descrição e palavras-chave otimizados
+- **Estrutura Semântica**: HTML5 com tags semânticas
+- **Imagens Otimizadas**: Lazy loading e compressão
+- **CSS Minificado**: Estilos otimizados para produção
+- **Google Analytics**: Rastreamento de visitantes
 
-### Formulário de Contato
-1. Preencha os campos obrigatórios
-2. Clique em "Enviar Mensagem"
-3. Aguarde a confirmação
-4. Email será enviado automaticamente
+## 🌐 Hospedagem
 
-### Botões Flutuantes
-- **WhatsApp:** Contato direto via WhatsApp (com animação pulse)
-- **Voltar ao topo:** Navegação rápida
-
-### Performance
-- **Lazy Loading:** Imagens carregam conforme necessário
-- **Smooth Scrolling:** Navegação suave entre seções
-- **Debounced Events:** Performance otimizada em scroll
-- **Accessibility:** Suporte a preferências de movimento reduzido
-
-## 🤝 Contribuição
-
-1. **Fork o projeto**
-2. **Crie uma branch** (`git checkout -b feature/AmazingFeature`)
-3. **Commit suas mudanças** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push para a branch** (`git push origin feature/AmazingFeature`)
-5. **Abra um Pull Request**
-
-### Padrões de Código
-- Use **HTML5 semântico**
-- Mantenha **CSS organizado** em arquivos separados
-- Use **JavaScript modular**
-- Siga as **convenções de nomenclatura**
-- Implemente **lazy loading** em novas imagens
-- Adicione **alt text** descritivo
+O site está configurado para ser hospedado em qualquer serviço de hospedagem estática:
+- GitHub Pages
+- Netlify
+- Vercel
+- Amazon S3
+- Qualquer servidor web
 
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
+## 👥 Equipe
+
+- **Vinicius Vieira** - Fundador e Desenvolvedor
+- **Wellinton Vieira** - Co-fundador e Desenvolvedor
+
 ## 📞 Contato
 
-**VWTech Dev**
-- 📧 Email: vieirateam.contact@gmail.com
-- 📱 WhatsApp: +55 47 99289-3609
-- 📍 Endereço: Estrada Dona Francisca, 988 - Canoinhas/SC
-- 🌐 Site: [vwtechdev.com.br](https://vwtechdev.com.br)
+- **Email**: vwtechdev@gmail.com
+- **WhatsApp**: +55 47 99289-3609
+- **Endereço**: Estrada Dona Francisca, 988 - Canoinhas/SC
+- **Website**: [vwtechdev.com.br](https://vwtechdev.com.br)
 
-### Redes Sociais
-- [Facebook](https://www.facebook.com/vwtechdev/)
-- [Instagram](https://www.instagram.com/vwtechdev/)
-- [GitHub](https://github.com/vwtechdev)
+## 🔄 Histórico de Versões
 
-## 🙏 Agradecimentos
+### v3.0.0 (Atual - Janeiro 2025)
+- ✅ **Navigation Drawer**: Menu mobile moderno que desliza da direita
+- ✅ **Botão Hambúrguer Animado**: Transformação suave para X
+- ✅ **Structured Data**: Schema.org para melhor SEO
+- ✅ **Responsividade Avançada**: Otimizações para todos os dispositivos
+- ✅ **Modais Otimizados**: Sistema de planos com melhor UX
+- ✅ **Performance**: Remoção de console.log e otimizações
+- ✅ **Acessibilidade**: Melhorias em ARIA labels e navegação
+- ✅ **SEO**: Sitemap e robots.txt atualizados
 
-- **EmailJS** - Serviço de envio de emails
-- **Elfsight** - Widget de Google Reviews
-- **Font Awesome** - Ícones
-- **Tailwind CSS** - Framework CSS
-- **AOS** - Animações de scroll
+### v2.0.0
+- ✅ Remoção completa do TailwindCSS
+- ✅ Recriação com CSS puro e moderno
+- ✅ Implementação da fonte Inter
+- ✅ Atualização para Font Awesome 6.4.0
+- ✅ Melhorias na responsividade
+- ✅ Otimização de performance
+
+### v1.0.0
+- ✅ Site inicial com TailwindCSS
+- ✅ Funcionalidades básicas
+- ✅ Design responsivo
 
 ---
 
-**Desenvolvido com ❤️ pela VWTech Dev**
-
-*Transformando ideias em código desde 2019* 
+**VWTech Dev** - Transformando ideias em soluções digitais de alto impacto! 🚀 

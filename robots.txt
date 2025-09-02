@@ -10,8 +10,13 @@ Crawl-delay: 1
 # Disallow admin areas (if any)
 Disallow: /admin/
 Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
 
 # Allow important files
 Allow: /src/css/
 Allow: /src/js/
-Allow: /src/img/ 
+Allow: /src/img/
+
+# Host
+Host: https://vwtechdev.com.br 

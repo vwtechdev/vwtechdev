@@ -1,5 +1,4 @@
 // EmailJS Configuration
-// Substitua estas credenciais pelas suas do EmailJS
 
 const EMAILJS_CONFIG = {
     PUBLIC_KEY: "HN1ki5--eeoUCBnGf", // Sua chave pública do EmailJS
