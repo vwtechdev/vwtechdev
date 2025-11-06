@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>VWTech Dev - Desenvolvimento Web, Apps Mobile e Suporte Técnico | Canoinhas/SC</title>
+    <title>VWTech Dev - Desenvolvimento Web e Soluções Tech | Canoinhas/SC</title>
     <meta name="description" content="VWTech Dev: Especialistas em desenvolvimento web, aplicativos mobile, suporte técnico e manutenção de computadores em Canoinhas/SC. Sites responsivos, sistemas personalizados e atendimento presencial.">
     <meta name="keywords" content="desenvolvimento web Canoinhas, aplicativos mobile SC, sites responsivos, sistemas web personalizados, suporte técnico, manutenção computador, notebook, celular, Canoinhas SC, Santa Catarina, VWTech Dev, programação, tecnologia">
     <meta name="author" content="VWTech Dev - Vinicius e Wellington">
@@ -81,7 +81,7 @@
         "url": "https://vwtechdev.com.br",
         "logo": "https://vwtechdev.com.br/src/img/logo.png",
         "image": "https://vwtechdev.com.br/src/img/logo.png",
-        "telephone": "+55-47-99289-3609",
+        "telephone": "+5547992893609",
         "email": "vwtechdev@gmail.com",
         "address": {
             "@type": "PostalAddress",
@@ -531,7 +531,7 @@
                                 </div>
                                 <div class="info-content">
                                     <h4 class="info-label">Telefone</h4>
-                                    <p class="info-text">+55 47 99289-3609</p>
+                                    <p class="info-text">(47) 9 9289-3609</p>
                                 </div>
                             </div>
                             
@@ -606,6 +606,60 @@
         </a>
     </div>
 
+    <!-- Promoção Modal -->
+    <div id="promo-modal" class="promo-modal" role="dialog" aria-labelledby="promo-modal-title" aria-modal="true">
+        <div class="promo-modal-overlay"></div>
+        <div class="promo-modal-content">
+            <button class="promo-modal-close" id="promo-modal-close" aria-label="Fechar modal de promoção">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="promo-modal-header">
+                <div class="promo-badge">
+                    <i class="fas fa-fire"></i>
+                    <span>PROMOÇÃO NOVEMBRO</span>
+                </div>
+                <h2 id="promo-modal-title" class="promo-modal-title">
+                    🚀 Transforme sua presença online com a VWTech Dev!
+                </h2>
+            </div>
+            <div class="promo-modal-body">
+                <div class="promo-offer">
+                    <div class="promo-price">
+                        <span class="promo-price-amount">R$ 89,90<span class="promo-price-period">/mês</span></span>
+                        <span class="promo-price-label">Site responsivo e profissional</span>
+                    </div>
+                </div>
+                
+                <div class="promo-features-list">
+                    <div class="promo-feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Site responsivo</span>
+                    </div>
+                    <div class="promo-feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Otimizado para SEO</span>
+                    </div>
+                    <div class="promo-feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Suporte incluído</span>
+                    </div>
+                </div>
+                
+                <div class="promo-warning">
+                    <i class="fas fa-clock"></i>
+                    <span>Oferta válida apenas até o fim de novembro</span>
+                </div>
+                
+                <div class="promo-cta">
+                    <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Quero%20garantir%20a%20promo%C3%A7%C3%A3o%20de%20site%20por%20R$%2089,90/m%C3%AAs!" target="_blank" rel="noopener noreferrer" class="promo-button">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Garantir Promoção Agora</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- EmailJS -->
@@ -631,10 +685,14 @@
                 <!-- Desenvolvimento Web -->
                 <div id="web-plans" class="service-plans" style="display: none;">
                     <div class="plans-list">
-                        <div class="plan-item">
+                        <div class="plan-item plan-item-promo">
+                            <div class="promo-badge" style="margin-bottom: 15px;">
+                                <i class="fas fa-fire"></i>
+                                <span>PROMOÇÃO NOVEMBRO</span>
+                            </div>
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Basic</h4>
-                                <div class="plan-price">R$ 129,90/mês</div>
+                                <h4 class="plan-name">Promo de Novembro</h4>
+                                <div class="plan-price">R$ 89,90/mês</div>
                             </div>
                             <ul class="plan-features">
                                 <li><i class="fas fa-check"></i> Landing Page</li>
@@ -643,8 +701,12 @@
                                 <li><i class="fas fa-check"></i> Suporte por WhatsApp</li>
                                 <li><i class="fas fa-check"></i> 1 Revisão Mensal</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Basic%20de%20Desenvolvimento%20Web%20por%20R$%20129,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Basic
+                            <div style="margin: 15px 0; padding: 10px; background: rgba(255, 193, 7, 0.1); border-radius: 5px; text-align: center; font-size: 0.9em; color: #ff6b35;">
+                                <i class="fas fa-clock"></i>
+                                <span>Oferta válida apenas até o fim de novembro</span>
+                            </div>
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Quero%20garantir%20a%20promo%C3%A7%C3%A3o%20de%20site%20por%20R$%2089,90/m%C3%AAs!" target="_blank" class="plan-whatsapp-button" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);">
+                                <i class="fab fa-whatsapp"></i> Garantir Promoção Agora
                             </a>
                         </div>
                         

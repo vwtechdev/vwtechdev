@@ -710,6 +710,9 @@ function initApp() {
         // Register Service Worker for PWA
         registerServiceWorker();
         
+        // Initialize Promo Modal
+        initPromoModal();
+        
         // Hide loading notification after initialization
         setTimeout(() => {
             const loadingNotification = document.querySelector('.notification');
@@ -735,6 +738,84 @@ function registerServiceWorker() {
                     .catch(function(error) {
                         // Service Worker registration failed - fallback silencioso
                     });
+            });
+        }
+    } catch (error) {
+        // Fallback silencioso
+    }
+}
+
+// Promoção Modal Functions
+function initPromoModal() {
+    try {
+        const promoModal = document.getElementById('promo-modal');
+        const promoModalClose = document.getElementById('promo-modal-close');
+        const promoModalOverlay = promoModal?.querySelector('.promo-modal-overlay');
+        const floatingButtons = document.querySelector('.floating-buttons');
+        
+        if (!promoModal) return;
+        
+        // Verificar se o usuário já viu o modal hoje (opcional - descomente se quiser)
+        // const lastSeen = localStorage.getItem('promo-modal-seen');
+        // const today = new Date().toDateString();
+        // if (lastSeen === today) return;
+        
+        function openPromoModal() {
+            promoModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Hide floating buttons when modal opens
+            if (floatingButtons) {
+                floatingButtons.style.display = 'none';
+            }
+        }
+        
+        function closePromoModal() {
+            promoModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Show floating buttons again when modal closes
+            if (floatingButtons) {
+                floatingButtons.style.display = 'flex';
+            }
+            
+            // Salvar que o usuário viu o modal hoje (opcional)
+            // localStorage.setItem('promo-modal-seen', new Date().toDateString());
+        }
+        
+        // Abrir modal automaticamente após 2 segundos
+        setTimeout(() => {
+            openPromoModal();
+        }, 2000);
+        
+        // Fechar modal ao clicar no botão X
+        if (promoModalClose) {
+            promoModalClose.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closePromoModal();
+            });
+        }
+        
+        // Fechar modal ao clicar no overlay
+        if (promoModalOverlay) {
+            promoModalOverlay.addEventListener('click', function() {
+                closePromoModal();
+            });
+        }
+        
+        // Fechar modal com a tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && promoModal.classList.contains('active')) {
+                closePromoModal();
+            }
+        });
+        
+        // Prevenir fechamento ao clicar dentro do conteúdo do modal
+        const promoModalContent = promoModal.querySelector('.promo-modal-content');
+        if (promoModalContent) {
+            promoModalContent.addEventListener('click', function(e) {
+                e.stopPropagation();
             });
         }
     } catch (error) {
