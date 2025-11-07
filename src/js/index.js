@@ -762,6 +762,11 @@ function initPromoModal() {
         
         function openPromoModal() {
             promoModal.classList.add('active');
+            promoModal.style.display = 'flex';
+            requestAnimationFrame(() => {
+                promoModal.style.opacity = '1';
+                promoModal.style.visibility = 'visible';
+            });
             document.body.style.overflow = 'hidden';
             
             // Hide floating buttons when modal opens
@@ -772,6 +777,7 @@ function initPromoModal() {
         
         function closePromoModal() {
             promoModal.classList.remove('active');
+            promoModal.style.opacity = '0';
             document.body.style.overflow = 'auto';
             
             // Show floating buttons again when modal closes
@@ -781,6 +787,13 @@ function initPromoModal() {
             
             // Salvar que o usuário viu o modal hoje (opcional)
             // localStorage.setItem('promo-modal-seen', new Date().toDateString());
+
+            setTimeout(() => {
+                if (!promoModal.classList.contains('active')) {
+                    promoModal.style.display = 'none';
+                    promoModal.style.visibility = 'hidden';
+                }
+            }, 300);
         }
         
         // Abrir modal automaticamente após 2 segundos
