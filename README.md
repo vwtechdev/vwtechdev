@@ -18,6 +18,8 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Integração WhatsApp**: Botão flutuante para contato direto
 - **Modais Interativos**: Sistema de planos com animações fluidas
 - **Lazy Loading**: Carregamento otimizado de imagens
+- **PWA Offline**: Suporte à instalação no dispositivo e navegação com cache inteligente
+- **Atualização Automática**: Ano do rodapé atualizado dinamicamente via JavaScript
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -28,6 +30,9 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Google Fonts (Inter)**: Tipografia moderna e legível
 - **AOS (Animate On Scroll)**: Animações baseadas em scroll
 - **EmailJS**: Sistema de envio de emails via JavaScript
+- **Service Worker / PWA**: Suporte offline e instalação como aplicativo
+- **Schema.org (JSON-LD)**: Dados estruturados para melhor ranqueamento local no Google
+- **Google Analytics 4**: Monitoramento de tráfego e eventos
 
 ## 📱 Seções do Site
 
@@ -105,6 +110,9 @@ O site é totalmente responsivo e funciona perfeitamente em:
 - **Integração EmailJS**: Envio automático de mensagens
 - **Botão WhatsApp**: Redirecionamento direto para contato
 - **Back to Top**: Navegação rápida para o topo da página
+- **Notificações de Interface**: Feedback visual para carregamento e erros
+- **Preload de Imagens Críticas**: Melhora a percepção de velocidade
+- **PWA / Service Worker**: Registro automático para navegação offline quando suportado
 
 ## 📧 Configuração EmailJS
 
@@ -125,7 +133,7 @@ Para configurar o sistema de envio de emails:
 
 ## 🌐 Hospedagem
 
-O site está configurado para ser hospedado em qualquer serviço de hospedagem estática:
+O site está configurado para ser hospedado em qualquer serviço de hospedagem estática e atualmente é publicado via **GitHub Pages** com domínio próprio:
 - GitHub Pages
 - Netlify
 - Vercel
@@ -150,7 +158,14 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 🔄 Histórico de Versões
 
-### v3.0.0 (Atual - Janeiro 2025)
+### v3.1.0 (Atual - Dezembro 2025)
+- ✅ **PWA Ativo**: Registro de Service Worker e suporte a navegação offline
+- ✅ **Preload de Recursos**: Pré-carregamento de imagens críticas para melhor performance
+- ✅ **Notificações de UI**: Mensagens de feedback para carregamento e erros
+- ✅ **Melhorias de Responsividade**: Ajustes finos em seções e componentes
+- ✅ **Otimizações Gerais**: Código JavaScript mais seguro, com fallbacks silenciosos
+
+### v3.0.0
 - ✅ **Navigation Drawer**: Menu mobile moderno que desliza da direita
 - ✅ **Botão Hambúrguer Animado**: Transformação suave para X
 - ✅ **Structured Data**: Schema.org para melhor SEO
