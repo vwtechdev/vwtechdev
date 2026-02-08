@@ -10,7 +10,7 @@
 html, body {
     max-width: 100vw;
     overflow-x: hidden;
-    background-image: url('../img/background.png');
+    background-image: url('../img/background.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -261,13 +261,15 @@ html, body {
     transition: all 0.3s ease;
 }
 
-.mobile-nav-link:hover::after {
-    width: 100%;
-}
-
-.mobile-nav-link:hover {
-    color: var(--primary-orange);
-    background-color: rgba(202, 105, 45, 0.1);
+@media (hover: hover) and (pointer: fine) {
+    .mobile-nav-link:hover::after {
+        width: 100%;
+    }
+    
+    .mobile-nav-link:hover {
+        color: var(--primary-orange);
+        background-color: rgba(202, 105, 45, 0.1);
+    }
 }
 
 /* Seções */
@@ -305,13 +307,32 @@ html, body {
     overflow: hidden;
 }
 
+/* Imagem LCP: primeiro filho da hero, pinta cedo com preload + fetchpriority="high" */
+.hero-lcp-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Overlay da hero: gradiente por cima da imagem LCP */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(135deg, rgba(7, 8, 8, 0.75) 0%, rgba(7, 8, 8, 0.5) 50%, rgba(202, 105, 45, 0.15) 100%);
+}
+
 .hero-bg {
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: 2;
     background: linear-gradient(135deg, rgba(7, 8, 8, 0.3) 0%, rgba(202, 105, 45, 0.1) 100%);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
 }
 
 .hero-content {
@@ -337,8 +358,18 @@ html, body {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 8px var(--shadow-dark);
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.4),
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(0, 0, 0, 0.2);
     letter-spacing: -0.02em;
+}
+
+.hero-title .text-highlight {
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.5),
+        0 4px 12px rgba(202, 105, 45, 0.25),
+        0 0 24px rgba(202, 105, 45, 0.15);
 }
 
 .hero-description {
@@ -349,6 +380,10 @@ html, body {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.6),
+        0 4px 16px rgba(0, 0, 0, 0.45),
+        0 0 32px rgba(0, 0, 0, 0.25);
 }
 
 .hero-features {
@@ -366,6 +401,10 @@ html, body {
     font-size: 1rem;
     color: var(--gray-300);
     transition: color 0.3s ease;
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.55),
+        0 4px 14px rgba(0, 0, 0, 0.4),
+        0 0 24px rgba(0, 0, 0, 0.2);
 }
 
 .hero-feature i {
@@ -1593,12 +1632,28 @@ img[loading="lazy"]:not(.loaded) {
 }
 
 @media (max-width: 767px) {
+    /* Reduz efeitos pesados no scroll para mobile de baixo custo (menos travamento) */
+    .navbar.scrolled {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: var(--primary-black);
+    }
+    
+    /* Sem blur nas seções = primeira pintura (LCP) mais rápida */
+    .section {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+    
     .navbar {
         padding: 0.75rem 0;
+        min-height: 56px;
     }
     
     .navbar-content {
         padding: 0 1rem;
+        min-height: 56px;
+        align-items: center;
     }
     
     .logo-text {
@@ -1619,7 +1674,9 @@ img[loading="lazy"]:not(.loaded) {
     }
     
     .menu-toggle {
-        display: block;
+        display: flex;
+        position: absolute;
+        right: 0.5rem;
         font-size: 1.25rem;
         padding: 0.5rem;
     }
@@ -1631,8 +1688,8 @@ img[loading="lazy"]:not(.loaded) {
         width: 280px;
         height: 100vh;
         background: linear-gradient(135deg, var(--primary-black) 0%, rgba(7, 8, 8, 0.98) 100%);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         border-left: 1px solid rgba(202, 105, 45, 0.3);
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
         z-index: 9999;
@@ -1685,13 +1742,11 @@ img[loading="lazy"]:not(.loaded) {
         border-bottom: none;
     }
     
-
-    
     .menu-toggle {
-        position: relative;
+        position: absolute;
+        right: 0.5rem;
         z-index: 10000;
         transition: all 0.3s ease;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -2644,11 +2699,13 @@ textarea:focus {
     }
     
     .hero-title {
-        font-size: clamp(1.5rem, 7vw, 2rem);
+        font-size: clamp(1.35rem, 6.5vw, 1.85rem);
+        line-height: 1.25;
     }
     
     .hero-description {
-        font-size: 0.9rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
     }
     
     .hero-features {
@@ -2656,7 +2713,7 @@ textarea:focus {
     }
     
     .hero-feature {
-        font-size: 0.85rem;
+        font-size: 0.8125rem;
         justify-content: center;
     }
     
@@ -2669,8 +2726,8 @@ textarea:focus {
     }
     
     .btn {
-        padding: 0.75rem 1.25rem;
-        font-size: 0.85rem;
+        padding: 0.7rem 1.1rem;
+        font-size: 0.8125rem;
     }
     
     .section {
@@ -2678,8 +2735,12 @@ textarea:focus {
     }
     
     .section-title {
-        font-size: clamp(1.5rem, 6vw, 2rem);
-        margin-bottom: 1.5rem;
+        font-size: clamp(1.4rem, 5.5vw, 1.75rem);
+        margin-bottom: 1.25rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.875rem;
     }
     
     .service-card,
@@ -2694,20 +2755,30 @@ textarea:focus {
     }
     
     .service-title {
-        font-size: 0.9rem;
+        font-size: 0.875rem;
         margin: 1.25rem 1rem 0.75rem 1rem;
     }
     
     .service-description {
-        font-size: 0.85rem;
+        font-size: 0.8125rem;
         margin: 0 1.25rem 1.25rem 1.25rem;
     }
     
     .service-button {
         margin: 0 1.25rem 1.25rem 1.25rem;
         width: calc(100% - 2.5rem);
-        padding: 0.75rem 1.25rem;
-        font-size: 0.85rem;
+        padding: 0.7rem 1.1rem;
+        font-size: 0.8125rem;
+    }
+    
+    .about-card h3,
+    .founder-name {
+        font-size: 1.05rem;
+    }
+    
+    .about-card p,
+    .founder-role {
+        font-size: 0.875rem;
     }
     
     .contact-form,
@@ -2718,12 +2789,16 @@ textarea:focus {
     .form-input,
     .form-textarea {
         padding: 0.875rem 1rem;
-        font-size: 0.9rem;
+        font-size: 0.875rem;
+    }
+    
+    .form-label {
+        font-size: 0.875rem;
     }
     
     .form-button {
-        padding: 0.875rem 1.25rem;
-        font-size: 0.9rem;
+        padding: 0.8rem 1.1rem;
+        font-size: 0.875rem;
     }
     
     .floating-buttons {
@@ -2810,6 +2885,147 @@ textarea:focus {
     
     .plans-list {
         gap: 1rem;
+    }
+}
+
+/* Telas muito pequenas (iPhone SE, iPhone 5/6, etc. até 400px) */
+@media (max-width: 400px) {
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    
+    .logo-circle {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.35rem, 6vw, 1.75rem);
+        margin-bottom: 0.75rem;
+        line-height: 1.25;
+    }
+    
+    .hero-description {
+        font-size: 0.8125rem;
+        margin-bottom: 1.25rem;
+        line-height: 1.45;
+    }
+    
+    .hero-feature {
+        font-size: 0.8rem;
+    }
+    
+    .hero-features {
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.65rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: clamp(1.35rem, 5.5vw, 1.65rem);
+        margin-bottom: 1.25rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .service-title {
+        font-size: 0.85rem;
+        margin: 1rem 0.75rem 0.5rem 0.75rem;
+    }
+    
+    .service-description {
+        font-size: 0.8rem;
+        margin: 0 1rem 1rem 1rem;
+    }
+    
+    .service-button {
+        padding: 0.65rem 1rem;
+        font-size: 0.8rem;
+        margin: 0 1rem 1rem 1rem;
+    }
+    
+    .about-card h3,
+    .founder-name {
+        font-size: 1rem;
+    }
+    
+    .about-card p,
+    .founder-role {
+        font-size: 0.8rem;
+    }
+    
+    .mobile-nav-link {
+        padding: 1rem 1.25rem;
+        font-size: 0.95rem;
+    }
+    
+    .form-input,
+    .form-textarea {
+        padding: 0.75rem 0.875rem;
+        font-size: 0.85rem;
+    }
+    
+    .form-label {
+        font-size: 0.85rem;
+    }
+    
+    .form-button {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .info-card h3 {
+        font-size: 1rem;
+    }
+    
+    .info-card p,
+    .contact-info-item {
+        font-size: 0.85rem;
+    }
+    
+    .plan-title,
+    .plan-name {
+        font-size: 0.95rem;
+    }
+    
+    .price-amount {
+        font-size: 1.5rem;
+    }
+    
+    .plan-feature {
+        font-size: 0.8rem;
+    }
+    
+    .plan-whatsapp-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .plans-modal-title {
+        font-size: 1rem;
+    }
+    
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+    
+    .testimonial-author {
+        font-size: 0.85rem;
+    }
+    
+    .footer p,
+    .footer a {
+        font-size: 0.85rem;
+    }
+    
+    .footer h4 {
+        font-size: 0.95rem;
     }
 }
 

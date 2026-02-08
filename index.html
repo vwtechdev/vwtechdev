@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LCP: preload da imagem no topo = request começa antes de qualquer outro recurso -->
+    <link rel="preload" href="src/img/background.webp" as="image" fetchpriority="high">
     
     <!-- SEO Meta Tags -->
     <title>VWTech Dev - Desenvolvimento Web e Soluções Tech | Canoinhas-SC, Brasil</title>
@@ -46,6 +48,15 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://vwtechdev.com.br">
     
+    <!-- Preconnect para recursos externos (reduz latência em mobile) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    
+    <!-- CSS crítico: único recurso bloqueante para a primeira pintura (hero + LCP image) -->
+    <link rel="stylesheet" href="src/css/base.css">
+    
     <!-- Favicon -->
     <link rel="icon" href="src/img/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="src/img/logo.png">
@@ -53,22 +64,28 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts: não bloqueiam primeira pintura = LCP image pode pintar assim que base.css e a imagem estiverem prontos -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+    <!-- Font Awesome: carrega sem bloquear primeira pintura -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="src/css/base.css">
+    <!-- AOS: não bloqueia renderização da hero -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRTLCBQKSG"></script>
+    <!-- Google Analytics: executa após interação para não atrasar LCP -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-VRTLCBQKSG');
+        window.addEventListener('load', function() {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VRTLCBQKSG';
+            document.head.appendChild(s);
+            s.onload = function() { gtag('js', new Date()); gtag('config', 'G-VRTLCBQKSG'); };
+        });
     </script>
     
     <!-- Structured Data for Business -->
@@ -261,6 +278,7 @@
             <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
             <!-- Mobile Menu -->
             <div class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+                <a href="#home" class="mobile-nav-link">Início</a>
                 <a href="#about" class="mobile-nav-link">Quem Somos</a>
                 <a href="#services" class="mobile-nav-link">Serviços</a>
                 <a href="#projects" class="mobile-nav-link">Projetos</a>
@@ -272,6 +290,11 @@
     <!-- Hero Section -->
     <main>
         <section id="home" class="hero" role="banner" aria-label="Seção principal">
+        <!-- LCP: WebP quando existir (bem menor), PNG fallback. decoding=sync para pintar assim que carregar. -->
+        <picture>
+            <source type="image/webp" srcset="src/img/background.webp">
+            <img class="hero-lcp-image" src="src/img/background.png" fetchpriority="high" loading="eager" decoding="sync" alt="" width="1536" height="1024">
+        </picture>
         <div class="hero-bg" aria-hidden="true"></div>
         <div class="container">
             <div class="hero-content">
@@ -444,7 +467,7 @@
                 <!-- Project 1 -->
                 <div class="project-card" data-aos="fade-up">
                     <div class="project-image">
-                        <img src="src/img/projects/project-01.png" alt="Sistema Delta Monitor - Geração de Recibos Automáticos" loading="lazy">
+                        <img src="src/img/projects/project-01.webp" alt="Sistema Delta Monitor - Geração de Recibos Automáticos" loading="lazy">
                     </div>
                     <h3 class="project-title">Delta Monitor</h3>
                     <p class="project-description">Sistema Web de Geração de Recibos Automáticos para empresa Delta Monitoramento Canoinhas-SC</p>
@@ -454,7 +477,7 @@
                 <!-- Project 2 -->
                 <div class="project-card" data-aos="fade-up">
                     <div class="project-image">
-                        <img src="src/img/projects/project-02.png" alt="Landing page Alpha Automation and Robotics - Automação Industrial" loading="lazy">
+                        <img src="src/img/projects/project-02.webp" alt="Landing page Alpha Automation and Robotics - Automação Industrial" loading="lazy">
                     </div>
                     <h3 class="project-title">Alpha Automation and Robotics</h3>
                     <p class="project-description">Landing page moderna e responsiva para a Alpha Automation and Robotics, empresa especializada em automação industrial e robótica.</p>
@@ -464,7 +487,7 @@
                 <!-- Project 3 -->
                 <div class="project-card" data-aos="fade-up">
                     <div class="project-image">
-                        <img src="src/img/projects/project-03.png" alt="Sistema NationsFlow - Controle Financeiro da Igreja Pentecostal Nações para Cristo" loading="lazy">
+                        <img src="src/img/projects/project-03.webp" alt="Sistema NationsFlow - Controle Financeiro da Igreja Pentecostal Nações para Cristo" loading="lazy">
                     </div>
                     <h3 class="project-title">Nations Flow</h3>
                     <p class="project-description">Sistema Web de Controle Financeiro para a Igreja Pentecostal Nações para Cristo.</p>
@@ -610,14 +633,11 @@
         </a>
     </div>
 
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <!-- EmailJS Config -->
-    <script src="src/js/emailjs-config.js"></script>
-    <!-- Custom JS -->
-    <script src="src/js/index.js"></script>
+    <!-- Scripts com defer: não bloqueiam parsing, rodam após DOM (melhor LCP em mobile) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+    <script src="src/js/emailjs-config.js" defer></script>
+    <script src="src/js/index.js" defer></script>
     
 
     

@@ -159,31 +159,25 @@ function initLazyLoading() {
     }
 }
 
-// Navbar scroll effect
+// Navbar scroll effect (throttle + passive para scroll fluido em mobile)
 function initNavbarScroll() {
     try {
         const navbar = document.querySelector('.navbar');
-        
         if (!navbar) return;
-        
-        function handleScroll() {
+
+        function updateNavbar() {
             try {
                 if (window.pageYOffset > 50) {
                     navbar.classList.add('scrolled');
                 } else {
                     navbar.classList.remove('scrolled');
                 }
-            } catch (error) {
-                // Fallback silencioso
-            }
+            } catch (e) {}
         }
-        
-        // Aplicar efeito inicial
-        handleScroll();
-        
-        // Adicionar listener de scroll com debounce
-        const debouncedScrollHandler = debounce(handleScroll, 10);
-        window.addEventListener('scroll', debouncedScrollHandler);
+
+        updateNavbar();
+        var throttled = throttleRAF(updateNavbar);
+        window.addEventListener('scroll', throttled, { passive: true });
     } catch (error) {
         // Fallback silencioso
     }
@@ -267,19 +261,17 @@ function initBackToTop() {
         
         if (!backToTopButton) return;
         
-        const debouncedScrollHandler = debounce(function() {
+        function updateVisibility() {
             try {
                 if (window.pageYOffset > 300) {
                     backToTopButton.classList.add('visible');
                 } else {
                     backToTopButton.classList.remove('visible');
                 }
-            } catch (error) {
-                // Fallback silencioso
-            }
-        }, 10);
-        
-        window.addEventListener('scroll', debouncedScrollHandler);
+            } catch (e) {}
+        }
+        var throttled = throttleRAF(updateVisibility);
+        window.addEventListener('scroll', throttled, { passive: true });
         
         backToTopButton.addEventListener('click', function(e) {
             try {
@@ -656,12 +648,23 @@ function debounce(func, wait) {
     };
 }
 
+// Throttle por requestAnimationFrame: 1 execução por frame (evita travamento em mobile)
+function throttleRAF(callback) {
+    var raf = null;
+    return function fn() {
+        if (raf !== null) return;
+        raf = requestAnimationFrame(function() {
+            callback();
+            raf = null;
+        });
+    };
+}
+
 // Preload critical images com verificação de segurança
 function preloadCriticalImages() {
     try {
         const criticalImages = [
-            'src/img/logo.png',
-            'src/img/background.png'
+            'src/img/background.webp'
         ];
         
         criticalImages.forEach(src => {
@@ -691,20 +694,10 @@ function updateCurrentYear() {
     }
 }
 
-// Initialize all functions when DOM is loaded
-function initApp() {
+// Inicializa apenas o necessário para first paint / LCP (melhor performance em mobile)
+function initCritical() {
     try {
-        // Show loading state
-        showNotification('Carregando...', 'success');
-        
-        // Atualizar ano atual no footer
         updateCurrentYear();
-        
-        // Inicializar AOS
-        initAOS();
-        
-        // Inicializar funcionalidades básicas
-        initLazyLoading();
         initNavbarScroll();
         initMobileMenu();
         initBackToTop();
@@ -712,28 +705,37 @@ function initApp() {
         initContactForm();
         initPlanButtons();
         initWhatsAppButton();
-        
-        // Inicializar animações
         handleScrollAnimations();
-        
-        // Debounced scroll handler for better performance
-        const debouncedScrollHandler = debounce(handleScrollAnimations, 10);
-        window.addEventListener('scroll', debouncedScrollHandler);
-        
-        // Preload de imagens críticas
+        // Debounce maior (150ms) + passive: scroll suave em aparelhos fracos
+        var debouncedScrollHandler = debounce(handleScrollAnimations, 150);
+        window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
+        initLazyLoading();
+    } catch (err) {
+        // fallback silencioso
+    }
+}
+
+// Inicializa após first paint (não atrasa LCP em celulares lentos)
+function initDeferred() {
+    try {
+        initAOS();
         preloadCriticalImages();
-        
-        // Register Service Worker for PWA
         registerServiceWorker();
-        
-        // Hide loading notification after initialization
-        setTimeout(() => {
-            const loadingNotification = document.querySelector('.notification');
-            if (loadingNotification && loadingNotification.textContent.includes('Carregando')) {
-                loadingNotification.remove();
-            }
-        }, 1000);
-        
+    } catch (err) {
+        // fallback silencioso
+    }
+}
+
+// Initialize all functions when DOM is loaded
+function initApp() {
+    try {
+        initCritical();
+        // AOS, preload e Service Worker depois da primeira pintura
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(function() { initDeferred(); }, { timeout: 2000 });
+        } else {
+            setTimeout(initDeferred, 100);
+        }
     } catch (error) {
         showNotification('Erro ao carregar algumas funcionalidades. Recarregue a página se necessário.', 'error');
     }

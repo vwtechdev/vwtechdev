@@ -7,7 +7,7 @@ const urlsToCache = [
   '/src/js/index.js',
   '/src/js/emailjs-config.js',
   '/src/img/logo.png',
-  '/src/img/background.png',
+  '/src/img/background.webp',
   '/src/img/code-apps.svg',
   '/src/img/services/service-01.webp',
   '/src/img/services/service-02.webp',

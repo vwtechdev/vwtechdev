@@ -18,6 +18,7 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Integração WhatsApp**: Botão flutuante para contato direto
 - **Modais Interativos**: Sistema de planos com animações fluidas
 - **Lazy Loading**: Carregamento otimizado de imagens
+- **Imagens WebP**: Assets convertidos para melhor compressão e qualidade
 - **PWA Offline**: Suporte à instalação no dispositivo e navegação com cache inteligente
 - **Atualização Automática**: Ano do rodapé atualizado dinamicamente via JavaScript
 
@@ -74,6 +75,8 @@ vwtechdev/
 │   │   ├── index.js       # JavaScript principal
 │   │   └── emailjs-config.js # Configuração EmailJS
 │   └── img/               # Imagens e assets
+│       ├── projects/      # Imagens dos projetos
+│       └── services/      # Imagens dos serviços
 ├── README.md              # Documentação
 └── LICENSE                # Licença do projeto
 ```
@@ -127,7 +130,7 @@ Para configurar o sistema de envio de emails:
 
 - **Meta Tags**: Título, descrição e palavras-chave otimizados
 - **Estrutura Semântica**: HTML5 com tags semânticas
-- **Imagens Otimizadas**: Lazy loading e compressão
+- **Imagens Otimizadas**: Lazy loading, compressão e formato WebP
 - **CSS Minificado**: Estilos otimizados para produção
 - **Google Analytics**: Rastreamento de visitantes
 
@@ -158,7 +161,10 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 🔄 Histórico de Versões
 
-### v3.1.0 (Atual - Dezembro 2025)
+### v3.2.0 (Atual - Fevereiro 2026)
+- ✅ **Imagens WebP**: Conversão de assets para melhor performance
+
+### v3.1.0 (Dezembro 2025)
 - ✅ **PWA Ativo**: Registro de Service Worker e suporte a navegação offline
 - ✅ **Preload de Recursos**: Pré-carregamento de imagens críticas para melhor performance
 - ✅ **Notificações de UI**: Mensagens de feedback para carregamento e erros
