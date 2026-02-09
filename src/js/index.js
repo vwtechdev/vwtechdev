@@ -1,5 +1,40 @@
 // VWTech Dev - Main JavaScript
 
+// Scroll lock helpers (evita travamento no iOS/Android ao abrir overlays)
+var scrollLockCount = 0;
+var scrollLockY = 0;
+
+function lockScroll() {
+    try {
+        scrollLockCount += 1;
+        if (scrollLockCount > 1) return;
+        scrollLockY = window.scrollY || window.pageYOffset || 0;
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + scrollLockY + 'px';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.width = '100%';
+        document.body.style.overflow = 'hidden';
+    } catch (e) {}
+}
+
+function unlockScroll() {
+    try {
+        if (scrollLockCount === 0) return;
+        scrollLockCount -= 1;
+        if (scrollLockCount > 0) return;
+        var top = document.body.style.top || '0';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        document.body.style.overflow = '';
+        var y = Math.abs(parseInt(top, 10)) || 0;
+        window.scrollTo(0, y);
+    } catch (e) {}
+}
+
 // Plans Modal Functions - Global Scope
 function openPlansModal(serviceType) {
     const modal = document.getElementById('plansModal');
@@ -47,7 +82,7 @@ function openPlansModal(serviceType) {
     
     // Show modal
     modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     
     // Add fade-in animation
     modal.style.opacity = '0';
@@ -68,7 +103,7 @@ function closePlansModal() {
     
     // Hide modal
     modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
+    unlockScroll();
 }
 
 // Close modal when clicking outside
@@ -196,7 +231,7 @@ function initMobileMenu() {
         mobileMenu.classList.add('mobile-menu-open');
         mobileMenuOverlay.classList.add('active');
         menuToggle.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        lockScroll();
         
         // Hide floating buttons when drawer opens
         const floatingButtons = document.querySelector('.floating-buttons');
@@ -209,7 +244,7 @@ function initMobileMenu() {
         mobileMenu.classList.remove('mobile-menu-open');
         mobileMenuOverlay.classList.remove('active');
         menuToggle.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        unlockScroll();
         
         // Show floating buttons again when drawer closes
         const floatingButtons = document.querySelector('.floating-buttons');
@@ -324,7 +359,7 @@ function initSmoothScrolling() {
                             mobileMenu.classList.remove('mobile-menu-open');
                             if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('active');
                             if (menuToggle) menuToggle.classList.remove('active');
-                            document.body.style.overflow = 'auto';
+                            unlockScroll();
                         }
                     }
                 } catch (error) {
@@ -681,6 +716,37 @@ function preloadCriticalImages() {
     }
 }
 
+// Lazy load de widgets terceiros (evita travar scroll no mobile)
+function initThirdPartyWidgets() {
+    try {
+        const elfsightContainer = document.querySelector('.elfsight-app-adece873-304f-457f-aa47-db1527fcc652');
+        if (!elfsightContainer) return;
+
+        function loadElfsight() {
+            if (window.__elfsightLoaded) return;
+            window.__elfsightLoaded = true;
+            const script = document.createElement('script');
+            script.src = 'https://static.elfsight.com/platform/platform.js';
+            script.async = true;
+            document.body.appendChild(script);
+        }
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        loadElfsight();
+                        observer.disconnect();
+                    }
+                });
+            }, { rootMargin: '200px 0px' });
+            observer.observe(elfsightContainer);
+        } else {
+            setTimeout(loadElfsight, 2000);
+        }
+    } catch (e) {}
+}
+
 // Update current year in footer
 function updateCurrentYear() {
     try {
@@ -720,6 +786,7 @@ function initDeferred() {
     try {
         initAOS();
         preloadCriticalImages();
+        initThirdPartyWidgets();
         registerServiceWorker();
     } catch (err) {
         // fallback silencioso

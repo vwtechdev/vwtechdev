@@ -21,6 +21,21 @@ html, body {
     line-height: 1.6;
 }
 
+/* Evita repaint pesado do background em mobile */
+@media (hover: none) and (pointer: coarse) {
+    html, body {
+        background-attachment: scroll;
+    }
+}
+
+/* Viewport correto no mobile (barra do navegador) */
+@media (max-width: 767px) {
+    html, body {
+        min-height: 100svh;
+        min-height: 100dvh;
+    }
+}
+
 /* Container */
 .container {
     max-width: 1200px;
@@ -1638,6 +1653,18 @@ img[loading="lazy"]:not(.loaded) {
         -webkit-backdrop-filter: none;
         background-color: var(--primary-black);
     }
+
+    .service-card,
+    .plan-card,
+    .about-card,
+    .contact-form,
+    .info-card,
+    .plans-modal-content,
+    .plan-item {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgba(31, 41, 55, 0.95);
+    }
     
     /* Sem blur nas seções = primeira pintura (LCP) mais rápida */
     .section {
@@ -1686,7 +1713,8 @@ img[loading="lazy"]:not(.loaded) {
         top: 0;
         right: -100%;
         width: 280px;
-        height: 100vh;
+        height: 100svh;
+        height: 100dvh;
         background: linear-gradient(135deg, var(--primary-black) 0%, rgba(7, 8, 8, 0.98) 100%);
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
@@ -1798,7 +1826,8 @@ img[loading="lazy"]:not(.loaded) {
     
     .hero {
         padding: 5rem 0 3rem;
-        min-height: 90vh;
+        min-height: 90svh;
+        min-height: 90dvh;
     }
     
     .hero-title {
