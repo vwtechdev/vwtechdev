@@ -155,8 +155,8 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 📞 Contato
 
 - **Email**: vwtechdev@gmail.com
-- **WhatsApp**: +55 47 99289-3609
-- **Endereço**: Estrada Dona Francisca, 988 - Canoinhas/SC
+- **WhatsApp**: +5547992893609
+- **Endereço**: R. Joaquim Vieira de Lima, 1100, Campo d' Água Verde, Canoinhas-SC 89466-324
 - **Website**: [vwtechdev.com.br](https://vwtechdev.com.br)
 
 ## 🔄 Histórico de Versões
