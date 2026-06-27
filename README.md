@@ -1,6 +1,6 @@
-# VWTech Dev - Site Oficial
+# VWTech Dev | TI para Empresas
 
-Site oficial da VWTech Dev, empresa especializada em desenvolvimento web, aplicativos mobile e soluções tecnológicas em Canoinhas/SC.
+Site oficial da VWTech Dev, empresa de TI para empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.
 
 ## 🚀 Sobre o Projeto
 
@@ -14,7 +14,6 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Acessibilidade**: Navegação por teclado, leitores de tela e ARIA labels
 - **Navigation Drawer**: Menu mobile moderno que desliza da direita
 - **Animações Suaves**: Transições e efeitos visuais elegantes
-- **Formulário de Contato**: Integração com EmailJS para envio de mensagens
 - **Integração WhatsApp**: Botão flutuante para contato direto
 - **Modais Interativos**: Sistema de planos com animações fluidas
 - **Lazy Loading**: Carregamento otimizado de imagens
@@ -30,14 +29,13 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Font Awesome 6.4.0**: Ícones vetoriais de alta qualidade
 - **Google Fonts (Inter)**: Tipografia moderna e legível
 - **AOS (Animate On Scroll)**: Animações baseadas em scroll
-- **EmailJS**: Sistema de envio de emails via JavaScript
 - **Service Worker / PWA**: Suporte offline e instalação como aplicativo
 - **Schema.org (JSON-LD)**: Dados estruturados para melhor ranqueamento local no Google
 - **Google Analytics 4**: Monitoramento de tráfego e eventos
 
 ## 📱 Seções do Site
 
-1. **Hero Section**: Apresentação principal com call-to-action
+1. **Hero Section**: Slogan "TI para Empresas" com call-to-action
 2. **Quem Somos**: História e fundadores da empresa
 3. **Serviços**: Portfólio de soluções oferecidas
 4. **Planos**: Opções de assinatura com preços
@@ -72,8 +70,7 @@ vwtechdev/
 │   ├── css/
 │   │   └── base.css       # Estilos principais
 │   ├── js/
-│   │   ├── index.js       # JavaScript principal
-│   │   └── emailjs-config.js # Configuração EmailJS
+│   │   └── index.js       # JavaScript principal
 │   └── img/               # Imagens e assets
 │       ├── projects/      # Imagens dos projetos
 │       └── services/      # Imagens dos serviços
@@ -110,21 +107,11 @@ O site é totalmente responsivo e funciona perfeitamente em:
 - **Scroll Suave**: Navegação interna com animação
 - **Lazy Loading**: Carregamento otimizado de imagens
 - **Validação de Formulário**: Verificação em tempo real
-- **Integração EmailJS**: Envio automático de mensagens
 - **Botão WhatsApp**: Redirecionamento direto para contato
 - **Back to Top**: Navegação rápida para o topo da página
 - **Notificações de Interface**: Feedback visual para carregamento e erros
 - **Preload de Imagens Críticas**: Melhora a percepção de velocidade
 - **PWA / Service Worker**: Registro automático para navegação offline quando suportado
-
-## 📧 Configuração EmailJS
-
-Para configurar o sistema de envio de emails:
-
-1. Crie uma conta em [EmailJS](https://www.emailjs.com/)
-2. Configure um serviço de email
-3. Crie um template de email
-4. Atualize as configurações em `src/js/emailjs-config.js`
 
 ## 🎯 SEO e Performance
 
@@ -159,41 +146,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - **Endereço**: R. Joaquim Vieira de Lima, 1100, Campo d' Água Verde, Canoinhas-SC 89466-324
 - **Website**: [vwtechdev.com.br](https://vwtechdev.com.br)
 
-## 🔄 Histórico de Versões
-
-### v3.2.0 (Atual - Fevereiro 2026)
-- ✅ **Imagens WebP**: Conversão de assets para melhor performance
-
-### v3.1.0 (Dezembro 2025)
-- ✅ **PWA Ativo**: Registro de Service Worker e suporte a navegação offline
-- ✅ **Preload de Recursos**: Pré-carregamento de imagens críticas para melhor performance
-- ✅ **Notificações de UI**: Mensagens de feedback para carregamento e erros
-- ✅ **Melhorias de Responsividade**: Ajustes finos em seções e componentes
-- ✅ **Otimizações Gerais**: Código JavaScript mais seguro, com fallbacks silenciosos
-
-### v3.0.0
-- ✅ **Navigation Drawer**: Menu mobile moderno que desliza da direita
-- ✅ **Botão Hambúrguer Animado**: Transformação suave para X
-- ✅ **Structured Data**: Schema.org para melhor SEO
-- ✅ **Responsividade Avançada**: Otimizações para todos os dispositivos
-- ✅ **Modais Otimizados**: Sistema de planos com melhor UX
-- ✅ **Performance**: Remoção de console.log e otimizações
-- ✅ **Acessibilidade**: Melhorias em ARIA labels e navegação
-- ✅ **SEO**: Sitemap e robots.txt atualizados
-
-### v2.0.0
-- ✅ Remoção completa do TailwindCSS
-- ✅ Recriação com CSS puro e moderno
-- ✅ Implementação da fonte Inter
-- ✅ Atualização para Font Awesome 6.4.0
-- ✅ Melhorias na responsividade
-- ✅ Otimização de performance
-
-### v1.0.0
-- ✅ Site inicial com TailwindCSS
-- ✅ Funcionalidades básicas
-- ✅ Design responsivo
-
----
-
-**VWTech Dev** - Transformando ideias em soluções digitais de alto impacto! 🚀 
+**VWTech Dev** - TI para Empresas
