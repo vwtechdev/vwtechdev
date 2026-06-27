@@ -289,6 +289,58 @@ function initMobileMenu() {
     }
 }
 
+// Language selector dropdown (i18n UI only — no translation logic yet)
+function initLanguageSelector() {
+    try {
+        const langToggle = document.getElementById('lang-toggle');
+        const langDropdown = document.getElementById('lang-dropdown');
+        const langContainer = langToggle ? langToggle.closest('.navbar-lang') : null;
+        if (!langToggle || !langDropdown || !langContainer) return;
+
+        function closeDropdown() {
+            langContainer.classList.remove('open');
+            langToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        function openDropdown() {
+            langContainer.classList.add('open');
+            langToggle.setAttribute('aria-expanded', 'true');
+        }
+
+        langToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (langContainer.classList.contains('open')) {
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
+        });
+
+        // Close when clicking an option (i18n wiring happens later)
+        const options = langDropdown.querySelectorAll('.navbar-lang-option');
+        options.forEach(function(opt) {
+            opt.addEventListener('click', function() {
+                options.forEach(function(o) { o.setAttribute('aria-checked', 'false'); });
+                opt.setAttribute('aria-checked', 'true');
+                closeDropdown();
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', function(e) {
+            if (!langContainer.contains(e.target)) closeDropdown();
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeDropdown();
+        });
+    } catch (error) {
+        // Fallback silencioso
+    }
+}
+
 // Back to Top Button com verificação de segurança
 function initBackToTop() {
     try {
@@ -703,6 +755,7 @@ function initCritical() {
         updateCurrentYear();
         initNavbarScroll();
         initMobileMenu();
+        initLanguageSelector();
         initBackToTop();
         initSmoothScrolling();
         initContactForm();
