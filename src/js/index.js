@@ -653,27 +653,6 @@ function throttleRAF(callback) {
     };
 }
 
-// Preload critical images com verificação de segurança
-function preloadCriticalImages() {
-    try {
-        const criticalImages = [
-            'src/img/background.webp'
-        ];
-        
-        criticalImages.forEach(src => {
-            const link = document.createElement('link');
-            link.rel = 'preload';
-            link.as = 'image';
-            link.href = src;
-            if (document.head) {
-                document.head.appendChild(link);
-            }
-        });
-    } catch (error) {
-        // Fallback silencioso
-    }
-}
-
 // Lazy load de widgets terceiros (evita travar scroll no mobile)
 function initThirdPartyWidgets() {
     try {
@@ -744,7 +723,6 @@ function initCritical() {
 function initDeferred() {
     try {
         initAOS();
-        preloadCriticalImages();
         initThirdPartyWidgets();
     } catch (err) {
         // fallback silencioso

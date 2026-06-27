@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- LCP: preload da imagem no topo = request começa antes de qualquer outro recurso -->
-    <link rel="preload" href="src/img/background.webp" as="image" fetchpriority="high">
-    
     <!-- SEO Meta Tags -->
     <title>VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil</title>
     <meta name="description" content="VWTech Dev: TI para Empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.">
@@ -139,11 +136,6 @@
     <!-- Hero Section -->
     <main>
         <section id="home" class="hero" role="banner" aria-label="Seção principal">
-        <!-- LCP: WebP quando existir (bem menor), PNG fallback. decoding=sync para pintar assim que carregar. -->
-        <picture>
-            <source type="image/webp" srcset="src/img/background.webp">
-            <img class="hero-lcp-image" src="src/img/background.png" fetchpriority="high" loading="eager" decoding="sync" alt="" width="1536" height="1024">
-        </picture>
         <div class="hero-bg" aria-hidden="true"></div>
         <div class="container">
             <div class="hero-content">
@@ -197,7 +189,8 @@
             <h2 id="about-title" class="section-title">Quem <span class="text-highlight">Somos</span></h2>
             <p class="section-subtitle">Conheça nossa história e a equipe que faz a VWTech Dev acontecer.</p>
             
-            <div class="about-card" data-aos="fade-up">
+            <div data-aos="fade-up">
+            <div class="about-card">
                 <div class="about-content">
                     <div class="about-text-section">
                         <h3 class="about-title">Nossa História</h3>
@@ -239,6 +232,7 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
@@ -249,7 +243,8 @@
             <p class="section-subtitle">Oferecemos uma ampla gama de serviços para atender às necessidades do seu negócio.</p>
             <div class="services-grid">
                 <!-- Service 1 -->
-                <div class="service-card" data-aos="fade-up">
+                <div data-aos="fade-up">
+                <div class="service-card">
                     <div class="service-image">
                         <img src="src/img/services/service-01.webp" alt="Desenvolvimento de sites responsivos e sistemas web personalizados - VWTech Dev" loading="lazy">
                     </div>
@@ -257,8 +252,10 @@
                     <p class="service-description">Criamos sites e aplicações web responsivas, otimizadas para performance e conversão, utilizando as melhores tecnologias do mercado.</p>
                     <button class="service-button" onclick="openPlansModal('web')">Ver Planos</button>
                 </div>
+                </div>
                 <!-- Service 2 -->
-                <div class="service-card" data-aos="fade-up">
+                <div data-aos="fade-up">
+                <div class="service-card">
                     <div class="service-image">
                         <img src="src/img/services/service-02.webp" alt="Desenvolvimento de aplicativos mobile para Android e iOS - VWTech Dev" loading="lazy">
                     </div>
@@ -266,8 +263,10 @@
                     <p class="service-description">Desenvolvemos aplicativos nativos e híbridos para Android, com foco em experiência do usuário e funcionalidades exclusivas.</p>
                     <button class="service-button" onclick="openPlansModal('mobile')">Ver Planos</button>
                 </div>
+                </div>
                 <!-- Service 3 -->
-                <div class="service-card" data-aos="fade-up">
+                <div data-aos="fade-up">
+                <div class="service-card">
                     <div class="service-image">
                         <img src="src/img/services/service-03.webp" alt="Montagem e upgrade de PCs Gamer personalizados - VWTech Dev" loading="lazy">
                     </div>
@@ -275,8 +274,10 @@
                     <p class="service-description">Montagem de PC Gamer com peças de qualidade e preço acessível. Orçamento sem compromisso.</p>
                     <button class="service-button" onclick="openPlansModal('gamer')">Ver Planos</button>
                 </div>
+                </div>
                 <!-- Service 4 -->
-                <div class="service-card" data-aos="fade-up">
+                <div data-aos="fade-up">
+                <div class="service-card">
                     <div class="service-image">
                         <img src="src/img/services/service-04.webp" alt="Manutenção e reparo de computadores, notebooks e celulares - VWTech Dev" loading="lazy">
                     </div>
@@ -284,8 +285,10 @@
                     <p class="service-description">Manutenção de computadores e celulares, troca de tela, bateria, carregador, etc.</p>
                     <button class="service-button" onclick="openPlansModal('maintenance')">Ver Planos</button>
                 </div>
+                </div>
                 <!-- Service 5 -->
-                <div class="service-card" data-aos="fade-up">
+                <div data-aos="fade-up">
+                <div class="service-card">
                     <div class="service-image">
                         <img src="src/img/services/service-05.webp" alt="Suporte técnico remoto e presencial para computadores e dispositivos - VWTech Dev" loading="lazy">
                     </div>
@@ -293,14 +296,17 @@
                     <p class="service-description">Suporte remoto rápido e eficiente! Chame no WhatsApp e resolva tudo por AnyDesk.</p>
                     <button class="service-button" onclick="openPlansModal('support')">Ver Planos</button>
                 </div>
+                </div>
                 <!-- Service 6 -->
-                <div class="service-card" data-aos="fade-up">
+                <div data-aos="fade-up">
+                <div class="service-card">
                     <div class="service-image">
                         <img src="src/img/services/service-06.webp" alt="Atendimento técnico presencial em residências e empresas - VWTech Dev" loading="lazy">
                     </div>
                     <h3 class="service-title">Atendimento Presencial</h3>
                     <p class="service-description">Atendimento presencial para o Planalto Norte Catarinense. Faça seu agendamento agora mesmo!</p>
                     <button class="service-button" onclick="openPlansModal('onsite')">Ver Planos</button>
+                </div>
                 </div>
             </div>
         </div>
@@ -314,7 +320,8 @@
             
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card" data-aos="fade-up">
+                <div data-aos="fade-up">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="src/img/projects/project-01.webp" alt="Sistema Delta Monitor - Geração de Recibos Automáticos" loading="lazy">
                     </div>
@@ -322,9 +329,11 @@
                     <p class="project-description">Sistema Web de Geração de Recibos Automáticos para empresa Delta Monitoramento Canoinhas-SC</p>
                     <a href="https://github.com/vwtechdev/delta-monitor" target="_blank" class="project-button">Saiba Mais</a>
                 </div>
-                
+                </div>
+
                 <!-- Project 2 -->
-                <div class="project-card" data-aos="fade-up">
+                <div data-aos="fade-up">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="src/img/projects/project-02.webp" alt="Landing page Alpha Automation and Robotics - Automação Industrial" loading="lazy">
                     </div>
@@ -332,15 +341,18 @@
                     <p class="project-description">Landing page moderna e responsiva para a Alpha Automation and Robotics, empresa especializada em automação industrial e robótica.</p>
                     <a href="https://www.alphaautomationbr.com/" target="_blank" class="project-button">Saiba Mais</a>
                 </div>
+                </div>
 
                 <!-- Project 3 -->
-                <div class="project-card" data-aos="fade-up">
+                <div data-aos="fade-up">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="src/img/projects/project-03.webp" alt="Sistema NationsFlow - Controle Financeiro da Igreja Pentecostal Nações para Cristo" loading="lazy">
                     </div>
                     <h3 class="project-title">Nations Flow</h3>
                     <p class="project-description">Sistema Web de Controle Financeiro para a Igreja Pentecostal Nações para Cristo.</p>
                     <a href="https://www.nationsflow.com.br/" target="_blank" class="project-button">Saiba Mais</a>
+                </div>
                 </div>
             </div>
         </div>
