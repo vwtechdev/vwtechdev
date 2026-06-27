@@ -18,7 +18,6 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Modais Interativos**: Sistema de planos com animações fluidas
 - **Lazy Loading**: Carregamento otimizado de imagens
 - **Imagens WebP**: Assets convertidos para melhor compressão e qualidade
-- **PWA Offline**: Suporte à instalação no dispositivo e navegação com cache inteligente
 - **Atualização Automática**: Ano do rodapé atualizado dinamicamente via JavaScript
 
 ## 🛠️ Tecnologias Utilizadas
@@ -29,7 +28,7 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Font Awesome 6.4.0**: Ícones vetoriais de alta qualidade
 - **Google Fonts (Inter)**: Tipografia moderna e legível
 - **AOS (Animate On Scroll)**: Animações baseadas em scroll
-- **Service Worker / PWA**: Suporte offline e instalação como aplicativo
+
 - **Schema.org (JSON-LD)**: Dados estruturados para melhor ranqueamento local no Google
 - **Google Analytics 4**: Monitoramento de tráfego e eventos
 
@@ -111,7 +110,7 @@ O site é totalmente responsivo e funciona perfeitamente em:
 - **Back to Top**: Navegação rápida para o topo da página
 - **Notificações de Interface**: Feedback visual para carregamento e erros
 - **Preload de Imagens Críticas**: Melhora a percepção de velocidade
-- **PWA / Service Worker**: Registro automático para navegação offline quando suportado
+
 
 ## 🎯 SEO e Performance
 

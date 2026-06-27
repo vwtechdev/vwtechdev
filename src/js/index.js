@@ -746,7 +746,6 @@ function initDeferred() {
         initAOS();
         preloadCriticalImages();
         initThirdPartyWidgets();
-        registerServiceWorker();
     } catch (err) {
         // fallback silencioso
     }
@@ -756,7 +755,7 @@ function initDeferred() {
 function initApp() {
     try {
         initCritical();
-        // AOS, preload e Service Worker depois da primeira pintura
+        // AOS e preload depois da primeira pintura
         if ('requestIdleCallback' in window) {
             requestIdleCallback(function() { initDeferred(); }, { timeout: 2000 });
         } else {
@@ -764,25 +763,6 @@ function initApp() {
         }
     } catch (error) {
         showNotification('Erro ao carregar algumas funcionalidades. Recarregue a página se necessário.', 'error');
-    }
-}
-
-// Service Worker Registration
-function registerServiceWorker() {
-    try {
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(function(registration) {
-                        // Service Worker registered successfully
-                    })
-                    .catch(function(error) {
-                        // Service Worker registration failed - fallback silencioso
-                    });
-            });
-        }
-    } catch (error) {
-        // Fallback silencioso
     }
 }
 
