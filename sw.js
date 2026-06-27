@@ -1,11 +1,10 @@
 // VWTech Dev - Service Worker
-const CACHE_NAME = 'vwtechdev-v1.0.0';
+const CACHE_NAME = 'vwtechdev-v1.1.0';
 const urlsToCache = [
   '/',
   '/index.html',
   '/src/css/base.css',
   '/src/js/index.js',
-  '/src/js/emailjs-config.js',
   '/src/img/logo.png',
   '/src/img/background.webp',
   '/src/img/code-apps.svg',
@@ -22,8 +21,7 @@ const urlsToCache = [
   'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
   'https://unpkg.com/aos@2.3.1/dist/aos.css',
-  'https://unpkg.com/aos@2.3.1/dist/aos.js',
-  'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js'
+  'https://unpkg.com/aos@2.3.1/dist/aos.js'
 ];
 
 // Install event - cache resources

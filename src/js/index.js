@@ -372,83 +372,22 @@ function initSmoothScrolling() {
     }
 }
 
-// Form validation and submission with EmailJS com verificação de segurança
-function initContactForm() {
+// Phone input mask (BR): (XX) XXXXX-XXXX
+function initPhoneMask() {
     try {
-        const contactForm = document.getElementById('contact-form');
-        
-        if (!contactForm) return;
-        
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            try {
-                // Basic form validation
-                const name = document.getElementById('name')?.value?.trim();
-                const email = document.getElementById('email')?.value?.trim();
-                const phone = document.getElementById('phone')?.value?.trim();
-                const message = document.getElementById('message')?.value?.trim();
-                
-                if (!name || !email || !message) {
-                    showNotification('Por favor, preencha todos os campos obrigatórios.', 'error');
-                    return;
-                }
-                
-                if (!isValidEmail(email)) {
-                    showNotification('Por favor, insira um e-mail válido.', 'error');
-                    return;
-                }
-                
-                // Get submit button
-                const submitButton = contactForm.querySelector('button[type="submit"]');
-                if (!submitButton) return;
-                
-                const originalText = submitButton.textContent;
-                
-                // Update button state with loading animation
-                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-                submitButton.disabled = true;
-                submitButton.style.opacity = '0.7';
-                submitButton.style.cursor = 'not-allowed';
-                
-                // Add loading state to form
-                contactForm.style.opacity = '0.8';
-                contactForm.style.pointerEvents = 'none';
-                
-                // Prepare template parameters
-                const templateParams = {
-                    user_name: name,
-                    user_email: email,
-                    user_phone: phone || '',
-                    message: message,
-                    to_email: 'vwtechdev@gmail.com'
-                };
-                
-                // Send email using EmailJS
-                if (typeof sendEmail === 'function') {
-                    sendEmail(templateParams)
-                        .then(function(response) {
-                            showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
-                            contactForm.reset();
-                            
-                            // Add success animation
-                            submitButton.innerHTML = '<i class="fas fa-check"></i> Enviado!';
-                            submitButton.style.background = '#22c55e';
-                            
-                            setTimeout(() => {
-                                resetFormState(submitButton, originalText, contactForm);
-                            }, 2000);
-                        }, function(error) {
-                            showNotification('Erro ao enviar mensagem. Tente novamente ou entre em contato pelo WhatsApp.', 'error');
-                            resetFormState(submitButton, originalText, contactForm);
-                        });
-                } else {
-                    showNotification('Serviço de email não disponível. Tente novamente mais tarde ou entre em contato pelo WhatsApp.', 'error');
-                    resetFormState(submitButton, originalText, contactForm);
-                }
-            } catch (error) {
-                showNotification('Erro inesperado. Tente novamente ou entre em contato pelo WhatsApp.', 'error');
-                resetFormState(submitButton, originalText, contactForm);
+        const phoneInput = document.getElementById('phone');
+        if (!phoneInput) return;
+
+        phoneInput.addEventListener('input', function() {
+            var value = this.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+
+            if (value.length > 6) {
+                this.value = '(' + value.slice(0, 2) + ') ' + value.slice(2, 7) + '-' + value.slice(7);
+            } else if (value.length > 2) {
+                this.value = '(' + value.slice(0, 2) + ') ' + value.slice(2);
+            } else if (value.length > 0) {
+                this.value = '(' + value;
             }
         });
     } catch (error) {
@@ -456,17 +395,36 @@ function initContactForm() {
     }
 }
 
-// Helper function to reset form state
-function resetFormState(submitButton, originalText, contactForm) {
+// Form validation and redirect to WhatsApp
+function initContactForm() {
     try {
-        submitButton.innerHTML = originalText;
-        submitButton.disabled = false;
-        submitButton.style.opacity = '1';
-        submitButton.style.cursor = 'pointer';
-        submitButton.style.background = '';
-        
-        contactForm.style.opacity = '1';
-        contactForm.style.pointerEvents = 'auto';
+        const contactForm = document.getElementById('contact-form');
+        if (!contactForm) return;
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            try {
+                const name = document.getElementById('name')?.value?.trim();
+                const email = document.getElementById('email')?.value?.trim();
+                const phone = document.getElementById('phone')?.value?.trim();
+                const message = document.getElementById('message')?.value?.trim();
+
+                if (!name || !email || !message) {
+                    showNotification('Por favor, preencha todos os campos obrigatórios.', 'error');
+                    return;
+                }
+
+                const phoneText = phone ? `Telefone: ${phone}.` : '';
+                const text = `Olá! Me chamo ${name}.\nE-mail: ${email}.\n${phoneText}\n\n${message}`;
+                const url = `https://api.whatsapp.com/send/?phone=5547992893609&text=${encodeURIComponent(text)}`;
+
+                window.open(url, '_blank');
+                contactForm.reset();
+            } catch (error) {
+                showNotification('Erro ao redirecionar para o WhatsApp. Tente novamente.', 'error');
+            }
+        });
     } catch (error) {
         // Fallback silencioso
     }
@@ -769,6 +727,7 @@ function initCritical() {
         initBackToTop();
         initSmoothScrolling();
         initContactForm();
+        initPhoneMask();
         initPlanButtons();
         initWhatsAppButton();
         handleScrollAnimations();

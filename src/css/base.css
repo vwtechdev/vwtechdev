@@ -1044,8 +1044,6 @@ html, body {
 
 .contact-form {
     background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-700) 100%);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
     padding: 2rem;
     border-radius: 1rem;
     border: 1px solid rgba(156, 163, 175, 0.2);
