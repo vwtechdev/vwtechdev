@@ -35,22 +35,30 @@ function unlockScroll() {
     } catch (e) {}
 }
 
+// i18n helper: retorna a tradução do idioma atual ou fallback pt-BR se i18n indisponível
+function tt(key, fallback) {
+    try {
+        if (window.i18n && typeof window.i18n.t === 'function') return window.i18n.t(key);
+    } catch (e) {}
+    return fallback;
+}
+
 // Plans Modal Functions - Global Scope
 function openPlansModal(serviceType) {
     const modal = document.getElementById('plansModal');
     if (!modal) {
-        showNotification('Erro: Modal não encontrado. Tente recarregar a página.', 'error');
+        showNotification(tt('notify.modalNotFound', 'Erro: Modal não encontrado. Tente recarregar a página.'), 'error');
         return;
     }
     
-    // Define service titles mapping
+    // Define service titles mapping (i18n com fallback pt-BR)
     const serviceTitles = {
-        'web': 'Desenvolvimento Web',
-        'mobile': 'Aplicativos Mobile',
-        'gamer': 'PC Gamer',
-        'maintenance': 'PC\'s e Celulares',
-        'support': 'Suporte Técnico',
-        'onsite': 'Atendimento Presencial'
+        'web': tt('services.web.title', 'Desenvolvimento Web'),
+        'mobile': tt('services.mobile.title', 'Aplicativos Mobile'),
+        'gamer': tt('services.gamer.title', 'PC Gamer'),
+        'maintenance': tt('services.maintenance.title', 'PC\'s e Celulares'),
+        'support': tt('services.support.title', 'Suporte Técnico'),
+        'onsite': tt('services.onsite.title', 'Atendimento Presencial')
     };
     
     // Update modal title with service name
@@ -70,7 +78,7 @@ function openPlansModal(serviceType) {
     if (selectedPlans) {
         selectedPlans.style.display = 'block';
     } else {
-        showNotification('Erro: Planos não encontrados para este serviço.', 'error');
+        showNotification(tt('notify.plansNotFound', 'Erro: Planos não encontrados para este serviço.'), 'error');
         return;
     }
     
@@ -289,7 +297,7 @@ function initMobileMenu() {
     }
 }
 
-// Language selector dropdown (i18n UI only — no translation logic yet)
+// Language selector dropdown (UI + i18n wiring)
 function initLanguageSelector() {
     try {
         const langToggle = document.getElementById('lang-toggle');
@@ -317,12 +325,14 @@ function initLanguageSelector() {
             }
         });
 
-        // Close when clicking an option (i18n wiring happens later)
+        // Aplica o idioma ao clicar numa opção (setLanguage atualiza aria-checked)
         const options = langDropdown.querySelectorAll('.navbar-lang-option');
         options.forEach(function(opt) {
             opt.addEventListener('click', function() {
-                options.forEach(function(o) { o.setAttribute('aria-checked', 'false'); });
-                opt.setAttribute('aria-checked', 'true');
+                var lang = opt.getAttribute('data-lang');
+                if (window.i18n && lang) {
+                    window.i18n.setLanguage(lang);
+                }
                 closeDropdown();
             });
         });
@@ -463,18 +473,22 @@ function initContactForm() {
                 const message = document.getElementById('message')?.value?.trim();
 
                 if (!name || !email || !message) {
-                    showNotification('Por favor, preencha todos os campos obrigatórios.', 'error');
+                    showNotification(tt('notify.fillRequired', 'Por favor, preencha todos os campos obrigatórios.'), 'error');
                     return;
                 }
 
-                const phoneText = phone ? `Telefone: ${phone}.` : '';
-                const text = `Olá! Me chamo ${name}.\nE-mail: ${email}.\n${phoneText}\n\n${message}`;
+                var phoneText = phone ? tt('contact.form.phoneLabelTpl', 'Telefone: {phone}.').replace('{phone}', phone) : '';
+                var text = tt('contact.form.whatsappTemplate', 'Olá! Me chamo {name}.\nE-mail: {email}.\n{phone}\n\n{message}')
+                    .replace('{name}', name)
+                    .replace('{email}', email)
+                    .replace('{phone}', phoneText)
+                    .replace('{message}', message);
                 const url = `https://api.whatsapp.com/send/?phone=5547992893609&text=${encodeURIComponent(text)}`;
 
                 window.open(url, '_blank');
                 contactForm.reset();
             } catch (error) {
-                showNotification('Erro ao redirecionar para o WhatsApp. Tente novamente.', 'error');
+                showNotification(tt('notify.whatsappError', 'Erro ao redirecionar para o WhatsApp. Tente novamente.'), 'error');
             }
         });
     } catch (error) {
@@ -610,11 +624,11 @@ function initPlanButtons() {
                     const planName = planTitle.textContent.trim();
                     if (!planName) return;
                     
-                    const message = encodeURIComponent(`Olá! Gostaria de assinar o plano ${planName}.`);
+                    const message = encodeURIComponent(tt('notify.planInquiryTpl', 'Olá! Gostaria de assinar o plano {plan}.').replace('{plan}', planName));
                     window.open(WHATSAPP_BASE_URL + message, '_blank');
                 } catch (error) {
                     // Fallback para WhatsApp genérico
-                    window.open(WHATSAPP_BASE_URL + encodeURIComponent('Olá! Gostaria de conhecer seus planos.'), '_blank');
+                    window.open(WHATSAPP_BASE_URL + encodeURIComponent(tt('notify.plansGeneral', 'Olá! Gostaria de conhecer seus planos.')), '_blank');
                 }
             });
         });
@@ -793,7 +807,7 @@ function initApp() {
             setTimeout(initDeferred, 100);
         }
     } catch (error) {
-        showNotification('Erro ao carregar algumas funcionalidades. Recarregue a página se necessário.', 'error');
+        showNotification(tt('notify.loadError', 'Erro ao carregar algumas funcionalidades. Recarregue a página se necessário.'), 'error');
     }
 }
 

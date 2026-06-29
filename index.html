@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Meta Tags -->
-    <title>VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil</title>
-    <meta name="description" content="VWTech Dev: TI para Empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.">
-    <meta name="keywords" content="desenvolvimento web Canoinhas, aplicativos mobile SC, sites responsivos, sistemas web personalizados, suporte técnico, manutenção computador, notebook, celular, Canoinhas SC, Santa Catarina, VWTech Dev, programação, tecnologia">
+    <title data-i18n="meta.title">VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil</title>
+    <meta name="description" data-i18n-attr="content:meta.description" content="VWTech Dev: TI para Empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.">
+    <meta name="keywords" data-i18n-attr="content:meta.keywords" content="desenvolvimento web Canoinhas, aplicativos mobile SC, sites responsivos, sistemas web personalizados, suporte técnico, manutenção computador, notebook, celular, Canoinhas SC, Santa Catarina, VWTech Dev, programação, tecnologia">
     <meta name="author" content="VWTech Dev - Vinicius e Wellinton">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="pt-BR">
@@ -18,8 +18,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vwtechdev.com.br/">
-    <meta property="og:title" content="VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil">
-    <meta property="og:description" content="VWTech Dev: TI para Empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.">
+    <meta property="og:title" data-i18n-attr="content:meta.ogTitle" content="VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil">
+    <meta property="og:description" data-i18n-attr="content:meta.ogDescription" content="VWTech Dev: TI para Empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.">
     <meta property="og:image" content="https://vwtechdev.com.br/src/img/logo.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -29,8 +29,8 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://vwtechdev.com.br/">
-    <meta property="twitter:title" content="VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil">
-    <meta property="twitter:description" content="VWTech Dev: TI para Empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.">
+    <meta property="twitter:title" data-i18n-attr="content:meta.ogTitle" content="VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil">
+    <meta property="twitter:description" data-i18n-attr="content:meta.ogDescription" content="VWTech Dev: TI para Empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.">
     <meta property="twitter:image" content="https://vwtechdev.com.br/src/img/logo.png">
     
     <!-- Additional SEO -->
@@ -91,23 +91,23 @@
     <header class="navbar">
         <div class="container">
             <div class="navbar-content">
-                <a href="#home" class="logo-container" aria-label="Voltar ao início">
+                <a href="#home" class="logo-container" aria-label="Voltar ao início" data-i18n-attr="aria-label:nav.logoAria">
                     <div class="logo-circle">
                         <img src="src/img/logo.png" alt="Logo VWTech Dev" loading="lazy">
                     </div>
                     <h1 class="logo-text">VW<span class="logo-highlight">Tech</span> Dev</h1>
                 </a>
-                <nav class="nav-menu" aria-label="Navegação principal">
-                    <a href="#about" class="nav-link">Quem Somos</a>
-                    <a href="#services" class="nav-link">Serviços</a>
-                    <a href="#projects" class="nav-link">Projetos</a>
-                    <a href="#contact" class="nav-link">Contato</a>
+                <nav class="nav-menu" aria-label="Menu">
+                    <a href="#about" class="nav-link" data-i18n="nav.about">Quem Somos</a>
+                    <a href="#services" class="nav-link" data-i18n="nav.services">Serviços</a>
+                    <a href="#projects" class="nav-link" data-i18n="nav.projects">Projetos</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav.contact">Contato</a>
                 </nav>
                 <div class="navbar-lang">
-                    <button class="navbar-lang-btn" aria-label="Selecionar idioma" aria-expanded="false" aria-haspopup="true" id="lang-toggle">
+                    <button class="navbar-lang-btn" aria-label="Selecionar idioma" aria-expanded="false" aria-haspopup="true" id="lang-toggle" data-i18n-attr="aria-label:nav.langToggleAria">
                         <i class="fas fa-globe"></i>
                     </button>
-                    <ul class="navbar-lang-dropdown" id="lang-dropdown" role="menu" aria-label="Idiomas disponíveis">
+                    <ul class="navbar-lang-dropdown" id="lang-dropdown" role="menu" aria-label="Idiomas disponíveis" data-i18n-attr="aria-label:nav.langDropdownAria">
                         <li role="none">
                             <button role="menuitemradio" aria-checked="true" data-lang="pt-BR" class="navbar-lang-option" type="button">
                                 <span class="lang-flag">🇧🇷</span> <span class="lang-label">Português</span>
@@ -125,18 +125,18 @@
                         </li>
                     </ul>
                 </div>
-                <div class="navbar-social-links" aria-label="Redes sociais">
-                    <a target="_blank" href="https://www.facebook.com/vwtechdev/" class="navbar-social-link" aria-label="Facebook" rel="noopener noreferrer">
+                <div class="navbar-social-links" aria-label="Redes sociais" data-i18n-attr="aria-label:nav.socialAria">
+                    <a target="_blank" href="https://www.facebook.com/vwtechdev/" class="navbar-social-link" aria-label="Facebook" rel="noopener noreferrer" data-i18n-attr="aria-label:nav.facebookAria">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a target="_blank" href="https://www.instagram.com/vwtechdev/" class="navbar-social-link" aria-label="Instagram" rel="noopener noreferrer">
+                    <a target="_blank" href="https://www.instagram.com/vwtechdev/" class="navbar-social-link" aria-label="Instagram" rel="noopener noreferrer" data-i18n-attr="aria-label:nav.instagramAria">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a target="_blank" href="https://github.com/vwtechdev" class="navbar-social-link" aria-label="GitHub" rel="noopener noreferrer">
+                    <a target="_blank" href="https://github.com/vwtechdev" class="navbar-social-link" aria-label="GitHub" rel="noopener noreferrer" data-i18n-attr="aria-label:nav.githubAria">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
-                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação" data-i18n-attr="aria-label:nav.menuToggleAria">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -145,58 +145,58 @@
             <!-- Mobile Menu Overlay -->
             <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
             <!-- Mobile Menu -->
-            <div class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
-                <a href="#home" class="mobile-nav-link">Início</a>
-                <a href="#about" class="mobile-nav-link">Quem Somos</a>
-                <a href="#services" class="mobile-nav-link">Serviços</a>
-                <a href="#projects" class="mobile-nav-link">Projetos</a>
-                <a href="#contact" class="mobile-nav-link">Contato</a>
+            <div class="mobile-menu" id="mobile-menu" aria-label="Menu mobile" data-i18n-attr="aria-label:nav.mobileMenuAria">
+                <a href="#home" class="mobile-nav-link" data-i18n="nav.home">Início</a>
+                <a href="#about" class="mobile-nav-link" data-i18n="nav.about">Quem Somos</a>
+                <a href="#services" class="mobile-nav-link" data-i18n="nav.services">Serviços</a>
+                <a href="#projects" class="mobile-nav-link" data-i18n="nav.projects">Projetos</a>
+                <a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">Contato</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <main>
-        <section id="home" class="hero" role="banner" aria-label="Seção principal">
+        <section id="home" class="hero" role="banner" aria-label="Seção principal" data-i18n-attr="aria-label:hero.sectionAria">
         <div class="hero-bg" aria-hidden="true"></div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text" data-aos="fade-right" data-aos-delay="200">
-                        <h1 class="hero-title">
+                        <h1 class="hero-title" data-i18n-html="hero.title">
                         <span class="text-highlight">Tecnologia</span> para Empresas
                     </h1>
-                    <p class="hero-description">
-                        Soluções completas em tecnologia para o seu negócio. 
+                    <p class="hero-description" data-i18n="hero.description">
+                        Soluções completas em tecnologia para o seu negócio.
                         Infraestrutura, suporte e sistemas com atendimento local e remoto.
                     </p>
-                    <ul class="hero-features" role="list" aria-label="Nossos diferenciais">
+                    <ul class="hero-features" role="list" aria-label="Nossos diferenciais" data-i18n-attr="aria-label:hero.featuresAria">
                         <li class="hero-feature">
                             <i class="fas fa-laptop-code" aria-hidden="true"></i>
-                            <span>Soluções completas em tecnologia</span>
+                            <span data-i18n="hero.feature1">Soluções completas em tecnologia</span>
                         </li>
                         <li class="hero-feature">
                             <i class="fas fa-server" aria-hidden="true"></i>
-                            <span>Infraestrutura, suporte e sistemas</span>
+                            <span data-i18n="hero.feature2">Infraestrutura, suporte e sistemas</span>
                         </li>
                         <li class="hero-feature">
                             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                            <span>Atendimento local e remoto</span>
+                            <span data-i18n="hero.feature3">Atendimento local e remoto</span>
                         </li>
                     </ul>
                     <div class="hero-buttons">
-                        <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-whatsapp" aria-label="Falar no WhatsApp">
-                            <i class="fab fa-whatsapp" aria-hidden="true"></i> 
-                            <span>Solicitar Orçamento Grátis</span>
+                        <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-whatsapp" aria-label="Falar no WhatsApp" data-i18n-attr="aria-label:hero.btnPrimaryAria" data-i18n-whatsapp="hero.btnPrimaryWhatsapp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            <span data-i18n="hero.btnPrimary">Solicitar Orçamento Grátis</span>
                             <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </a>
                         <div class="hero-buttons-secondary">
-                            <a href="#services" class="btn btn-secondary" aria-label="Conhecer nossos serviços">
-                            <i class="fas fa-rocket" aria-hidden="true"></i> 
-                                <span>Ver Serviços</span>
+                            <a href="#services" class="btn btn-secondary" aria-label="Conhecer nossos serviços" data-i18n-attr="aria-label:hero.btnSecondaryAria">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                                <span data-i18n="hero.btnSecondary">Ver Serviços</span>
                         </a>
-                            <a href="#contact" class="btn btn-outline" aria-label="Entrar em contato">
-                                <i class="fas fa-envelope" aria-hidden="true"></i> 
-                                <span>Contato</span>
+                            <a href="#contact" class="btn btn-outline" aria-label="Entrar em contato" data-i18n-attr="aria-label:hero.btnOutlineAria">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <span data-i18n="hero.btnOutline">Contato</span>
                         </a>
                         </div>
                     </div>
@@ -208,34 +208,34 @@
     <!-- Quem Somos Section -->
     <section id="about" class="section" aria-labelledby="about-title">
         <div class="container">
-            <h2 id="about-title" class="section-title">Quem <span class="text-highlight">Somos</span></h2>
-            <p class="section-subtitle">Conheça nossa história e a equipe que faz a VWTech Dev acontecer.</p>
+            <h2 id="about-title" class="section-title" data-i18n-html="about.title">Quem <span class="text-highlight">Somos</span></h2>
+            <p class="section-subtitle" data-i18n="about.subtitle">Conheça nossa história e a equipe que faz a VWTech Dev acontecer.</p>
             
             <div data-aos="fade-up">
             <div class="about-card">
                 <div class="about-content">
                     <div class="about-text-section">
-                        <h3 class="about-title">Nossa História</h3>
-                        <p class="about-text">
+                        <h3 class="about-title" data-i18n="about.historyTitle">Nossa História</h3>
+                        <p class="about-text" data-i18n="about.historyText">
                             Fundada em 2019 na cidade de Canoinhas-SC, Brasil, a VWTech Dev nasceu da visão dos irmãos Vinicius Vieira (fundador) e Wellinton Vieira (co-fundador). Inicialmente conhecida como Vieirateam, a empresa busca aprimorar o desenvolvimento de sistemas web, aplicativos móveis com soluções tecnológicas inovadoras.
                         </p>
                         
-                        <h3 class="about-title">Nossa Missão</h3>
-                        <p class="about-text">
+                        <h3 class="about-title" data-i18n="about.missionTitle">Nossa Missão</h3>
+                        <p class="about-text" data-i18n="about.missionText">
                             Oferecer soluções completas de TI para empresas, combinando infraestrutura, suporte e sistemas com atendimento personalizado e excelência técnica. Com um compromisso constante com a qualidade e a inovação, buscamos entregar serviços que não apenas atendam, mas superem as expectativas dos nossos clientes.
                         </p>
                     </div>
                     
                     <div class="founders-section">
-                        <h3 class="about-title">Nossa Equipe</h3>
+                        <h3 class="about-title" data-i18n="about.teamTitle">Nossa Equipe</h3>
                         <div class="founders">
                             <div class="founder">
                                 <img src="https://avatars.githubusercontent.com/u/38732035?v=4" alt="Vinicius Vieira - Fundador da VWTech Dev" class="founder-image" loading="lazy" />
                                 <div class="founder-info">
                                     <span class="founder-name">Vinicius Vieira</span>
-                                    <span class="founder-role">Fundador</span>
-                                    <a href="https://github.com/viniciusvsantos" target="_blank" class="founder-github" title="GitHub Vinicius">
-                                        <i class="fab fa-github"></i> Ver GitHub
+                                    <span class="founder-role" data-i18n="about.founderRole">Fundador</span>
+                                    <a href="https://github.com/viniciusvsantos" target="_blank" class="founder-github" title="GitHub Vinicius" data-i18n-attr="title:about.githubViniciusTitle">
+                                        <i class="fab fa-github"></i> <span data-i18n="about.githubText">Ver GitHub</span>
                                     </a>
                                 </div>
                             </div>
@@ -244,9 +244,9 @@
                                 <img src="https://avatars.githubusercontent.com/u/23120330?v=4" alt="Wellinton Vieira - Co-fundador da VWTech Dev" class="founder-image" loading="lazy" />
                                 <div class="founder-info">
                                     <span class="founder-name">Wellinton Vieira</span>
-                                    <span class="founder-role">Co-fundador</span>
-                                    <a href="https://github.com/nellowint" target="_blank" class="founder-github" title="GitHub Wellinton">
-                                        <i class="fab fa-github"></i> Ver GitHub
+                                    <span class="founder-role" data-i18n="about.cofounderRole">Co-fundador</span>
+                                    <a href="https://github.com/nellowint" target="_blank" class="founder-github" title="GitHub Wellinton" data-i18n-attr="title:about.githubWellintonTitle">
+                                        <i class="fab fa-github"></i> <span data-i18n="about.githubText">Ver GitHub</span>
                                     </a>
                                 </div>
                             </div>
@@ -261,8 +261,8 @@
     <!-- Services Section -->
     <section id="services" class="section" aria-labelledby="services-title">
         <div class="container">
-            <h2 id="services-title" class="section-title">Nossos <span class="text-highlight">Serviços</span></h2>
-            <p class="section-subtitle">Oferecemos uma ampla gama de serviços para atender às necessidades do seu negócio.</p>
+            <h2 id="services-title" class="section-title" data-i18n-html="services.title">Nossos <span class="text-highlight">Serviços</span></h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">Oferecemos uma ampla gama de serviços para atender às necessidades do seu negócio.</p>
             <div class="services-grid">
                 <!-- Service 1 -->
                 <div data-aos="fade-up">
@@ -270,9 +270,9 @@
                     <div class="service-image">
                         <img src="src/img/services/service-01.webp" alt="Desenvolvimento de sites responsivos e sistemas web personalizados - VWTech Dev" loading="lazy">
                     </div>
-                    <h3 class="service-title">Desenvolvimento Web</h3>
-                    <p class="service-description">Criamos sites e aplicações web responsivas, otimizadas para performance e conversão, utilizando as melhores tecnologias do mercado.</p>
-                    <button class="service-button" onclick="openPlansModal('web')">Ver Planos</button>
+                    <h3 class="service-title" data-i18n="services.web.title">Desenvolvimento Web</h3>
+                    <p class="service-description" data-i18n="services.web.description">Criamos sites e aplicações web responsivas, otimizadas para performance e conversão, utilizando as melhores tecnologias do mercado.</p>
+                    <button class="service-button" onclick="openPlansModal('web')" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
                 <!-- Service 2 -->
@@ -281,9 +281,9 @@
                     <div class="service-image">
                         <img src="src/img/services/service-02.webp" alt="Desenvolvimento de aplicativos mobile para Android e iOS - VWTech Dev" loading="lazy">
                     </div>
-                    <h3 class="service-title">Aplicativos Mobile</h3>
-                    <p class="service-description">Desenvolvemos aplicativos nativos e híbridos para Android, com foco em experiência do usuário e funcionalidades exclusivas.</p>
-                    <button class="service-button" onclick="openPlansModal('mobile')">Ver Planos</button>
+                    <h3 class="service-title" data-i18n="services.mobile.title">Aplicativos Mobile</h3>
+                    <p class="service-description" data-i18n="services.mobile.description">Desenvolvemos aplicativos nativos e híbridos para Android, com foco em experiência do usuário e funcionalidades exclusivas.</p>
+                    <button class="service-button" onclick="openPlansModal('mobile')" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
                 <!-- Service 3 -->
@@ -292,9 +292,9 @@
                     <div class="service-image">
                         <img src="src/img/services/service-03.webp" alt="Montagem e upgrade de PCs Gamer personalizados - VWTech Dev" loading="lazy">
                     </div>
-                    <h3 class="service-title">PC Gamer</h3>
-                    <p class="service-description">Montagem de PC Gamer com peças de qualidade e preço acessível. Orçamento sem compromisso.</p>
-                    <button class="service-button" onclick="openPlansModal('gamer')">Ver Planos</button>
+                    <h3 class="service-title" data-i18n="services.gamer.title">PC Gamer</h3>
+                    <p class="service-description" data-i18n="services.gamer.description">Montagem de PC Gamer com peças de qualidade e preço acessível. Orçamento sem compromisso.</p>
+                    <button class="service-button" onclick="openPlansModal('gamer')" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
                 <!-- Service 4 -->
@@ -303,9 +303,9 @@
                     <div class="service-image">
                         <img src="src/img/services/service-04.webp" alt="Manutenção e reparo de computadores, notebooks e celulares - VWTech Dev" loading="lazy">
                     </div>
-                    <h3 class="service-title">PC's e Celulares</h3>
-                    <p class="service-description">Manutenção de computadores e celulares, troca de tela, bateria, carregador, etc.</p>
-                    <button class="service-button" onclick="openPlansModal('maintenance')">Ver Planos</button>
+                    <h3 class="service-title" data-i18n="services.maintenance.title">PC's e Celulares</h3>
+                    <p class="service-description" data-i18n="services.maintenance.description">Manutenção de computadores e celulares, troca de tela, bateria, carregador, etc.</p>
+                    <button class="service-button" onclick="openPlansModal('maintenance')" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
                 <!-- Service 5 -->
@@ -314,9 +314,9 @@
                     <div class="service-image">
                         <img src="src/img/services/service-05.webp" alt="Suporte técnico remoto e presencial para computadores e dispositivos - VWTech Dev" loading="lazy">
                     </div>
-                    <h3 class="service-title">Suporte Técnico</h3>
-                    <p class="service-description">Suporte remoto rápido e eficiente! Chame no WhatsApp e resolva tudo por AnyDesk.</p>
-                    <button class="service-button" onclick="openPlansModal('support')">Ver Planos</button>
+                    <h3 class="service-title" data-i18n="services.support.title">Suporte Técnico</h3>
+                    <p class="service-description" data-i18n="services.support.description">Suporte remoto rápido e eficiente! Chame no WhatsApp e resolva tudo por AnyDesk.</p>
+                    <button class="service-button" onclick="openPlansModal('support')" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
                 <!-- Service 6 -->
@@ -325,9 +325,9 @@
                     <div class="service-image">
                         <img src="src/img/services/service-06.webp" alt="Atendimento técnico presencial em residências e empresas - VWTech Dev" loading="lazy">
                     </div>
-                    <h3 class="service-title">Atendimento Presencial</h3>
-                    <p class="service-description">Atendimento presencial para o Planalto Norte Catarinense. Faça seu agendamento agora mesmo!</p>
-                    <button class="service-button" onclick="openPlansModal('onsite')">Ver Planos</button>
+                    <h3 class="service-title" data-i18n="services.onsite.title">Atendimento Presencial</h3>
+                    <p class="service-description" data-i18n="services.onsite.description">Atendimento presencial para o Planalto Norte Catarinense. Faça seu agendamento agora mesmo!</p>
+                    <button class="service-button" onclick="openPlansModal('onsite')" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
             </div>
@@ -337,8 +337,8 @@
     <!-- Projects Section -->
     <section id="projects" class="section" aria-labelledby="projects-title">
         <div class="container">
-            <h2 id="projects-title" class="section-title">Nossos <span class="text-highlight">Projetos</span></h2>
-            <p class="section-subtitle">Alguns dos projetos que desenvolvemos para nossos clientes satisfeitos.</p>
+            <h2 id="projects-title" class="section-title" data-i18n-html="projects.title">Nossos <span class="text-highlight">Projetos</span></h2>
+            <p class="section-subtitle" data-i18n="projects.subtitle">Alguns dos projetos que desenvolvemos para nossos clientes satisfeitos.</p>
             
             <div class="projects-grid">
                 <!-- Project 1 -->
@@ -347,9 +347,9 @@
                     <div class="project-image">
                         <img src="src/img/projects/project-01.webp" alt="Sistema Delta Monitor - Geração de Recibos Automáticos" loading="lazy">
                     </div>
-                    <h3 class="project-title">Delta Monitor</h3>
-                    <p class="project-description">Sistema Web de Geração de Recibos Automáticos para empresa Delta Monitoramento Canoinhas-SC</p>
-                    <a href="https://github.com/vwtechdev/delta-monitor" target="_blank" class="project-button">Saiba Mais</a>
+                    <h3 class="project-title" data-i18n="projects.p1.title">Delta Monitor</h3>
+                    <p class="project-description" data-i18n="projects.p1.description">Sistema Web de Geração de Recibos Automáticos para empresa Delta Monitoramento Canoinhas-SC</p>
+                    <a href="https://github.com/vwtechdev/delta-monitor" target="_blank" class="project-button" data-i18n="projects.button">Saiba Mais</a>
                 </div>
                 </div>
 
@@ -359,9 +359,9 @@
                     <div class="project-image">
                         <img src="src/img/projects/project-02.webp" alt="Landing page Alpha Automation and Robotics - Automação Industrial" loading="lazy">
                     </div>
-                    <h3 class="project-title">Alpha Automation and Robotics</h3>
-                    <p class="project-description">Landing page moderna e responsiva para a Alpha Automation and Robotics, empresa especializada em automação industrial e robótica.</p>
-                    <a href="https://www.alphaautomationbr.com/" target="_blank" class="project-button">Saiba Mais</a>
+                    <h3 class="project-title" data-i18n="projects.p2.title">Alpha Automation and Robotics</h3>
+                    <p class="project-description" data-i18n="projects.p2.description">Landing page moderna e responsiva para a Alpha Automation and Robotics, empresa especializada em automação industrial e robótica.</p>
+                    <a href="https://www.alphaautomationbr.com/" target="_blank" class="project-button" data-i18n="projects.button">Saiba Mais</a>
                 </div>
                 </div>
 
@@ -371,9 +371,9 @@
                     <div class="project-image">
                         <img src="src/img/projects/project-03.webp" alt="Sistema NationsFlow - Controle Financeiro da Igreja Pentecostal Nações para Cristo" loading="lazy">
                     </div>
-                    <h3 class="project-title">Nations Flow</h3>
-                    <p class="project-description">Sistema Web de Controle Financeiro para a Igreja Pentecostal Nações para Cristo.</p>
-                    <a href="https://www.nationsflow.com.br/" target="_blank" class="project-button">Saiba Mais</a>
+                    <h3 class="project-title" data-i18n="projects.p3.title">Nations Flow</h3>
+                    <p class="project-description" data-i18n="projects.p3.description">Sistema Web de Controle Financeiro para a Igreja Pentecostal Nações para Cristo.</p>
+                    <a href="https://www.nationsflow.com.br/" target="_blank" class="project-button" data-i18n="projects.button">Saiba Mais</a>
                 </div>
                 </div>
             </div>
@@ -383,7 +383,7 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="section" aria-labelledby="testimonials-title">
         <div class="container">
-            <h2 id="testimonials-title" class="section-title">O que dizem <span class="text-highlight">nossos clientes</span></h2>
+            <h2 id="testimonials-title" class="section-title" data-i18n-html="testimonials.title">O que dizem <span class="text-highlight">nossos clientes</span></h2>
                     
             <!-- Elfsight Google Reviews | carregado sob demanda via JS -->
             <div class="elfsight-app-adece873-304f-457f-aa47-db1527fcc652" data-elfsight-app-lazy></div>
@@ -393,35 +393,35 @@
     <!-- Contact Section -->
     <section id="contact" class="section" aria-labelledby="contact-title">
         <div class="container">
-            <h2 id="contact-title" class="section-title">Entre em <span class="text-highlight">Contato</span></h2>
-            <p class="section-subtitle">Tem um projeto em mente? Preencha o formulário abaixo e nossa equipe entrará em contato em breve.</p>
+            <h2 id="contact-title" class="section-title" data-i18n-html="contact.title">Entre em <span class="text-highlight">Contato</span></h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">Tem um projeto em mente? Preencha o formulário abaixo e nossa equipe entrará em contato em breve.</p>
             
             <div class="contact-content">
                 <div class="contact-form-container" data-aos="fade-right" data-aos-delay="100">
                     <form id="contact-form" class="contact-form">
                         <div class="form-group">
-                            <label for="name" class="form-label">Nome Completo</label>
-                            <input type="text" name="user_name" id="name" class="form-input" placeholder="Seu nome" required>
+                            <label for="name" class="form-label" data-i18n="contact.form.nameLabel">Nome Completo</label>
+                            <input type="text" name="user_name" id="name" class="form-input" placeholder="Seu nome" data-i18n-attr="placeholder:contact.form.namePlaceholder" required>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="form-label">E-mail</label>
-                            <input type="email" name="user_email" id="email" class="form-input" placeholder="seu@email.com" required>
+                            <label for="email" class="form-label" data-i18n="contact.form.emailLabel">E-mail</label>
+                            <input type="email" name="user_email" id="email" class="form-input" placeholder="seu@email.com" data-i18n-attr="placeholder:contact.form.emailPlaceholder" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone" class="form-label">Telefone</label>
-                            <input type="tel" name="user_phone" id="phone" class="form-input" placeholder="(00) 00000-0000">
+                            <label for="phone" class="form-label" data-i18n="contact.form.phoneLabel">Telefone</label>
+                            <input type="tel" name="user_phone" id="phone" class="form-input" placeholder="(00) 00000-0000" data-i18n-attr="placeholder:contact.form.phonePlaceholder">
                         </div>
                         <div class="form-group">
-                            <label for="message" class="form-label">Mensagem</label>
-                            <textarea name="message" id="message" rows="5" class="form-textarea" placeholder="Descreva seu projeto ou dúvida" required></textarea>
+                            <label for="message" class="form-label" data-i18n="contact.form.messageLabel">Mensagem</label>
+                            <textarea name="message" id="message" rows="5" class="form-textarea" placeholder="Descreva seu projeto ou dúvida" data-i18n-attr="placeholder:contact.form.messagePlaceholder" required></textarea>
                         </div>
-                        <button type="submit" class="form-button">Enviar Mensagem</button>
+                        <button type="submit" class="form-button" data-i18n="contact.form.button">Enviar Mensagem</button>
                     </form>
                 </div>
                 
                 <div class="contact-info" data-aos="fade-left" data-aos-delay="200">
                     <div class="info-card">
-                        <h3 class="info-title">Informações de Contato</h3>
+                        <h3 class="info-title" data-i18n="contact.info.title">Informações de Contato</h3>
                         
                         <div class="info-items">
                             <div class="info-item">
@@ -429,8 +429,8 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="info-content">
-                                    <h4 class="info-label">Endereço</h4>
-                                    <p class="info-text">R. Joaquim Vieira de Lima, 1100<br>Campo d' Água Verde, Canoinhas-SC, 89466-324</p>
+                                    <h4 class="info-label" data-i18n="contact.info.addressLabel">Endereço</h4>
+                                    <p class="info-text" data-i18n-html="contact.info.addressText">R. Joaquim Vieira de Lima, 1100<br>Campo d' Água Verde, Canoinhas-SC, 89466-324</p>
                                 </div>
                             </div>
                             
@@ -439,8 +439,8 @@
                                     <i class="fas fa-phone-alt"></i>
                                 </div>
                                 <div class="info-content">
-                                    <h4 class="info-label">Telefone</h4>
-                                    <p class="info-text">(47) 99289-3609</p>
+                                    <h4 class="info-label" data-i18n="contact.info.phoneLabel">Telefone</h4>
+                                    <p class="info-text" data-i18n="contact.info.phoneText">(47) 99289-3609</p>
                                 </div>
                             </div>
                             
@@ -449,8 +449,8 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="info-content">
-                                    <h4 class="info-label">E-mail</h4>
-                                    <p class="info-text">vwtechdev@gmail.com</p>
+                                    <h4 class="info-label" data-i18n="contact.info.emailLabel">E-mail</h4>
+                                    <p class="info-text" data-i18n="contact.info.emailText">vwtechdev@gmail.com</p>
                                 </div>
                             </div>
                             
@@ -459,14 +459,14 @@
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div class="info-content">
-                                    <h4 class="info-label">Horário de Atendimento</h4>
-                                    <p class="info-text">Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+                                    <h4 class="info-label" data-i18n="contact.info.hoursLabel">Horário de Atendimento</h4>
+                                    <p class="info-text" data-i18n-html="contact.info.hoursText">Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="social-media">
-                            <h4 class="social-title">Siga-nos nas redes sociais</h4>
+                            <h4 class="social-title" data-i18n="contact.social.title">Siga-nos nas redes sociais</h4>
                             <div class="social-links">
                                 <a target="_blank" href="https://www.facebook.com/vwtechdev/" class="social-link">
                                     <i class="fab fa-facebook"></i>
@@ -496,7 +496,7 @@
                 </div>
                 
                 <div class="footer-copyright">
-                    <p>© 2019-<span id="current-year">2026</span> VWTech Dev.<br class="mobile-break"> Todos os direitos reservados.</p>
+                    <p>© 2019-<span id="current-year">2026</span> VWTech Dev.<br class="mobile-break"> <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
                 </div>
             </div>
         </div>
@@ -505,18 +505,19 @@
     <!-- Floating Buttons -->
     <div class="floating-buttons">
         <!-- Back to Top Button -->
-        <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo" data-i18n-attr="aria-label:floating.backToTopAria">
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <!-- WhatsApp Button -->
-        <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20seus%20servi%C3%A7os." target="_blank" rel="noopener noreferrer" class="whatsapp-button" aria-label="Conversar pelo WhatsApp">
+        <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20seus%20servi%C3%A7os." target="_blank" rel="noopener noreferrer" class="whatsapp-button" aria-label="Conversar pelo WhatsApp" data-i18n-attr="aria-label:floating.whatsappAria" data-i18n-whatsapp="floating.whatsappMsg">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
     <!-- Scripts com defer: não bloqueiam parsing, rodam após DOM (melhor LCP em mobile) -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="src/js/i18n.js" defer></script>
     <script src="src/js/index.js" defer></script>
     
 
@@ -525,7 +526,7 @@
     <div id="plansModal" class="plans-modal">
         <div class="plans-modal-content">
             <div class="plans-modal-header">
-                <h2 class="plans-modal-title"><span id="modal-service-title">Serviço</span></h2>
+                <h2 class="plans-modal-title"><span id="modal-service-title" data-i18n="modal.serviceTitle">Serviço</span></h2>
                 <button class="plans-modal-close" onclick="closePlansModal()">
                     <i class="fas fa-times"></i>
                 </button>
@@ -537,44 +538,44 @@
                     <div class="plans-list">
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Basic</h4>
-                                <div class="plan-price">R$ 149,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.web.basic.name">Plano Basic</h4>
+                                <div class="plan-price" data-i18n="plans.web.basic.price">R$ 149,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.web.basic.features">
                                 <li><i class="fas fa-check"></i> Landing Page</li>
                                 <li><i class="fas fa-check"></i> Domínio Grátis</li>
                                 <li><i class="fas fa-check"></i> Hospedagem Grátis 1GB</li>
                                 <li><i class="fas fa-check"></i> Suporte por WhatsApp</li>
                                 <li><i class="fas fa-check"></i> 1 Revisão Mensal</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Basic%20de%20Desenvolvimento%20Web%20por%20R$%20129,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Basic
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Basic%20de%20Desenvolvimento%20Web%20por%20R$%20129,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.web.basic.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.web.basic.button">Assinar Plano Basic</span>
                             </a>
                         </div>
                         
                         <div class="plan-item plan-item-featured">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Silver</h4>
-                                <div class="plan-price">R$ 249,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.web.silver.name">Plano Silver</h4>
+                                <div class="plan-price" data-i18n="plans.web.silver.price">R$ 249,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.web.silver.features">
                                 <li><i class="fas fa-check"></i> Sistema Web Personalizado</li>
                                 <li><i class="fas fa-check"></i> Domínio Grátis</li>
                                 <li><i class="fas fa-check"></i> Hospedagem Grátis 10GB</li>
                                 <li><i class="fas fa-check"></i> Suporte por WhatsApp</li>
                                 <li><i class="fas fa-check"></i> 2 Revisões Mensais</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Silver%20de%20Desenvolvimento%20Web%20por%20R$%20229,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Silver
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Silver%20de%20Desenvolvimento%20Web%20por%20R$%20229,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.web.silver.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.web.silver.button">Assinar Plano Silver</span>
                             </a>
                         </div>
                         
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Gold</h4>
-                                <div class="plan-price">R$ 349,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.web.gold.name">Plano Gold</h4>
+                                <div class="plan-price" data-i18n="plans.web.gold.price">R$ 349,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.web.gold.features">
                                 <li><i class="fas fa-check"></i> Sistema Web Personalizado</li>
                                 <li><i class="fas fa-check"></i> Domínio Grátis</li>
                                 <li><i class="fas fa-check"></i> Hospedagem Grátis 30GB</li>
@@ -582,8 +583,8 @@
                                 <li><i class="fas fa-check"></i> Suporte por WhatsApp 24/7</li>
                                 <li><i class="fas fa-check"></i> Revisões Semanais</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Gold%20de%20Desenvolvimento%20Web%20por%20R$%20329,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Gold
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Gold%20de%20Desenvolvimento%20Web%20por%20R$%20329,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.web.gold.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.web.gold.button">Assinar Plano Gold</span>
                             </a>
                         </div>
                     </div>
@@ -594,10 +595,10 @@
                     <div class="plans-list">
                         <div class="plan-item plan-item-featured">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Android</h4>
-                                <div class="plan-price">R$ 349,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.mobile.android.name">Plano Android</h4>
+                                <div class="plan-price" data-i18n="plans.mobile.android.price">R$ 349,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.mobile.android.features">
                                 <li><i class="fas fa-check"></i> Desenvolvimento de Aplicativo Mobile para Android</li>
                                 <li><i class="fas fa-check"></i> Publicação Gratuita na Google Play Store</li>
                                 <li><i class="fas fa-check"></i> Hospedagem Grátis (10 GB)</li>
@@ -605,17 +606,17 @@
                                 <li><i class="fas fa-check"></i> Suporte via WhatsApp</li>
                                 <li><i class="fas fa-check"></i> 2 Revisões Mensais</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Android%20de%20Aplicativos%20Mobile%20por%20R$%20299,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Android
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Android%20de%20Aplicativos%20Mobile%20por%20R$%20299,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.mobile.android.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.mobile.android.button">Assinar Plano Android</span>
                             </a>
                         </div>
                         
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano iOS</h4>
-                                <div class="plan-price">R$ 549,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.mobile.ios.name">Plano iOS</h4>
+                                <div class="plan-price" data-i18n="plans.mobile.ios.price">R$ 549,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.mobile.ios.features">
                                 <li><i class="fas fa-check"></i> Desenvolvimento de Aplicativo Mobile para iOS</li>
                                 <li><i class="fas fa-check"></i> Publicação Gratuita na Apple App Store</li>
                                 <li><i class="fas fa-check"></i> Hospedagem Grátis (10 GB)</li>
@@ -623,8 +624,8 @@
                                 <li><i class="fas fa-check"></i> Suporte via WhatsApp</li>
                                 <li><i class="fas fa-check"></i> 2 Revisões Mensais</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20iOS%20de%20Aplicativos%20Mobile%20por%20R$%20499,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano iOS
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20iOS%20de%20Aplicativos%20Mobile%20por%20R$%20499,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.mobile.ios.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.mobile.ios.button">Assinar Plano iOS</span>
                             </a>
                         </div>
                     </div>
@@ -635,27 +636,27 @@
                     <div class="plans-list">
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Upgrade de Peças</h4>
-                                <div class="plan-price">R$ 149,90</div>
+                                <h4 class="plan-name" data-i18n="plans.gamer.upgrade.name">Upgrade de Peças</h4>
+                                <div class="plan-price" data-i18n="plans.gamer.upgrade.price">R$ 149,90</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.gamer.upgrade.features">
                                 <li><i class="fas fa-check"></i> Análise de compatibilidade das peças</li>
                                 <li><i class="fas fa-check"></i> Instalação profissional e segura</li>
                                 <li><i class="fas fa-check"></i> Testes de performance e estabilidade</li>
                                 <li><i class="fas fa-check"></i> Configuração da BIOS otimizada</li>
                                 <li><i class="fas fa-check"></i> Garantia de funcionamento</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20servi%C3%A7o%20de%20Upgrade%20de%20Pe%C3%A7as%20PC%20Gamer%20por%20R$%20229,90." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Contratar Upgrade de Peças
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20servi%C3%A7o%20de%20Upgrade%20de%20Pe%C3%A7as%20PC%20Gamer%20por%20R$%20229,90." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.gamer.upgrade.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.gamer.upgrade.button">Contratar Upgrade de Peças</span>
                             </a>
                         </div>
                         
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Limpeza Técnica</h4>
-                                <div class="plan-price">R$ 249,90</div>
+                                <h4 class="plan-name" data-i18n="plans.gamer.cleaning.name">Limpeza Técnica</h4>
+                                <div class="plan-price" data-i18n="plans.gamer.cleaning.price">R$ 249,90</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.gamer.cleaning.features">
                                 <li><i class="fas fa-check"></i> Limpeza completa de poeira</li>
                                 <li><i class="fas fa-check"></i> Troca de pasta térmica</li>
                                 <li><i class="fas fa-check"></i> Organização e fixação de cabos</li>
@@ -663,17 +664,17 @@
                                 <li><i class="fas fa-check"></i> Otimização do sistema</li>
                                 <li><i class="fas fa-check"></i> Relatório de saúde dos componentes</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20servi%C3%A7o%20de%20Limpeza%20T%C3%A9cnica%20PC%20Gamer%20por%20R$%20329,90." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Contratar Limpeza Técnica
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20servi%C3%A7o%20de%20Limpeza%20T%C3%A9cnica%20PC%20Gamer%20por%20R$%20329,90." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.gamer.cleaning.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.gamer.cleaning.button">Contratar Limpeza Técnica</span>
                             </a>
                         </div>
                         
                         <div class="plan-item plan-item-featured">
                             <div class="plan-header">
-                                <h4 class="plan-name">Montagem Completa</h4>
-                                <div class="plan-price">R$ 349,90</div>
+                                <h4 class="plan-name" data-i18n="plans.gamer.assembly.name">Montagem Completa</h4>
+                                <div class="plan-price" data-i18n="plans.gamer.assembly.price">R$ 349,90</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.gamer.assembly.features">
                                 <li><i class="fas fa-check"></i> Seleção de peças compatíveis</li>
                                 <li><i class="fas fa-check"></i> Montagem cuidadosa e profissional</li>
                                 <li><i class="fas fa-check"></i> Instalação do sistema operacional</li>
@@ -682,8 +683,8 @@
                                 <li><i class="fas fa-check"></i> Benchmark de performance</li>
                                 <li><i class="fas fa-check"></i> Garantia de funcionamento</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20servi%C3%A7o%20de%20Montagem%20Completa%20PC%20Gamer%20por%20R$%20429,90." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Contratar Montagem Completa
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20contratar%20o%20servi%C3%A7o%20de%20Montagem%20Completa%20PC%20Gamer%20por%20R$%20429,90." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.gamer.assembly.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.gamer.assembly.button">Contratar Montagem Completa</span>
                             </a>
                         </div>
                     </div>
@@ -694,10 +695,10 @@
                     <div class="plans-list">
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Computador</h4>
-                                <div class="plan-price">Consultar</div>
+                                <h4 class="plan-name" data-i18n="plans.maintenance.computer.name">Computador</h4>
+                                <div class="plan-price" data-i18n="plans.maintenance.computer.price">Consultar</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.maintenance.computer.features">
                                 <li><i class="fas fa-check"></i> Limpeza completa interna e externa</li>
                                 <li><i class="fas fa-check"></i> Troca de pasta térmica</li>
                                 <li><i class="fas fa-check"></i> Verificação e otimização do sistema</li>
@@ -706,17 +707,17 @@
                                 <li><i class="fas fa-check"></i> Backup de dados importantes</li>
                                 <li><i class="fas fa-check"></i> Atualização de drivers</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20manuten%C3%A7%C3%A3o%20de%20Computador." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20manuten%C3%A7%C3%A3o%20de%20Computador." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.maintenance.computer.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.maintenance.computer.button">Solicitar Orçamento</span>
                             </a>
                         </div>
                         
                         <div class="plan-item plan-item-featured">
                             <div class="plan-header">
-                                <h4 class="plan-name">Notebook</h4>
-                                <div class="plan-price">Consultar</div>
+                                <h4 class="plan-name" data-i18n="plans.maintenance.notebook.name">Notebook</h4>
+                                <div class="plan-price" data-i18n="plans.maintenance.notebook.price">Consultar</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.maintenance.notebook.features">
                                 <li><i class="fas fa-check"></i> Limpeza completa interna e externa</li>
                                 <li><i class="fas fa-check"></i> Troca de pasta térmica</li>
                                 <li><i class="fas fa-check"></i> Verificação e otimização do sistema</li>
@@ -726,17 +727,17 @@
                                 <li><i class="fas fa-check"></i> Verificação de bateria e carregador</li>
                                 <li><i class="fas fa-check"></i> Atualização de drivers</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20manuten%C3%A7%C3%A3o%20de%20Notebook." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20manuten%C3%A7%C3%A3o%20de%20Notebook." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.maintenance.notebook.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.maintenance.notebook.button">Solicitar Orçamento</span>
                             </a>
                         </div>
                         
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Celular</h4>
-                                <div class="plan-price">Consultar</div>
+                                <h4 class="plan-name" data-i18n="plans.maintenance.phone.name">Celular</h4>
+                                <div class="plan-price" data-i18n="plans.maintenance.phone.price">Consultar</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.maintenance.phone.features">
                                 <li><i class="fas fa-check"></i> Limpeza completa interna e externa</li>
                                 <li><i class="fas fa-check"></i> Troca de tela quebrada</li>
                                 <li><i class="fas fa-check"></i> Troca de bateria</li>
@@ -746,8 +747,8 @@
                                 <li><i class="fas fa-check"></i> Remoção de vírus e malwares</li>
                                 <li><i class="fas fa-check"></i> Atualização do sistema operacional</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20manuten%C3%A7%C3%A3o%20de%20Celular." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20manuten%C3%A7%C3%A3o%20de%20Celular." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.maintenance.phone.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.maintenance.phone.button">Solicitar Orçamento</span>
                             </a>
                         </div>
                     </div>
@@ -758,27 +759,27 @@
                     <div class="plans-list">
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Basic</h4>
-                                <div class="plan-price">R$ 149,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.support.basic.name">Plano Basic</h4>
+                                <div class="plan-price" data-i18n="plans.support.basic.price">R$ 149,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.support.basic.features">
                                 <li><i class="fas fa-check"></i> Suporte remoto via AnyDesk</li>
                                 <li><i class="fas fa-check"></i> Atendimento via WhatsApp</li>
                                 <li><i class="fas fa-check"></i> Até 3 chamados por mês</li>
                                 <li><i class="fas fa-check"></i> Horário comercial: 09h–18h</li>
                                 <li><i class="fas fa-check"></i> Suporte rápido para problemas simples</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Basic%20de%20Suporte%20T%C3%A9cnico%20por%20R$%20129,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Basic
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Basic%20de%20Suporte%20T%C3%A9cnico%20por%20R$%20129,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.support.basic.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.support.basic.button">Assinar Plano Basic</span>
                             </a>
                         </div>
                         
                         <div class="plan-item plan-item-featured">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Silver</h4>
-                                <div class="plan-price">R$ 249,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.support.silver.name">Plano Silver</h4>
+                                <div class="plan-price" data-i18n="plans.support.silver.price">R$ 249,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.support.silver.features">
                                 <li><i class="fas fa-check"></i> Suporte remoto via AnyDesk</li>
                                 <li><i class="fas fa-check"></i> Atendimento via WhatsApp</li>
                                 <li><i class="fas fa-check"></i> Até 5 chamados por mês</li>
@@ -786,17 +787,17 @@
                                 <li><i class="fas fa-check"></i> Prioridade média para atendimento</li>
                                 <li><i class="fas fa-check"></i> Assistência em configurações e pequenas manutenções remotas</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Silver%20de%20Suporte%20T%C3%A9cnico%20por%20R$%20229,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Silver
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Silver%20de%20Suporte%20T%C3%A9cnico%20por%20R$%20229,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.support.silver.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.support.silver.button">Assinar Plano Silver</span>
                             </a>
                         </div>
                         
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Gold</h4>
-                                <div class="plan-price">R$ 349,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.support.gold.name">Plano Gold</h4>
+                                <div class="plan-price" data-i18n="plans.support.gold.price">R$ 349,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.support.gold.features">
                                 <li><i class="fas fa-check"></i> Suporte remoto via AnyDesk</li>
                                 <li><i class="fas fa-check"></i> Atendimento via WhatsApp 24/7</li>
                                 <li><i class="fas fa-check"></i> Chamados ilimitados</li>
@@ -804,8 +805,8 @@
                                 <li><i class="fas fa-check"></i> Prioridade máxima no atendimento</li>
                                 <li><i class="fas fa-check"></i> Assistência completa: configurações, atualização e diagnóstico avançado</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Gold%20de%20Suporte%20T%C3%A9cnico%20por%20R$%20329,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Gold
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Gold%20de%20Suporte%20T%C3%A9cnico%20por%20R$%20329,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.support.gold.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.support.gold.button">Assinar Plano Gold</span>
                             </a>
                         </div>
                     </div>
@@ -816,27 +817,27 @@
                     <div class="plans-list">
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Basic</h4>
-                                <div class="plan-price">R$ 249,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.onsite.basic.name">Plano Basic</h4>
+                                <div class="plan-price" data-i18n="plans.onsite.basic.price">R$ 249,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.onsite.basic.features">
                                 <li><i class="fas fa-check"></i> Atendimento presencial em residência ou escritório pequeno</li>
                                 <li><i class="fas fa-check"></i> Suporte básico para computadores e periféricos</li>
                                 <li><i class="fas fa-check"></i> 1 visita mensal sob agendamento</li>
                                 <li><i class="fas fa-check"></i> Horário comercial: 09h–18h</li>
                                 <li><i class="fas fa-check"></i> Solução rápida para problemas simples</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Basic%20de%20Atendimento%20Presencial%20por%20R$%20249,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Basic
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Basic%20de%20Atendimento%20Presencial%20por%20R$%20249,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.onsite.basic.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.onsite.basic.button">Assinar Plano Basic</span>
                             </a>
                         </div>
                         
                         <div class="plan-item plan-item-featured">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Silver</h4>
-                                <div class="plan-price">R$ 349,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.onsite.silver.name">Plano Silver</h4>
+                                <div class="plan-price" data-i18n="plans.onsite.silver.price">R$ 349,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.onsite.silver.features">
                                 <li><i class="fas fa-check"></i> Atendimento presencial em residência ou empresa</li>
                                 <li><i class="fas fa-check"></i> Suporte técnico completo para computadores, redes e periféricos</li>
                                 <li><i class="fas fa-check"></i> 2 visitas mensais sob agendamento</li>
@@ -844,17 +845,17 @@
                                 <li><i class="fas fa-check"></i> Prioridade média no atendimento</li>
                                 <li><i class="fas fa-check"></i> Assistência em manutenção, configuração e atualização de sistemas</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Silver%20de%20Atendimento%20Presencial%20por%20R$%20749,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Silver
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Silver%20de%20Atendimento%20Presencial%20por%20R$%20749,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.onsite.silver.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.onsite.silver.button">Assinar Plano Silver</span>
                             </a>
                         </div>
                         
                         <div class="plan-item">
                             <div class="plan-header">
-                                <h4 class="plan-name">Plano Gold</h4>
-                                <div class="plan-price">R$ 549,90/mês</div>
+                                <h4 class="plan-name" data-i18n="plans.onsite.gold.name">Plano Gold</h4>
+                                <div class="plan-price" data-i18n="plans.onsite.gold.price">R$ 549,90/mês</div>
                             </div>
-                            <ul class="plan-features">
+                            <ul class="plan-features" data-i18n-list="plans.onsite.gold.features">
                                 <li><i class="fas fa-check"></i> Atendimento presencial 24/7 para empresas</li>
                                 <li><i class="fas fa-check"></i> Suporte técnico completo: computadores, redes, servidores e periféricos</li>
                                 <li><i class="fas fa-check"></i> Visitas Semanais sob agendamento</li>
@@ -862,8 +863,8 @@
                                 <li><i class="fas fa-check"></i> Diagnóstico, manutenção e atualização avançada de sistemas</li>
                                 <li><i class="fas fa-check"></i> Consultoria para melhorias de infraestrutura de TI</li>
                             </ul>
-                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Gold%20de%20Atendimento%20Presencial%20por%20R$%201.249,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button">
-                                <i class="fab fa-whatsapp"></i> Assinar Plano Gold
+                            <a href="https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20assinar%20o%20Plano%20Gold%20de%20Atendimento%20Presencial%20por%20R$%201.249,90/m%C3%AAs." target="_blank" class="plan-whatsapp-button" data-i18n-whatsapp="plans.onsite.gold.whatsapp">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="plans.onsite.gold.button">Assinar Plano Gold</span>
                             </a>
                         </div>
                     </div>

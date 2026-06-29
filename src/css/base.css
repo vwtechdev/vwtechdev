@@ -24,8 +24,9 @@
 
     --section-padding: 5rem 0;
 
-    --z-navbar: 1000;
+    --z-navbar: 5001; /* acima do overlay p/ o botão X (fechar) ficar clicável sobre o drawer mobile */
     --z-overlay: 5000;
+    --z-menu-toggle: 5002;
     --z-modal: 9000;
     --z-floating: 9999;
     --z-notification: 10000;
@@ -58,17 +59,19 @@ html, body {
 }
 
 body {
+    background-color: var(--primary-black);
+}
+
+/* Camada de fundo fixa: position:fixed evita os bugs de background-attachment:fixed no iOS/mobile */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
     background-image: url('../img/background.webp');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
-}
-
-@media (hover: none) and (pointer: coarse) {
-    body {
-        background-attachment: scroll;
-    }
 }
 
 /* === 3. Container === */
@@ -234,6 +237,10 @@ body {
     transform: translateX(-50%);
 }
 
+.nav-menu a:hover {
+    transform: translateY(-2px);
+}
+
 .nav-link {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
@@ -322,6 +329,7 @@ body {
 .navbar-lang.open .navbar-lang-btn {
     color: var(--primary-orange);
     background: var(--orange-subtle);
+    transform: translateY(-2px);
 }
 
 .navbar-lang.open .navbar-lang-btn {
@@ -374,8 +382,9 @@ body {
 }
 
 .navbar-lang-option:hover {
+    color: var(--primary-orange);
     background: var(--orange-subtle);
-    color: #fff;
+    transform: translateY(-2px);
 }
 
 .navbar-lang-option[aria-checked="true"] {
@@ -402,6 +411,7 @@ body {
     height: 2.5rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    z-index: var(--z-menu-toggle);
     transition: var(--transition);
 }
 
@@ -1688,6 +1698,11 @@ a:focus:not(:focus-visible) {
         padding: 0 1rem;
     }
 
+    /* Background mobile: imagem portrait específica para telas verticais */
+    body::before {
+        background-image: url('../img/background-mobile.webp');
+    }
+
     /* Navbar Mobile */
     .navbar {
         padding: 0.5rem 0;
@@ -1733,7 +1748,7 @@ a:focus:not(:focus-visible) {
     }
 
     .section {
-        background: rgba(7, 8, 8, 0.95);
+        background: rgba(7, 8, 8, 0.65);
     }
 
     .section::before {
