@@ -70,13 +70,13 @@ function openPlansModal(serviceType) {
     // Hide all service plans
     const allServicePlans = document.querySelectorAll('.service-plans');
     allServicePlans.forEach(plan => {
-        plan.style.display = 'none';
+        plan.classList.add('service-plans--hidden');
     });
     
     // Show the selected service plans
     const selectedPlans = document.getElementById(serviceType + '-plans');
     if (selectedPlans) {
-        selectedPlans.style.display = 'block';
+        selectedPlans.classList.remove('service-plans--hidden');
     } else {
         showNotification(tt('notify.plansNotFound', 'Erro: Planos não encontrados para este serviço.'), 'error');
         return;
@@ -116,7 +116,7 @@ function closePlansModal() {
 
 // Close modal when clicking outside
 document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('plansModal');
+    var modal = document.getElementById('plansModal');
     if (modal) {
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
@@ -131,6 +131,20 @@ document.addEventListener('DOMContentLoaded', function() {
             closePlansModal();
         }
     });
+    
+    // Service buttons: open plans modal
+    var serviceButtons = document.querySelectorAll('.service-button[data-service]');
+    serviceButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            openPlansModal(this.getAttribute('data-service'));
+        });
+    });
+    
+    // Plans modal close button
+    var plansModalClose = document.getElementById('plans-modal-close');
+    if (plansModalClose) {
+        plansModalClose.addEventListener('click', closePlansModal);
+    }
 });
 
 // Verificar se AOS está disponível antes de inicializar

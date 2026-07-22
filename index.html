@@ -90,7 +90,7 @@
             <div class="navbar-content">
                 <a href="#home" class="logo-container" aria-label="Voltar ao início" data-i18n-attr="aria-label:nav.logoAria">
                     <div class="logo-circle">
-                        <img src="src/img/logo.png" alt="Logo VWTech Dev" loading="lazy">
+                        <img src="src/img/logo.png" alt="Logo VWTech Dev">
                     </div>
                     <h1 class="logo-text">VW<span class="logo-highlight">Tech</span> Dev</h1>
                 </a>
@@ -269,7 +269,7 @@
                     </div>
                     <h3 class="service-title" data-i18n="services.web.title">Desenvolvimento Web</h3>
                     <p class="service-description" data-i18n="services.web.description">Criamos sites e aplicações web responsivas, otimizadas para performance e conversão, utilizando as melhores tecnologias do mercado.</p>
-                    <button class="service-button" onclick="openPlansModal('web')" data-i18n="services.button">Ver Planos</button>
+                    <button class="service-button" data-service="web" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
                 <!-- Service 2 -->
@@ -280,7 +280,7 @@
                     </div>
                     <h3 class="service-title" data-i18n="services.mobile.title">Aplicativos Mobile</h3>
                     <p class="service-description" data-i18n="services.mobile.description">Desenvolvemos aplicativos nativos e híbridos para Android, com foco em experiência do usuário e funcionalidades exclusivas.</p>
-                    <button class="service-button" onclick="openPlansModal('mobile')" data-i18n="services.button">Ver Planos</button>
+                    <button class="service-button" data-service="mobile" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
                 <!-- Service 3 -->
@@ -291,7 +291,7 @@
                     </div>
                     <h3 class="service-title" data-i18n="services.gamer.title">PC Gamer</h3>
                     <p class="service-description" data-i18n="services.gamer.description">Montagem de PC Gamer com peças de qualidade e preço acessível. Orçamento sem compromisso.</p>
-                    <button class="service-button" onclick="openPlansModal('gamer')" data-i18n="services.button">Ver Planos</button>
+                    <button class="service-button" data-service="gamer" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
                 <!-- Service 4 -->
@@ -302,7 +302,7 @@
                     </div>
                     <h3 class="service-title" data-i18n="services.maintenance.title">PC's e Celulares</h3>
                     <p class="service-description" data-i18n="services.maintenance.description">Manutenção de computadores e celulares, troca de tela, bateria, carregador, etc.</p>
-                    <button class="service-button" onclick="openPlansModal('maintenance')" data-i18n="services.button">Ver Planos</button>
+                    <button class="service-button" data-service="maintenance" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
                 <!-- Service 5 -->
@@ -313,7 +313,7 @@
                     </div>
                     <h3 class="service-title" data-i18n="services.support.title">Suporte Técnico</h3>
                     <p class="service-description" data-i18n="services.support.description">Suporte remoto rápido e eficiente! Chame no WhatsApp e resolva tudo por AnyDesk.</p>
-                    <button class="service-button" onclick="openPlansModal('support')" data-i18n="services.button">Ver Planos</button>
+                    <button class="service-button" data-service="support" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
                 <!-- Service 6 -->
@@ -324,7 +324,7 @@
                     </div>
                     <h3 class="service-title" data-i18n="services.onsite.title">Atendimento Presencial</h3>
                     <p class="service-description" data-i18n="services.onsite.description">Atendimento presencial para o Planalto Norte Catarinense. Faça seu agendamento agora mesmo!</p>
-                    <button class="service-button" onclick="openPlansModal('onsite')" data-i18n="services.button">Ver Planos</button>
+                    <button class="service-button" data-service="onsite" data-i18n="services.button">Ver Planos</button>
                 </div>
                 </div>
             </div>
@@ -382,8 +382,11 @@
         <div class="container">
             <h2 id="testimonials-title" class="section-title" data-i18n-html="testimonials.title">O que dizem <span class="text-highlight">nossos clientes</span></h2>
                     
-            <!-- Elfsight Google Reviews | carregado sob demanda via JS -->
+            <!-- Elfsight Google Reviews | VWTech Dev Google Reviews -->
+            <div class="testimonials-reviews-wrapper">
+            <script src="https://elfsightcdn.com/platform.js" async></script>
             <div class="elfsight-app-19856aea-ef0c-4856-a78d-4de55d28c279" data-elfsight-app-lazy></div>
+            </div>
         </div>
     </section>
 
@@ -517,21 +520,19 @@
     <script src="src/js/i18n.js" defer></script>
     <script src="src/js/index.js" defer></script>
     
-
-    
     <!-- Plans Modal -->
     <div id="plansModal" class="plans-modal">
         <div class="plans-modal-content">
             <div class="plans-modal-header">
                 <h2 class="plans-modal-title"><span id="modal-service-title" data-i18n="modal.serviceTitle">Serviço</span></h2>
-                <button class="plans-modal-close" onclick="closePlansModal()">
+                <button class="plans-modal-close" id="plans-modal-close">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             
             <div class="plans-modal-body">
                 <!-- Desenvolvimento Web -->
-                <div id="web-plans" class="service-plans" style="display: none;">
+                <div id="web-plans" class="service-plans service-plans--hidden">
                     <div class="plans-list">
                         <div class="plan-item">
                             <div class="plan-header">
@@ -588,7 +589,7 @@
                 </div>
                 
                 <!-- Desenvolvimento Mobile -->
-                <div id="mobile-plans" class="service-plans" style="display: none;">
+                <div id="mobile-plans" class="service-plans service-plans--hidden">
                     <div class="plans-list">
                         <div class="plan-item plan-item-featured">
                             <div class="plan-header">
@@ -629,7 +630,7 @@
                 </div>
                 
                 <!-- PC Gamer -->
-                <div id="gamer-plans" class="service-plans" style="display: none;">
+                <div id="gamer-plans" class="service-plans service-plans--hidden">
                     <div class="plans-list">
                         <div class="plan-item">
                             <div class="plan-header">
@@ -688,7 +689,7 @@
                 </div>
                 
                 <!-- PC's e Celulares -->
-                <div id="maintenance-plans" class="service-plans" style="display: none;">
+                <div id="maintenance-plans" class="service-plans service-plans--hidden">
                     <div class="plans-list">
                         <div class="plan-item">
                             <div class="plan-header">
@@ -752,7 +753,7 @@
                 </div>
                 
                 <!-- Suporte Técnico -->
-                <div id="support-plans" class="service-plans" style="display: none;">
+                <div id="support-plans" class="service-plans service-plans--hidden">
                     <div class="plans-list">
                         <div class="plan-item">
                             <div class="plan-header">
@@ -810,7 +811,7 @@
                 </div>
                 
                 <!-- Atendimento Presencial -->
-                <div id="onsite-plans" class="service-plans" style="display: none;">
+                <div id="onsite-plans" class="service-plans service-plans--hidden">
                     <div class="plans-list">
                         <div class="plan-item">
                             <div class="plan-header">

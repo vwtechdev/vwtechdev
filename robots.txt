@@ -1,22 +1,35 @@
+# === VWTech Dev - robots.txt ===
+# Última atualização: 2026-07-21
+
+# === Buscadores gerais ===
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://vwtechdev.com.br/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin areas (if any)
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 Disallow: /backup/
 
-# Allow important files
-Allow: /src/css/
-Allow: /src/js/
-Allow: /src/img/
+# === IA / LLM Crawlers ===
+# Permite indexação para aumentar presença digital em respostas de IA
 
-# Host
-Host: https://vwtechdev.com.br 
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# === Sitemap ===
+Sitemap: https://vwtechdev.com.br/sitemap.xml
+
+# Crawl-delay: aguarda 1s entre requisições para não sobrecarregar o servidor
+Crawl-delay: 1

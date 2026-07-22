@@ -64,18 +64,52 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 
 ```
 vwtechdev/
-├── index.html              # Página principal
+├── index.html              # Página principal (SPA)
 ├── src/
 │   ├── css/
 │   │   └── base.css       # Estilos principais
 │   ├── js/
-│   │   └── index.js       # JavaScript principal
+│   │   ├── index.js       # JavaScript principal
+│   │   └── i18n.js        # Internacionalização (pt-BR, en-US, es-ES)
 │   └── img/               # Imagens e assets
 │       ├── projects/      # Imagens dos projetos
 │       └── services/      # Imagens dos serviços
+├── robots.txt              # Regras de rastreamento para buscadores e IA
+├── sitemap.xml             # Mapa do site para indexação
+├── manifest.json           # PWA Manifest (instalação como app)
+├── CNAME                   # Domínio customizado GitHub Pages
 ├── README.md              # Documentação
 └── LICENSE                # Licença do projeto
 ```
+
+### 📄 robots.txt
+
+Controla o comportamento dos crawlers de buscadores e IA:
+
+- **User-agent: `*`** — Permite rastreamento total da raiz; bloqueia `/admin/`, `/private/`, `/temp/` e `/backup/`
+- **IA / LLM Crawlers** — Permite explicitamente `GPTBot`, `Google-Extended`, `Claude-Web`, `CCBot` e `PerplexityBot` para aumentar a presença da marca em respostas de IA
+- **Sitemap** — Aponta para `https://vwtechdev.com.br/sitemap.xml`
+- **Crawl-delay** — 1 segundo entre requisições para não sobrecarregar o servidor
+
+### 🗺️ sitemap.xml
+
+Lista todas as seções da SPA para indexação pelos buscadores:
+
+- URL raiz com prioridade 1.0 e frequência semanal
+- Seções `#home`, `#about`, `#services`, `#projects`, `#testimonials`, `#contact` com prioridades decrescentes (0.9 a 0.6) e frequência mensal
+- Deve ser mantido com `lastmod` atualizado sempre que o conteúdo for alterado
+
+### 📲 manifest.json
+
+Configura o site como Progressive Web App (PWA):
+
+- **Display**: `standalone` — abre sem a barra do navegador
+- **Ícones**: múltiplos tamanhos (48px a 512px) com `purpose: maskable`
+- **Screenshots**: para lojas de aplicativos (wide + narrow)
+- **Shortcuts**: acesso rápido a Serviços, Contato e WhatsApp
+- **Share Target**: recebe arquivos `.txt` e `.pdf` via compartilhamento do sistema
+- **Protocol Handlers**: abre `mailto:` e `tel:` direcionando para a seção de contato
+- **Edge Side Panel**: painel lateral com 400px de largura no Edge
 
 ## 🚀 Como Executar
 
@@ -116,6 +150,9 @@ O site é totalmente responsivo e funciona perfeitamente em:
 
 - **Meta Tags**: Título, descrição e palavras-chave otimizados
 - **Estrutura Semântica**: HTML5 com tags semânticas
+- **robots.txt**: Regras de rastreamento para buscadores e crawlers de IA
+- **sitemap.xml**: Mapa do site completo para indexação
+- **manifest.json**: PWA configurado com shortcuts, share target e protocol handlers
 - **Imagens Otimizadas**: Lazy loading, compressão e formato WebP
 - **CSS Minificado**: Estilos otimizados para produção
 - **Google Analytics**: Rastreamento de visitantes
