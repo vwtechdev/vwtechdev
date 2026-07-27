@@ -29,12 +29,13 @@ var i18n = {
             },
             hero: {
                 sectionAria: 'Seção principal',
-                title: '<span class="text-highlight">Tecnologia</span> para Empresas',
-                description: 'Soluções completas em tecnologia para o seu negócio. Infraestrutura, suporte e sistemas com atendimento local e remoto.',
+                title: '<span class="text-highlight">Soluções</span> em Tecnologia',
+                description: 'Soluções em tecnologia sob medida para o seu negócio. Atendimento presencial em Canoinhas-SC e suporte remoto para todo o Brasil.',
                 featuresAria: 'Nossos diferenciais',
-                feature1: 'Soluções completas em tecnologia',
-                feature2: 'Infraestrutura, suporte e sistemas',
-                feature3: 'Atendimento local e remoto',
+                feature1: 'Tecnologia para você e sua empresa',
+                feature2: 'PCs de alta performance e upgrades',
+                feature3: 'Infraestrutura, suporte e sistemas',
+                feature4: 'Atendimento local e remoto',
                 btnPrimaryAria: 'Falar no WhatsApp',
                 btnPrimary: 'Solicitar Orçamento Grátis',
                 btnPrimaryWhatsapp: 'Olá! Gostaria de solicitar um orçamento para meu projeto.',
@@ -47,9 +48,9 @@ var i18n = {
                 title: 'Quem <span class="text-highlight">Somos</span>',
                 subtitle: 'Conheça nossa história e a equipe que faz a VWTech Dev acontecer.',
                 historyTitle: 'Nossa História',
-                historyText: 'Fundada em 2019 na cidade de Canoinhas-SC, Brasil, a VWTech Dev nasceu da visão dos irmãos Vinicius Vieira (fundador) e Wellinton Vieira (co-fundador). Inicialmente conhecida como Vieirateam, a empresa busca aprimorar o desenvolvimento de sistemas web, aplicativos móveis com soluções tecnológicas inovadoras.',
+                historyText: 'Fundada em 2019 em Canoinhas-SC, a VWTech Dev nasceu da visão dos irmãos Vinicius Vieira e Wellinton Vieira. A empresa oferece soluções em tecnologia para pessoas e empresas, combinando desenvolvimento de sistemas web, aplicativos mobile, manutenção de equipamentos e suporte técnico com atendimento personalizado.',
                 missionTitle: 'Nossa Missão',
-                missionText: 'Oferecer soluções completas de TI para empresas, combinando infraestrutura, suporte e sistemas com atendimento personalizado e excelência técnica. Com um compromisso constante com a qualidade e a inovação, buscamos entregar serviços que não apenas atendam, mas superem as expectativas dos nossos clientes.',
+                missionText: 'Oferecer soluções em tecnologia para pessoas e empresas, combinando infraestrutura, suporte e sistemas com atendimento personalizado e excelência técnica. Com um compromisso constante com a qualidade e a inovação, buscamos entregar serviços que não apenas atendam, mas superem as expectativas dos nossos clientes.',
                 teamTitle: 'Nossa Equipe',
                 founderRole: 'Fundador',
                 cofounderRole: 'Co-fundador',
@@ -106,7 +107,7 @@ var i18n = {
                     hoursLabel: 'Horário de Atendimento',
                     hoursText: 'Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h'
                 },
-                social: { title: 'Siga-nos nas redes sociais' }
+                social: { title: 'Siga-nos nas redes sociais', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' }
             },
             footer: {
                 rights: 'Todos os direitos reservados.'
@@ -117,9 +118,11 @@ var i18n = {
                 whatsappMsg: 'Olá! Gostaria de conversar sobre seus serviços.'
             },
             modal: {
-                serviceTitle: 'Serviço'
+                serviceTitle: 'Serviço',
+                closeAria: 'Fechar modal'
             },
             plans: {
+                badge: 'Mais escolhido',
                 web: {
                     basic: {
                         name: 'Plano Basic', price: 'R$ 149,90/mês',
@@ -222,17 +225,18 @@ var i18n = {
                 modalNotFound: 'Erro: Modal não encontrado. Tente recarregar a página.',
                 plansNotFound: 'Erro: Planos não encontrados para este serviço.',
                 fillRequired: 'Por favor, preencha todos os campos obrigatórios.',
+                invalidEmail: 'Por favor, informe um e-mail válido.',
                 whatsappError: 'Erro ao redirecionar para o WhatsApp. Tente novamente.',
                 loadError: 'Erro ao carregar algumas funcionalidades. Recarregue a página se necessário.',
                 planInquiryTpl: 'Olá! Gostaria de assinar o plano {plan}.',
                 plansGeneral: 'Olá! Gostaria de conhecer seus planos.'
             },
             meta: {
-                title: 'VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil',
-                description: 'VWTech Dev: TI para Empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.',
+                title: 'VWTech Dev | Soluções em Tecnologia | Canoinhas-SC, Brasil',
+                description: 'VWTech Dev: Soluções em Tecnologia em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.',
                 keywords: 'desenvolvimento web Canoinhas, aplicativos mobile SC, sites responsivos, sistemas web personalizados, suporte técnico, manutenção computador, notebook, celular, Canoinhas SC, Santa Catarina, VWTech Dev, programação, tecnologia',
-                ogTitle: 'VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil',
-                ogDescription: 'VWTech Dev: TI para Empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.'
+                ogTitle: 'VWTech Dev | Soluções em Tecnologia | Canoinhas-SC, Brasil',
+                ogDescription: 'VWTech Dev: Soluções em Tecnologia em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.'
             }
         },
 
@@ -255,12 +259,13 @@ var i18n = {
             },
             hero: {
                 sectionAria: 'Main section',
-                title: '<span class="text-highlight">Technology</span> for Businesses',
-                description: 'Complete technology solutions for your business. Infrastructure, support and systems with local and remote service.',
+                title: '<span class="text-highlight">Technology</span> Solutions',
+                description: 'Tailored technology solutions for your business. On-site service in Canoinhas-SC and remote support across Brazil.',
                 featuresAria: 'Our differentials',
-                feature1: 'Complete technology solutions',
-                feature2: 'Infrastructure, support and systems',
-                feature3: 'Local and remote service',
+                feature1: 'Technology for you and your business',
+                feature2: 'High-performance PCs and upgrades',
+                feature3: 'Infrastructure, support and systems',
+                feature4: 'Local and remote service',
                 btnPrimaryAria: 'Chat on WhatsApp',
                 btnPrimary: 'Request a Free Quote',
                 btnPrimaryWhatsapp: 'Hello! I would like to request a quote for my project.',
@@ -273,9 +278,9 @@ var i18n = {
                 title: 'About <span class="text-highlight">Us</span>',
                 subtitle: 'Learn about our history and the team that makes VWTech Dev happen.',
                 historyTitle: 'Our History',
-                historyText: 'Founded in 2019 in the city of Canoinhas-SC, Brazil, VWTech Dev was born from the vision of the brothers Vinicius Vieira (founder) and Wellinton Vieira (co-founder). Initially known as Vieirateam, the company strives to improve the development of web systems, mobile apps with innovative technological solutions.',
+                historyText: 'Founded in 2019 in Canoinhas-SC, Brazil, VWTech Dev was born from the vision of brothers Vinicius Vieira and Wellinton Vieira. The company provides technology solutions for people and businesses, combining web development, mobile apps, equipment maintenance, and technical support with personalized service.',
                 missionTitle: 'Our Mission',
-                missionText: 'To provide complete IT solutions for businesses, combining infrastructure, support and systems with personalized service and technical excellence. With a constant commitment to quality and innovation, we aim to deliver services that not only meet but exceed our clients\' expectations.',
+                missionText: 'To provide technology solutions for people and businesses, combining infrastructure, support and systems with personalized service and technical excellence. With a constant commitment to quality and innovation, we strive to deliver services that not only meet but exceed our clients\' expectations.',
                 teamTitle: 'Our Team',
                 founderRole: 'Founder',
                 cofounderRole: 'Co-founder',
@@ -332,7 +337,7 @@ var i18n = {
                     hoursLabel: 'Business Hours',
                     hoursText: 'Monday to Friday: 9am to 6pm<br>Saturday: 9am to 1pm'
                 },
-                social: { title: 'Follow us on social media' }
+                social: { title: 'Follow us on social media', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' }
             },
             footer: {
                 rights: 'All rights reserved.'
@@ -343,9 +348,11 @@ var i18n = {
                 whatsappMsg: 'Hello! I would like to chat about your services.'
             },
             modal: {
-                serviceTitle: 'Service'
+                serviceTitle: 'Service',
+                closeAria: 'Close modal'
             },
             plans: {
+                badge: 'Most popular',
                 web: {
                     basic: {
                         name: 'Basic Plan', price: 'R$ 149.90/mo',
@@ -448,17 +455,18 @@ var i18n = {
                 modalNotFound: 'Error: Modal not found. Try reloading the page.',
                 plansNotFound: 'Error: Plans not found for this service.',
                 fillRequired: 'Please fill in all required fields.',
+                invalidEmail: 'Please enter a valid email.',
                 whatsappError: 'Error redirecting to WhatsApp. Please try again.',
                 loadError: 'Error loading some features. Reload the page if necessary.',
                 planInquiryTpl: 'Hello! I would like to sign up for the {plan} plan.',
                 plansGeneral: 'Hello! I would like to learn about your plans.'
             },
             meta: {
-                title: 'VWTech Dev | IT for Businesses | Canoinhas-SC, Brazil',
-                description: 'VWTech Dev: IT for Businesses in Canoinhas/SC. Complete technology, infrastructure, support and systems solutions with local and remote service.',
+                title: 'VWTech Dev | Technology Solutions | Canoinhas-SC, Brazil',
+                description: 'VWTech Dev: Technology Solutions in Canoinhas/SC. Complete technology, infrastructure, support and systems solutions with local and remote service.',
                 keywords: 'web development Canoinhas, mobile apps SC, responsive websites, custom web systems, technical support, computer maintenance, notebook, phone, Canoinhas SC, Santa Catarina, VWTech Dev, programming, technology',
-                ogTitle: 'VWTech Dev | IT for Businesses | Canoinhas-SC, Brazil',
-                ogDescription: 'VWTech Dev: IT for Businesses in Canoinhas/SC. Complete technology, infrastructure, support and systems solutions with local and remote service.'
+                ogTitle: 'VWTech Dev | Technology Solutions | Canoinhas-SC, Brazil',
+                ogDescription: 'VWTech Dev: Technology Solutions in Canoinhas/SC. Complete technology, infrastructure, support and systems solutions with local and remote service.'
             }
         },
 
@@ -481,12 +489,13 @@ var i18n = {
             },
             hero: {
                 sectionAria: 'Sección principal',
-                title: '<span class="text-highlight">Tecnología</span> para Empresas',
-                description: 'Soluciones completas de tecnología para tu negocio. Infraestructura, soporte y sistemas con atención local y remota.',
+                title: '<span class="text-highlight">Soluciones</span> en Tecnología',
+                description: 'Soluciones en tecnología a medida para tu negocio. Atención presencial en Canoinhas-SC y soporte remoto para todo Brasil.',
                 featuresAria: 'Nuestros diferenciales',
-                feature1: 'Soluciones completas en tecnología',
-                feature2: 'Infraestructura, soporte y sistemas',
-                feature3: 'Atención local y remota',
+                feature1: 'Tecnología para ti y tu empresa',
+                feature2: 'PCs de alto rendimiento y upgrades',
+                feature3: 'Infraestructura, soporte y sistemas',
+                feature4: 'Atención local y remota',
                 btnPrimaryAria: 'Hablar por WhatsApp',
                 btnPrimary: 'Solicitar Presupuesto Gratis',
                 btnPrimaryWhatsapp: '¡Hola! Me gustaría solicitar un presupuesto para mi proyecto.',
@@ -499,9 +508,9 @@ var i18n = {
                 title: 'Quiénes <span class="text-highlight">Somos</span>',
                 subtitle: 'Conoce nuestra historia y el equipo que hace posible VWTech Dev.',
                 historyTitle: 'Nuestra Historia',
-                historyText: 'Fundada en 2019 en la ciudad de Canoinhas-SC, Brasil, VWTech Dev nació de la visión de los hermanos Vinicius Vieira (fundador) y Wellinton Vieira (cofundador). Inicialmente conocida como Vieirateam, la empresa busca perfeccionar el desarrollo de sistemas web, aplicaciones móviles con soluciones tecnológicas innovadoras.',
+                historyText: 'Fundada en 2019 en Canoinhas-SC, Brasil, VWTech Dev nació de la visión de los hermanos Vinicius Vieira y Wellinton Vieira. La empresa ofrece soluciones en tecnología para personas y empresas, combinando desarrollo de sistemas web, aplicaciones móviles, mantenimiento de equipos y soporte técnico con atención personalizada.',
                 missionTitle: 'Nuestra Misión',
-                missionText: 'Ofrecer soluciones completas de TI para empresas, combinando infraestructura, soporte y sistemas con atención personalizada y excelencia técnica. Con un compromiso constante con la calidad y la innovación, buscamos entregar servicios que no solo cumplan, sino que superen las expectativas de nuestros clientes.',
+                missionText: 'Ofrecer soluciones en tecnología para personas y empresas, combinando infraestructura, soporte y sistemas con atención personalizada y excelencia técnica. Con un compromiso constante con la calidad y la innovación, buscamos entregar servicios que no solo cumplan, sino que superen las expectativas de nuestros clientes.',
                 teamTitle: 'Nuestro Equipo',
                 founderRole: 'Fundador',
                 cofounderRole: 'Cofundador',
@@ -558,7 +567,7 @@ var i18n = {
                     hoursLabel: 'Horario de Atención',
                     hoursText: 'Lunes a Viernes: 9h a 18h<br>Sábado: 9h a 13h'
                 },
-                social: { title: 'Síguenos en redes sociales' }
+                social: { title: 'Síguenos en redes sociales', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' }
             },
             footer: {
                 rights: 'Todos los derechos reservados.'
@@ -569,9 +578,11 @@ var i18n = {
                 whatsappMsg: '¡Hola! Me gustaría conversar sobre sus servicios.'
             },
             modal: {
-                serviceTitle: 'Servicio'
+                serviceTitle: 'Servicio',
+                closeAria: 'Cerrar modal'
             },
             plans: {
+                badge: 'Más elegido',
                 web: {
                     basic: {
                         name: 'Plan Basic', price: 'R$ 149,90/mes',
@@ -674,17 +685,18 @@ var i18n = {
                 modalNotFound: 'Error: Modal no encontrado. Intenta recargar la página.',
                 plansNotFound: 'Error: Planes no encontrados para este servicio.',
                 fillRequired: 'Por favor, rellena todos los campos obligatorios.',
+                invalidEmail: 'Por favor, ingresa un correo electrónico válido.',
                 whatsappError: 'Error al redirigir a WhatsApp. Intenta de nuevo.',
                 loadError: 'Error al cargar algunas funciones. Recarga la página si es necesario.',
                 planInquiryTpl: '¡Hola! Me gustaría contratar el plan {plan}.',
                 plansGeneral: '¡Hola! Me gustaría conocer sus planes.'
             },
             meta: {
-                title: 'VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil',
-                description: 'VWTech Dev: TI para Empresas en Canoinhas/SC. Soluciones completas en tecnología, infraestructura, soporte y sistemas con atención local y remota.',
+                title: 'VWTech Dev | Soluciones en Tecnología | Canoinhas-SC, Brasil',
+                description: 'VWTech Dev: Soluciones en Tecnología en Canoinhas/SC. Soluciones completas en tecnología, infraestructura, soporte y sistemas con atención local y remota.',
                 keywords: 'desarrollo web Canoinhas, aplicaciones móviles SC, sitios web responsivos, sistemas web personalizados, soporte técnico, mantenimiento computadora, notebook, celular, Canoinhas SC, Santa Catarina, VWTech Dev, programación, tecnología',
-                ogTitle: 'VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil',
-                ogDescription: 'VWTech Dev: TI para Empresas en Canoinhas/SC. Soluciones completas en tecnología, infraestructura, soporte y sistemas con atención local y remota.'
+                ogTitle: 'VWTech Dev | Soluciones en Tecnología | Canoinhas-SC, Brasil',
+                ogDescription: 'VWTech Dev: Soluciones en Tecnología en Canoinhas/SC. Soluciones completas en tecnología, infraestructura, soporte y sistemas con atención local y remota.'
             }
         }
     },

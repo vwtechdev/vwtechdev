@@ -164,7 +164,7 @@ body::before {
     position: absolute;
     inset: 0;
     background: transparent;
-    transition: var(--transition);
+    transition: background var(--transition), box-shadow var(--transition);
     pointer-events: none;
 }
 
@@ -605,6 +605,14 @@ body::before {
     font-size: 1rem;
     color: var(--gray-300);
     transition: var(--transition);
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.hero-feature:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(6px);
 }
 
 .hero-feature i {
@@ -615,10 +623,6 @@ body::before {
     flex-shrink: 0;
 }
 
-.hero-feature:hover {
-    color: #fff;
-    transform: translateX(4px);
-}
 
 /* Buttons */
 .hero-buttons {
@@ -827,7 +831,6 @@ body::before {
     border-radius: 0.5rem;
     border: 1px solid rgba(202, 105, 45, 0.15);
     transition: var(--transition);
-    margin-top: 0.4rem;
 }
 
 .founder-github:hover {
@@ -1032,7 +1035,8 @@ body::before {
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-    color: rgba(156, 163, 175, 0.5);
+    color: rgba(156, 163, 175, 0.75);
+    font-family: 'Inter', system-ui, sans-serif;
 }
 
 .form-textarea {
@@ -1295,10 +1299,10 @@ body::before {
 
 @keyframes pulse-whatsapp {
     0%, 100% {
-        box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);
+        transform: scale(1);
     }
     50% {
-        box-shadow: 0 4px 30px rgba(34, 197, 94, 0.6);
+        transform: scale(1.08);
     }
 }
 
@@ -1411,8 +1415,7 @@ body::before {
     position: relative;
 }
 
-.plan-item.plan-item-featured::before {
-    content: 'Mais escolhido';
+.plan-badge {
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
@@ -1571,20 +1574,6 @@ body::before {
 }
 
 /* === 18. Animations === */
-@keyframes floatY {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-@keyframes pulse-whatsapp-btn {
-    0%, 100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
-    50% { box-shadow: 0 8px 35px rgba(37, 211, 102, 0.6); }
-}
-
-@keyframes pulse-badge {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3); }
-    50% { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
-}
 
 /* Lazy Loading */
 img[loading="lazy"] {
@@ -1756,10 +1745,8 @@ a:focus:not(:focus-visible) {
 
     .section {
         background: rgba(7, 8, 8, 0.65);
-    }
-
-    .section::before {
-        display: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 
     /* Hero Mobile */

@@ -1,5 +1,9 @@
 // VWTech Dev - Main JavaScript
 
+// Configuração centralizada
+var WHATSAPP_NUMBER = '5547992893609';
+var WHATSAPP_BASE_URL = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=';
+
 // Scroll lock helpers (evita travamento no iOS/Android ao abrir overlays)
 var scrollLockCount = 0;
 var scrollLockY = 0;
@@ -15,7 +19,7 @@ function lockScroll() {
         document.body.style.right = '0';
         document.body.style.width = '100%';
         document.body.style.overflow = 'hidden';
-    } catch (e) {}
+    } catch (e) { console.error('[VWTech]', e); }
 }
 
 function unlockScroll() {
@@ -32,14 +36,14 @@ function unlockScroll() {
         document.body.style.overflow = '';
         var y = Math.abs(parseInt(top, 10)) || 0;
         window.scrollTo(0, y);
-    } catch (e) {}
+    } catch (e) { console.error('[VWTech]', e); }
 }
 
 // i18n helper: retorna a tradução do idioma atual ou fallback pt-BR se i18n indisponível
 function tt(key, fallback) {
     try {
         if (window.i18n && typeof window.i18n.t === 'function') return window.i18n.t(key);
-    } catch (e) {}
+    } catch (e) { console.error('[VWTech]', e); }
     return fallback;
 }
 
@@ -50,7 +54,9 @@ function openPlansModal(serviceType) {
         showNotification(tt('notify.modalNotFound', 'Erro: Modal não encontrado. Tente recarregar a página.'), 'error');
         return;
     }
-    
+
+    if (modal.style.display === 'block') return;
+
     // Define service titles mapping (i18n com fallback pt-BR)
     const serviceTitles = {
         'web': tt('services.web.title', 'Desenvolvimento Web'),
@@ -114,24 +120,16 @@ function closePlansModal() {
     unlockScroll();
 }
 
-// Close modal when clicking outside
-document.addEventListener('DOMContentLoaded', function() {
+function setupModalEvents() {
     var modal = document.getElementById('plansModal');
-    if (modal) {
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                closePlansModal();
-            }
-        });
-    }
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
+    if (!modal) return;
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
             closePlansModal();
         }
     });
-    
+
     // Service buttons: open plans modal
     var serviceButtons = document.querySelectorAll('.service-button[data-service]');
     serviceButtons.forEach(function(btn) {
@@ -139,11 +137,28 @@ document.addEventListener('DOMContentLoaded', function() {
             openPlansModal(this.getAttribute('data-service'));
         });
     });
-    
+
     // Plans modal close button
     var plansModalClose = document.getElementById('plans-modal-close');
     if (plansModalClose) {
         plansModalClose.addEventListener('click', closePlansModal);
+    }
+}
+
+// Global Escape key handler for modal and mobile menu
+document.addEventListener('keydown', function(e) {
+    if (e.key !== 'Escape') return;
+    var modal = document.getElementById('plansModal');
+    if (modal && modal.style.display === 'block') {
+        closePlansModal();
+        return;
+    }
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu && mobileMenu.classList.contains('mobile-menu-open')) {
+        mobileMenu.classList.remove('mobile-menu-open');
+        document.getElementById('mobile-menu-overlay')?.classList.remove('active');
+        document.getElementById('menu-toggle')?.classList.remove('active');
+        unlockScroll();
     }
 });
 
@@ -162,6 +177,7 @@ function initAOS() {
             handleScrollAnimations();
         }
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso para animações
         handleScrollAnimations();
     }
@@ -208,6 +224,7 @@ function initLazyLoading() {
             });
         }
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
         const images = document.querySelectorAll('img[loading="lazy"]');
         images.forEach(img => {
@@ -224,18 +241,19 @@ function initNavbarScroll() {
 
         function updateNavbar() {
             try {
-                if (window.pageYOffset > 50) {
+                if (window.scrollY > 50) {
                     navbar.classList.add('scrolled');
                 } else {
                     navbar.classList.remove('scrolled');
                 }
-            } catch (e) {}
+            } catch (e) { console.error('[VWTech]', e); }
         }
 
         updateNavbar();
         var throttled = throttleRAF(updateNavbar);
         window.addEventListener('scroll', throttled, { passive: true });
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
     }
 }
@@ -299,14 +317,8 @@ function initMobileMenu() {
             closeMenu();
         });
     });
-    
-        // Close menu on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('mobile-menu-open')) {
-                closeMenu();
-            }
-        });
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
     }
 }
@@ -361,6 +373,7 @@ function initLanguageSelector() {
             if (e.key === 'Escape') closeDropdown();
         });
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
     }
 }
@@ -374,12 +387,12 @@ function initBackToTop() {
         
         function updateVisibility() {
             try {
-                if (window.pageYOffset > 300) {
+                if (window.scrollY > 300) {
                     backToTopButton.classList.add('visible');
                 } else {
                     backToTopButton.classList.remove('visible');
                 }
-            } catch (e) {}
+            } catch (e) { console.error('[VWTech]', e); }
         }
         var throttled = throttleRAF(updateVisibility);
         window.addEventListener('scroll', throttled, { passive: true });
@@ -397,6 +410,7 @@ function initBackToTop() {
             }
         });
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
     }
 }
@@ -436,14 +450,18 @@ function initSmoothScrolling() {
                             if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('active');
                             if (menuToggle) menuToggle.classList.remove('active');
                             unlockScroll();
+                            const floatingButtons = document.querySelector('.floating-buttons');
+                            if (floatingButtons) floatingButtons.style.display = 'flex';
                         }
                     }
                 } catch (error) {
-                    // Fallback silencioso
+                    console.error('[VWTech]', error);
+        // Fallback silencioso
                 }
             });
         });
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
     }
 }
@@ -458,16 +476,23 @@ function initPhoneMask() {
             var value = this.value.replace(/\D/g, '');
             if (value.length > 11) value = value.slice(0, 11);
 
+            var formatted = '';
             if (value.length > 6) {
-                this.value = '(' + value.slice(0, 2) + ') ' + value.slice(2, 7) + '-' + value.slice(7);
+                formatted = '(' + value.slice(0, 2) + ') ' + value.slice(2, 7) + '-' + value.slice(7);
             } else if (value.length > 2) {
-                this.value = '(' + value.slice(0, 2) + ') ' + value.slice(2);
+                formatted = '(' + value.slice(0, 2) + ') ' + value.slice(2);
             } else if (value.length > 0) {
-                this.value = '(' + value;
+                formatted = '(' + value;
             }
+
+            var cursor = this.selectionStart;
+            var prevLen = this.value.length;
+            this.value = formatted;
+            var delta = this.value.length - prevLen;
+            this.setSelectionRange(cursor + delta, cursor + delta);
         });
     } catch (error) {
-        // Fallback silencioso
+        console.error('[VWTech] Phone mask error:', error);
     }
 }
 
@@ -491,13 +516,18 @@ function initContactForm() {
                     return;
                 }
 
+                if (!isValidEmail(email)) {
+                    showNotification(tt('notify.invalidEmail', 'Por favor, informe um e-mail válido.'), 'error');
+                    return;
+                }
+
                 var phoneText = phone ? tt('contact.form.phoneLabelTpl', 'Telefone: {phone}.').replace('{phone}', phone) : '';
                 var text = tt('contact.form.whatsappTemplate', 'Olá! Me chamo {name}.\nE-mail: {email}.\n{phone}\n\n{message}')
                     .replace('{name}', name)
                     .replace('{email}', email)
                     .replace('{phone}', phoneText)
                     .replace('{message}', message);
-                const url = `https://api.whatsapp.com/send/?phone=5547992893609&text=${encodeURIComponent(text)}`;
+                const url = WHATSAPP_BASE_URL + encodeURIComponent(text);
 
                 window.open(url, '_blank');
                 contactForm.reset();
@@ -506,6 +536,7 @@ function initContactForm() {
             }
         });
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
     }
 }
@@ -513,6 +544,7 @@ function initContactForm() {
 // Notification function com verificação de segurança
 function showNotification(message, type) {
     try {
+        var safeMessage = String(message).replace(/</g, '&lt;').replace(/>/g, '&gt;');
         // Remove existing notifications to avoid stacking
         const existingNotifications = document.querySelectorAll('.notification');
         existingNotifications.forEach(notif => {
@@ -527,7 +559,7 @@ function showNotification(message, type) {
         notification.innerHTML = `
             <div class="notification-content">
                 <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
-                <span>${message}</span>
+                <span>${safeMessage}</span>
                 <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
                     <i class="fas fa-times"></i>
                 </button>
@@ -539,7 +571,7 @@ function showNotification(message, type) {
             position: fixed;
             top: 1rem;
             right: 1rem;
-            z-index: 10000;
+            z-index: var(--z-notification);
             padding: 1rem;
             border-radius: 0.5rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -619,9 +651,6 @@ function isValidEmail(email) {
 // Plan button click handlers com verificação de segurança
 function initPlanButtons() {
     try {
-        const WHATSAPP_NUMBER = '5547992893609';
-        const WHATSAPP_BASE_URL = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=';
-        
         const planButtons = document.querySelectorAll('.plan-button');
         
         planButtons.forEach(button => {
@@ -647,6 +676,7 @@ function initPlanButtons() {
             });
         });
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
     }
 }
@@ -663,7 +693,8 @@ function initWhatsAppButton() {
             try {
                 // You can add analytics tracking here
             } catch (error) {
-                // Fallback silencioso
+                console.error('[VWTech]', error);
+        // Fallback silencioso
             }
         });
         
@@ -672,7 +703,8 @@ function initWhatsAppButton() {
             try {
                 this.style.animationPlayState = 'paused';
             } catch (error) {
-                // Fallback silencioso
+                console.error('[VWTech]', error);
+        // Fallback silencioso
             }
         });
         
@@ -680,22 +712,28 @@ function initWhatsAppButton() {
             try {
                 this.style.animationPlayState = 'running';
             } catch (error) {
-                // Fallback silencioso
+                console.error('[VWTech]', error);
+        // Fallback silencioso
             }
         });
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
     }
 }
 
 // Animações de entrada CSS puro com verificação de segurança
+var scrollAnimatedElements = null;
+
 function handleScrollAnimations() {
     try {
-        const animatedElements = document.querySelectorAll('.fade-in, .fade-up, .fade-right, .fade-left');
-        if (!animatedElements.length) return;
+        if (!scrollAnimatedElements) {
+            scrollAnimatedElements = document.querySelectorAll('.fade-in, .fade-up, .fade-right, .fade-left');
+        }
+        if (!scrollAnimatedElements.length) return;
         
         const windowHeight = window.innerHeight;
-        animatedElements.forEach(el => {
+        scrollAnimatedElements.forEach(el => {
             if (el && el.getBoundingClientRect) {
                 const rect = el.getBoundingClientRect();
                 if (rect.top < windowHeight - 60) {
@@ -704,6 +742,7 @@ function handleScrollAnimations() {
             }
         });
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
     }
 }
@@ -761,7 +800,7 @@ function initThirdPartyWidgets() {
         } else {
             setTimeout(loadElfsight, 2000);
         }
-    } catch (e) {}
+    } catch (e) { console.error('[VWTech]', e); }
 }
 
 // Update current year in footer
@@ -773,6 +812,7 @@ function updateCurrentYear() {
             currentYearElement.textContent = currentYear;
         }
     } catch (error) {
+        console.error('[VWTech]', error);
         // Fallback silencioso
     }
 }
@@ -790,12 +830,14 @@ function initCritical() {
         initPhoneMask();
         initPlanButtons();
         initWhatsAppButton();
+        setupModalEvents();
         handleScrollAnimations();
         // Debounce maior (150ms) + passive: scroll suave em aparelhos fracos
         var debouncedScrollHandler = debounce(handleScrollAnimations, 150);
         window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
         initLazyLoading();
     } catch (err) {
+        console.error('[VWTech]', error);
         // fallback silencioso
     }
 }
@@ -806,6 +848,7 @@ function initDeferred() {
         initAOS();
         initThirdPartyWidgets();
     } catch (err) {
+        console.error('[VWTech]', error);
         // fallback silencioso
     }
 }

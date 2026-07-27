@@ -1,6 +1,6 @@
-# VWTech Dev | TI para Empresas
+# VWTech Dev | Soluções em Tecnologia
 
-Site oficial da VWTech Dev, empresa de TI para empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.
+Site oficial da VWTech Dev, empresa de tecnologia em Canoinhas/SC. Soluções completas para pessoas e empresas: desenvolvimento web, aplicativos mobile, PCs de alta performance, manutenção de equipamentos, suporte técnico e atendimento local e remoto.
 
 ## 🚀 Sobre o Projeto
 
@@ -10,38 +10,36 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 
 - **Design Responsivo**: Adapta-se perfeitamente a todos os tamanhos de tela
 - **Performance Otimizada**: Carregamento rápido e eficiente
-- **SEO Avançado**: Meta tags, structured data e sitemap otimizados
+- **SEO Avançado**: Meta tags, JSON-LD structured data e sitemap otimizados
 - **Acessibilidade**: Navegação por teclado, leitores de tela e ARIA labels
+- **Internacionalização (i18n)**: Suporte a pt-BR, en-US e es-ES com persistência local
 - **Navigation Drawer**: Menu mobile moderno que desliza da direita
-- **Animações Suaves**: Transições e efeitos visuais elegantes
-- **Integração WhatsApp**: Botão flutuante para contato direto
-- **Modais Interativos**: Sistema de planos com animações fluidas
-- **Lazy Loading**: Carregamento otimizado de imagens
-- **Imagens WebP**: Assets convertidos para melhor compressão e qualidade
-- **Atualização Automática**: Ano do rodapé atualizado dinamicamente via JavaScript
+- **Animações Suaves**: Transições e efeitos visuais com AOS + CSS
+- **Integração WhatsApp**: Formulário de contato redireciona para WhatsApp
+- **Modais de Planos**: Sistema interativo com 6 categorias de serviços e preços
+- **PWA**: Instalável como aplicativo com suporte offline
+- **Lazy Loading**: Carregamento otimizado de imagens e widgets terceiros
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica e acessível
-- **CSS3**: Estilos modernos com variáveis CSS e Flexbox/Grid
-- **JavaScript ES6+**: Funcionalidades interativas e validações
-- **Font Awesome 6.4.0**: Ícones vetoriais de alta qualidade
-- **Google Fonts (Inter)**: Tipografia moderna e legível
+- **CSS3**: Estilos com variáveis CSS, Flexbox e Grid
+- **JavaScript ES6+**: Vanilla, sem dependências de framework
+- **Font Awesome 6.4.0**: Ícones vetoriais
+- **Google Fonts (Inter)**: Tipografia moderna
 - **AOS (Animate On Scroll)**: Animações baseadas em scroll
-
-- **Schema.org (JSON-LD)**: Dados estruturados para melhor ranqueamento local no Google
+- **Schema.org (JSON-LD)**: Dados estruturados para ranqueamento local
 - **Google Analytics 4**: Monitoramento de tráfego e eventos
 
 ## 📱 Seções do Site
 
-1. **Hero Section**: Slogan "TI para Empresas" com call-to-action
-2. **Quem Somos**: História e fundadores da empresa
-3. **Serviços**: Portfólio de soluções oferecidas
-4. **Planos**: Opções de assinatura com preços
+1. **Hero Section**: Slogan "Soluções em Tecnologia" com 4 diferenciais e call-to-action
+2. **Quem Somos**: História, missão e equipe de fundadores
+3. **Serviços**: 6 categorias (Web, Mobile, PC Gamer, Manutenção, Suporte Técnico, Atendimento Presencial)
+4. **Planos**: Modal com planos detalhados e preços para cada serviço
 5. **Projetos**: Casos de sucesso e trabalhos realizados
-6. **Depoimentos**: Avaliações de clientes (Google Reviews)
-7. **Contato**: Formulário e informações de contato
-8. **Footer**: Informações da empresa e links importantes
+6. **Depoimentos**: Google Reviews via Elfsight (lazy load)
+7. **Contato**: Formulário com redirecionamento para WhatsApp + informações de contato
 
 ## 🎨 Design System
 
@@ -58,7 +56,7 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Cards**: Design consistente com efeitos hover
 - **Botões**: Estilos primário e secundário com animações
 - **Formulários**: Campos estilizados com validação visual
-- **Navegação**: Menu responsivo com dropdown mobile
+- **Navegação**: Menu responsivo com dropdown de idiomas
 
 ## 📁 Estrutura do Projeto
 
@@ -87,16 +85,13 @@ vwtechdev/
 Controla o comportamento dos crawlers de buscadores e IA:
 
 - **User-agent: `*`** — Permite rastreamento total da raiz; bloqueia `/admin/`, `/private/`, `/temp/` e `/backup/`
-- **IA / LLM Crawlers** — Permite explicitamente `GPTBot`, `Google-Extended`, `Claude-Web`, `CCBot` e `PerplexityBot` para aumentar a presença da marca em respostas de IA
+- **IA / LLM Crawlers** — Permite explicitamente `GPTBot`, `Google-Extended`, `Claude-Web`, `CCBot` e `PerplexityBot`, com as mesmas restrições de diretórios
 - **Sitemap** — Aponta para `https://vwtechdev.com.br/sitemap.xml`
-- **Crawl-delay** — 1 segundo entre requisições para não sobrecarregar o servidor
+- **Crawl-delay** — 1 segundo entre requisições
 
 ### 🗺️ sitemap.xml
 
-Lista todas as seções da SPA para indexação pelos buscadores:
-
-- URL raiz com prioridade 1.0 e frequência semanal
-- Seções `#home`, `#about`, `#services`, `#projects`, `#testimonials`, `#contact` com prioridades decrescentes (0.9 a 0.6) e frequência mensal
+- URL raiz com prioridade 1.0 e atualização semanal
 - Deve ser mantido com `lastmod` atualizado sempre que o conteúdo for alterado
 
 ### 📲 manifest.json
@@ -104,11 +99,9 @@ Lista todas as seções da SPA para indexação pelos buscadores:
 Configura o site como Progressive Web App (PWA):
 
 - **Display**: `standalone` — abre sem a barra do navegador
-- **Ícones**: múltiplos tamanhos (48px a 512px) com `purpose: maskable`
-- **Screenshots**: para lojas de aplicativos (wide + narrow)
-- **Shortcuts**: acesso rápido a Serviços, Contato e WhatsApp
-- **Share Target**: recebe arquivos `.txt` e `.pdf` via compartilhamento do sistema
-- **Protocol Handlers**: abre `mailto:` e `tel:` direcionando para a seção de contato
+- **Orientação**: `any` — funciona em portrait e landscape
+- **Ícones**: múltiplos tamanhos (48px a 512px)
+- **Shortcuts**: acesso rápido a Serviços e Contato
 - **Edge Side Panel**: painel lateral com 400px de largura no Edge
 
 ## 🚀 Como Executar
@@ -136,35 +129,32 @@ O site é totalmente responsivo e funciona perfeitamente em:
 
 ## 🔧 Funcionalidades JavaScript
 
-- **Menu Mobile**: Toggle responsivo para dispositivos móveis
+- **Menu Mobile**: Toggle responsivo com scroll lock
 - **Scroll Suave**: Navegação interna com animação
-- **Lazy Loading**: Carregamento otimizado de imagens
-- **Validação de Formulário**: Verificação em tempo real
-- **Botão WhatsApp**: Redirecionamento direto para contato
-- **Back to Top**: Navegação rápida para o topo da página
-- **Notificações de Interface**: Feedback visual para carregamento e erros
-- **Preload de Imagens Críticas**: Melhora a percepção de velocidade
-
+- **Lazy Loading**: Carregamento otimizado de imagens e widgets via IntersectionObserver
+- **Formulário de Contato**: Validação de campos e e-mail, redirecionamento para WhatsApp
+- **Máscara de Telefone**: Formatação automática (XX) XXXXX-XXXX com preservação do cursor
+- **WhatsApp Flutuante**: Botão com animação de pulse
+- **Back to Top**: Navegação rápida para o topo
+- **Notificações**: Feedback visual com auto-dismiss de 6s e escape de HTML
+- **Throttle RAF**: Eventos de scroll otimizados com requestAnimationFrame
+- **Two-phase Init**: Critical no DOMContentLoaded, deferred no requestIdleCallback
 
 ## 🎯 SEO e Performance
 
-- **Meta Tags**: Título, descrição e palavras-chave otimizados
-- **Estrutura Semântica**: HTML5 com tags semânticas
-- **robots.txt**: Regras de rastreamento para buscadores e crawlers de IA
-- **sitemap.xml**: Mapa do site completo para indexação
-- **manifest.json**: PWA configurado com shortcuts, share target e protocol handlers
-- **Imagens Otimizadas**: Lazy loading, compressão e formato WebP
-- **CSS Minificado**: Estilos otimizados para produção
-- **Google Analytics**: Rastreamento de visitantes
+- **Meta Tags**: Título, descrição, Open Graph e Twitter Cards otimizados
+- **JSON-LD**: LocalBusiness e WebSite com horários, redes sociais e serviços
+- **robots.txt**: Regras para buscadores e crawlers de IA com Disallow por crawler
+- **sitemap.xml**: Mapa do site para indexação
+- **manifest.json**: PWA configurado com shortcuts e edge side panel
+- **Imagens Otimizadas**: Lazy loading, compressão WebP e dimensões explícitas
+- **Fontes Não-bloqueantes**: Carregamento com media="print" + onload
+- **Preconnect**: Redução de latência para CDNs externas
+- **Google Analytics 4**: Rastreamento de visitantes
 
 ## 🌐 Hospedagem
 
-O site está configurado para ser hospedado em qualquer serviço de hospedagem estática e atualmente é publicado via **GitHub Pages** com domínio próprio:
-- GitHub Pages
-- Netlify
-- Vercel
-- Amazon S3
-- Qualquer servidor web
+Publicado via **GitHub Pages** com domínio próprio (`vwtechdev.com.br`). Compatível com qualquer servidor de hospedagem estática.
 
 ## 📄 Licença
 
@@ -182,4 +172,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - **Endereço**: R. Joaquim Vieira de Lima, 1100, Campo d' Água Verde, Canoinhas-SC 89466-324
 - **Website**: [vwtechdev.com.br](https://vwtechdev.com.br)
 
-**VWTech Dev** - TI para Empresas
+**VWTech Dev** - Soluções em Tecnologia

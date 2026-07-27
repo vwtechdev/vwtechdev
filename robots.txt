@@ -1,5 +1,5 @@
 # === VWTech Dev - robots.txt ===
-# Última atualização: 2026-07-21
+# Última atualização: 2026-07-27
 
 # === Buscadores gerais ===
 User-agent: *
@@ -15,18 +15,38 @@ Disallow: /backup/
 
 User-agent: GPTBot
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
 
 User-agent: CCBot
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
 
 # === Sitemap ===
 Sitemap: https://vwtechdev.com.br/sitemap.xml

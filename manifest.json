@@ -1,12 +1,12 @@
 {
-  "name": "VWTech Dev | TI para Empresas | Canoinhas-SC, Brasil",
+  "name": "VWTech Dev | Soluções em Tecnologia | Canoinhas-SC, Brasil",
   "short_name": "VWTech Dev",
-  "description": "VWTech Dev: TI para Empresas em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.",
+  "description": "VWTech Dev: Soluções em Tecnologia em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#070808",
   "theme_color": "#ca692d",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "scope": "/",
   "lang": "pt-BR",
   "dir": "ltr",
@@ -16,13 +16,13 @@
       "src": "src/img/logo.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "src/img/logo.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "src/img/logo.png",
@@ -49,27 +49,11 @@
       "purpose": "any"
     }
   ],
-  "screenshots": [
-    {
-      "src": "src/img/logo.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "VWTech Dev - Página Principal"
-    },
-    {
-      "src": "src/img/logo.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "VWTech Dev - Mobile View"
-    }
-  ],
   "shortcuts": [
     {
       "name": "Serviços",
       "short_name": "Serviços",
-      "description": "Conheça nossas soluções completas em TI para empresas",
+      "description": "Conheça nossas soluções em tecnologia",
       "url": "/#services",
       "icons": [
         {
@@ -89,18 +73,6 @@
           "sizes": "96x96"
         }
       ]
-    },
-    {
-      "name": "WhatsApp",
-      "short_name": "WhatsApp",
-      "description": "Fale conosco pelo WhatsApp",
-      "url": "https://wa.me/5547992893609?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20seus%20servi%C3%A7os.",
-      "icons": [
-        {
-          "src": "src/img/logo.png",
-          "sizes": "96x96"
-        }
-      ]
     }
   ],
   "related_applications": [],
@@ -112,33 +84,5 @@
     "client_mode": "navigate-existing"
   },
   "handle_links": "preferred",
-  "capture_links": "new-client",
-  "protocol_handlers": [
-    {
-      "protocol": "mailto",
-      "url": "/#contact?email=%s"
-    },
-    {
-      "protocol": "tel",
-      "url": "/#contact?phone=%s"
-    }
-  ],
-  "file_handlers": [
-    {
-      "action": "/#contact",
-      "accept": {
-        "text/plain": [".txt"],
-        "application/pdf": [".pdf"]
-      }
-    }
-  ],
-  "share_target": {
-    "action": "/#contact",
-    "method": "GET",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url"
-    }
-  }
+  "capture_links": "new-client"
 }
