@@ -30,7 +30,7 @@ var i18n = {
             hero: {
                 sectionAria: 'Seção principal',
                 title: '<span class="text-highlight">Soluções</span> em Tecnologia',
-                description: 'Soluções em tecnologia sob medida para o seu negócio. Atendimento presencial em Canoinhas-SC e suporte remoto para todo o Brasil.',
+                description: 'Soluções em tecnologia para você e sua empresa. Atendimento presencial em Canoinhas-SC e suporte remoto para todo o Brasil.',
                 featuresAria: 'Nossos diferenciais',
                 feature1: 'Tecnologia para você e sua empresa',
                 feature2: 'PCs de alta performance e upgrades',
@@ -233,10 +233,10 @@ var i18n = {
             },
             meta: {
                 title: 'VWTech Dev | Soluções em Tecnologia | Canoinhas-SC, Brasil',
-                description: 'VWTech Dev: Soluções em Tecnologia em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.',
-                keywords: 'desenvolvimento web Canoinhas, aplicativos mobile SC, sites responsivos, sistemas web personalizados, suporte técnico, manutenção computador, notebook, celular, Canoinhas SC, Santa Catarina, VWTech Dev, programação, tecnologia',
+                description: 'VWTech Dev | Soluções em Tecnologia em Canoinhas-SC. Tecnologia para você e sua empresa: suporte técnico, manutenção de computadores e notebooks, redes, consultoria de TI, sistemas, automação e muito mais. Atendimento local e remoto.',
+                keywords: 'Soluções em Tecnologia, tecnologia Canoinhas, suporte técnico Canoinhas, assistência técnica informática Canoinhas, manutenção de computadores Canoinhas, manutenção de notebooks Canoinhas, redes de computadores Canoinhas, consultoria de TI Canoinhas, desenvolvimento de sistemas Canoinhas, sistemas web Canoinhas, automação empresarial Canoinhas, suporte remoto, servidores, backup, VWTech Dev',
                 ogTitle: 'VWTech Dev | Soluções em Tecnologia | Canoinhas-SC, Brasil',
-                ogDescription: 'VWTech Dev: Soluções em Tecnologia em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.'
+                ogDescription: 'VWTech Dev | Soluções em Tecnologia em Canoinhas-SC. Tecnologia para você e sua empresa: suporte técnico, manutenção de computadores e notebooks, redes, consultoria de TI, sistemas, automação e muito mais. Atendimento local e remoto.'
             }
         },
 
@@ -260,7 +260,7 @@ var i18n = {
             hero: {
                 sectionAria: 'Main section',
                 title: '<span class="text-highlight">Technology</span> Solutions',
-                description: 'Tailored technology solutions for your business. On-site service in Canoinhas-SC and remote support across Brazil.',
+                description: 'Technology solutions for you and your business. On-site service in Canoinhas-SC and remote support throughout Brazil.',
                 featuresAria: 'Our differentials',
                 feature1: 'Technology for you and your business',
                 feature2: 'High-performance PCs and upgrades',
@@ -463,10 +463,10 @@ var i18n = {
             },
             meta: {
                 title: 'VWTech Dev | Technology Solutions | Canoinhas-SC, Brazil',
-                description: 'VWTech Dev: Technology Solutions in Canoinhas/SC. Complete technology, infrastructure, support and systems solutions with local and remote service.',
-                keywords: 'web development Canoinhas, mobile apps SC, responsive websites, custom web systems, technical support, computer maintenance, notebook, phone, Canoinhas SC, Santa Catarina, VWTech Dev, programming, technology',
+                description: 'VWTech Dev | Technology Solutions in Canoinhas-SC. Technology for you and your business: technical support, computer and notebook maintenance, networks, IT consulting, systems, automation and more. Local and remote service.',
+                keywords: 'Technology Solutions, technology Canoinhas, technical support Canoinhas, computer repair Canoinhas, computer maintenance Canoinhas, notebook maintenance Canoinhas, computer networks Canoinhas, IT consulting Canoinhas, software development Canoinhas, web systems Canoinhas, business automation Canoinhas, remote support, servers, backup, VWTech Dev',
                 ogTitle: 'VWTech Dev | Technology Solutions | Canoinhas-SC, Brazil',
-                ogDescription: 'VWTech Dev: Technology Solutions in Canoinhas/SC. Complete technology, infrastructure, support and systems solutions with local and remote service.'
+                ogDescription: 'VWTech Dev | Technology Solutions in Canoinhas-SC. Technology for you and your business: technical support, computer and notebook maintenance, networks, IT consulting, systems, automation and more. Local and remote service.'
             }
         },
 
@@ -487,10 +487,10 @@ var i18n = {
                 githubAria: 'GitHub',
                 mobileMenuAria: 'Menú móvil'
             },
-            hero: {
+           hero: {
                 sectionAria: 'Sección principal',
                 title: '<span class="text-highlight">Soluciones</span> en Tecnología',
-                description: 'Soluciones en tecnología a medida para tu negocio. Atención presencial en Canoinhas-SC y soporte remoto para todo Brasil.',
+                description: 'Soluciones en tecnología para ti y tu empresa. Atención presencial en Canoinhas-SC y soporte remoto en todo Brasil.',
                 featuresAria: 'Nuestros diferenciales',
                 feature1: 'Tecnología para ti y tu empresa',
                 feature2: 'PCs de alto rendimiento y upgrades',
@@ -693,10 +693,10 @@ var i18n = {
             },
             meta: {
                 title: 'VWTech Dev | Soluciones en Tecnología | Canoinhas-SC, Brasil',
-                description: 'VWTech Dev: Soluciones en Tecnología en Canoinhas/SC. Soluciones completas en tecnología, infraestructura, soporte y sistemas con atención local y remota.',
-                keywords: 'desarrollo web Canoinhas, aplicaciones móviles SC, sitios web responsivos, sistemas web personalizados, soporte técnico, mantenimiento computadora, notebook, celular, Canoinhas SC, Santa Catarina, VWTech Dev, programación, tecnología',
+                description: 'VWTech Dev | Soluciones en Tecnología en Canoinhas-SC. Tecnología para ti y tu empresa: soporte técnico, mantenimiento de computadoras y notebooks, redes, consultoría de TI, sistemas, automatización y mucho más. Atención local y remota.',
+                keywords: 'Soluciones en Tecnología, tecnología Canoinhas, soporte técnico Canoinhas, asistencia técnica informática Canoinhas, mantenimiento de computadoras Canoinhas, mantenimiento de notebooks Canoinhas, redes de computadoras Canoinhas, consultoría de TI Canoinhas, desarrollo de sistemas Canoinhas, sistemas web Canoinhas, automatización empresarial Canoinhas, soporte remoto, servidores, backup, VWTech Dev',
                 ogTitle: 'VWTech Dev | Soluciones en Tecnología | Canoinhas-SC, Brasil',
-                ogDescription: 'VWTech Dev: Soluciones en Tecnología en Canoinhas/SC. Soluciones completas en tecnología, infraestructura, soporte y sistemas con atención local y remota.'
+                ogDescription: 'VWTech Dev | Soluciones en Tecnología en Canoinhas-SC. Tecnología para ti y tu empresa: soporte técnico, mantenimiento de computadoras y notebooks, redes, consultoría de TI, sistemas, automatización y mucho más. Atención local y remota.'
             }
         }
     },

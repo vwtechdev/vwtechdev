@@ -1,7 +1,7 @@
 {
   "name": "VWTech Dev | Soluções em Tecnologia | Canoinhas-SC, Brasil",
   "short_name": "VWTech Dev",
-  "description": "VWTech Dev: Soluções em Tecnologia em Canoinhas/SC. Soluções completas em tecnologia, infraestrutura, suporte e sistemas com atendimento local e remoto.",
+  "description": "VWTech Dev | Soluções em Tecnologia em Canoinhas-SC. Tecnologia para você e sua empresa: suporte técnico, manutenção de computadores e notebooks, redes, consultoria de TI, sistemas, automação e muito mais. Atendimento local e remoto.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#070808",
@@ -10,7 +10,11 @@
   "scope": "/",
   "lang": "pt-BR",
   "dir": "ltr",
-  "categories": ["business", "technology", "productivity"],
+  "categories": [
+    "business",
+    "technology",
+    "productivity"
+  ],
   "icons": [
     {
       "src": "src/img/logo.png",
@@ -53,7 +57,7 @@
     {
       "name": "Serviços",
       "short_name": "Serviços",
-      "description": "Conheça nossas soluções em tecnologia",
+      "description": "Conheça nossas soluções em tecnologia para você e sua empresa",
       "url": "/#services",
       "icons": [
         {
@@ -65,7 +69,7 @@
     {
       "name": "Contato",
       "short_name": "Contato",
-      "description": "Entre em contato conosco",
+      "description": "Entre em contato com a VWTech Dev",
       "url": "/#contact",
       "icons": [
         {
