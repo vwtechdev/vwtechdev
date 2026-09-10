@@ -24,6 +24,8 @@
 
     --section-padding: 5rem 0;
 
+    --card-single-max: 960px;
+
     --z-navbar: 5001; /* acima do overlay p/ o botão X (fechar) ficar clicável sobre o drawer mobile */
     --z-overlay: 5000;
     --z-menu-toggle: 5002;
@@ -120,7 +122,7 @@ body::before {
 /* === 5b. FAQ === */
 .faq-card {
     padding: 2.5rem;
-    max-width: 960px;
+    max-width: var(--card-single-max);
     margin: 0 auto;
 }
 
@@ -793,7 +795,7 @@ body::before {
 /* === 9. About Section === */
 .about-card {
     padding: 2.5rem;
-    max-width: 960px;
+    max-width: var(--card-single-max);
     margin: 0 auto;
 }
 
