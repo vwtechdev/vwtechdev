@@ -230,6 +230,7 @@ function renderGallery() {
             });
             thumbs.appendChild(btn);
         });
+        observeLazyImages(thumbs);
     }
 
     // Preload neighbors for smooth navigation
@@ -370,27 +371,34 @@ function initAOS() {
     }
 }
 
-// Lazy Loading melhorado para imagens
-function initLazyLoading() {
+// Lazy Loading melhorado para imagens (inclui imagens adicionadas dinamicamente, ex.: miniaturas da galeria)
+var lazyImageObserver = null;
+
+function observeLazyImages(root) {
     try {
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        
+        var scope = root || document;
+        var images = scope.querySelectorAll('img[loading="lazy"]:not(.loaded):not([data-lazy-observed])');
         if (!images.length) return;
-        
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
+
+        if (!('IntersectionObserver' in window)) {
+            images.forEach(function(img) { img.classList.add('loaded'); });
+            return;
+        }
+
+        if (!lazyImageObserver) {
+            lazyImageObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const img = entry.target;
-                        
+
                         // Adicionar loading state
                         img.style.opacity = '0.5';
-                        
+
                         // Simular carregamento com timeout mínimo
                         setTimeout(() => {
                             img.classList.add('loaded');
                             img.style.opacity = '1';
-                            imageObserver.unobserve(img);
+                            lazyImageObserver.unobserve(img);
                         }, 100);
                     }
                 });
@@ -398,26 +406,25 @@ function initLazyLoading() {
                 rootMargin: '50px 0px',
                 threshold: 0.01
             });
-            
-            images.forEach(img => {
-                // Adicionar estado inicial de loading
-                img.style.transition = 'opacity 0.3s ease-in-out';
-                imageObserver.observe(img);
-            });
-        } else {
-            // Fallback para navegadores que não suportam IntersectionObserver
-            images.forEach(img => {
-                img.classList.add('loaded');
-            });
         }
+
+        images.forEach(img => {
+            // Adicionar estado inicial de loading
+            img.style.transition = 'opacity 0.3s ease-in-out';
+            img.setAttribute('data-lazy-observed', 'true');
+            lazyImageObserver.observe(img);
+        });
     } catch (error) {
         console.error('[VWTech]', error);
-        // Fallback silencioso
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        images.forEach(img => {
+        var fallbackImages = (root || document).querySelectorAll('img[loading="lazy"]');
+        fallbackImages.forEach(img => {
             img.classList.add('loaded');
         });
     }
+}
+
+function initLazyLoading() {
+    observeLazyImages(document);
 }
 
 // Navbar scroll effect (throttle + passive para scroll fluido em mobile)
