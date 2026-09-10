@@ -1195,6 +1195,34 @@ body::before {
     transform: translateY(-3px);
 }
 
+/* === 13b. Map (Como chegar) === */
+.map-wrapper {
+    margin-top: 3rem;
+}
+
+.map-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.map-embed {
+    border-radius: var(--glass-radius);
+    overflow: hidden;
+    border: var(--glass-border);
+    aspect-ratio: 16 / 9;
+    background: rgba(31, 41, 55, 0.3);
+}
+
+.map-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
 /* === 14. Footer === */
 .footer {
     padding: 2.5rem 0;
@@ -2072,6 +2100,15 @@ a:focus:not(:focus-visible) {
 
     .info-card {
         padding: 1.5rem;
+    }
+
+    /* Map Mobile */
+    .map-wrapper {
+        margin-top: 2rem;
+    }
+
+    .map-embed {
+        aspect-ratio: 4 / 3;
     }
 
     /* Footer Mobile */

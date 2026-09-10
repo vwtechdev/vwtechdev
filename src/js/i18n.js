@@ -109,7 +109,8 @@ var i18n = {
                     hoursLabel: 'Horário de Atendimento',
                     hoursText: 'Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h'
                 },
-                social: { title: 'Siga-nos nas redes sociais', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' }
+                social: { title: 'Siga-nos nas redes sociais', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' },
+                map: { title: 'Como chegar', iframeTitle: 'Mapa com a localização da VWTech Dev' }
             },
             footer: {
                 rights: 'Todos os direitos reservados.'
@@ -347,7 +348,8 @@ var i18n = {
                     hoursLabel: 'Business Hours',
                     hoursText: 'Monday to Friday: 9am to 6pm<br>Saturday: 9am to 1pm'
                 },
-                social: { title: 'Follow us on social media', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' }
+                social: { title: 'Follow us on social media', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' },
+                map: { title: 'How to get there', iframeTitle: 'Map showing the VWTech Dev location' }
             },
             footer: {
                 rights: 'All rights reserved.'
@@ -585,7 +587,8 @@ var i18n = {
                     hoursLabel: 'Horario de Atención',
                     hoursText: 'Lunes a Viernes: 9h a 18h<br>Sábado: 9h a 13h'
                 },
-                social: { title: 'Síguenos en redes sociales', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' }
+                social: { title: 'Síguenos en redes sociales', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' },
+                map: { title: 'Cómo llegar', iframeTitle: 'Mapa con la ubicación de VWTech Dev' }
             },
             footer: {
                 rights: 'Todos los derechos reservados.'
