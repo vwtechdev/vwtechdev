@@ -73,9 +73,11 @@ var i18n = {
                 title: 'Nossos <span class="text-highlight">Projetos</span>',
                 subtitle: 'Alguns dos projetos que desenvolvemos para nossos clientes satisfeitos.',
                 button: 'Saiba Mais',
+                viewGallery: 'Ver galeria de imagens',
                 p1: { title: 'Delta Monitor', description: 'Sistema Web de Geração de Recibos Automáticos para empresa Delta Monitoramento Canoinhas-SC' },
                 p2: { title: 'Alpha Automation and Robotics', description: 'Landing page moderna e responsiva para a Alpha Automation and Robotics, empresa especializada em automação industrial e robótica.' },
-                p3: { title: 'Nations Flow', description: 'Sistema Web de Controle Financeiro para a Igreja Pentecostal Nações para Cristo.' }
+                p3: { title: 'Nations Flow', description: 'Sistema Web de Controle Financeiro para a Igreja Pentecostal Nações para Cristo.' },
+                p4: { title: 'Em breve', description: 'Novo projeto em andamento. Volte em breve para conferir.' }
             },
             testimonials: {
                 title: 'O que dizem <span class="text-highlight">nossos clientes</span>'
@@ -120,6 +122,12 @@ var i18n = {
             modal: {
                 serviceTitle: 'Serviço',
                 closeAria: 'Fechar modal'
+            },
+            gallery: {
+                prevAria: 'Imagem anterior',
+                nextAria: 'Próxima imagem',
+                closeAria: 'Fechar galeria',
+                thumbTpl: 'Ver imagem {n}'
             },
             plans: {
                 badge: 'Mais escolhido',
@@ -303,9 +311,11 @@ var i18n = {
                 title: 'Our <span class="text-highlight">Projects</span>',
                 subtitle: 'Some of the projects we have developed for our satisfied clients.',
                 button: 'Learn More',
+                viewGallery: 'View image gallery',
                 p1: { title: 'Delta Monitor', description: 'Web system for Automatic Receipt Generation for Delta Monitoramento company in Canoinhas-SC' },
                 p2: { title: 'Alpha Automation and Robotics', description: 'Modern and responsive landing page for Alpha Automation and Robotics, a company specialized in industrial automation and robotics.' },
-                p3: { title: 'Nations Flow', description: 'Web system for Financial Control for the Pentecostal Church Nações para Cristo.' }
+                p3: { title: 'Nations Flow', description: 'Web system for Financial Control for the Pentecostal Church Nações para Cristo.' },
+                p4: { title: 'Coming soon', description: 'New project in progress. Check back soon.' }
             },
             testimonials: {
                 title: 'What <span class="text-highlight">our clients</span> say'
@@ -350,6 +360,12 @@ var i18n = {
             modal: {
                 serviceTitle: 'Service',
                 closeAria: 'Close modal'
+            },
+            gallery: {
+                prevAria: 'Previous image',
+                nextAria: 'Next image',
+                closeAria: 'Close gallery',
+                thumbTpl: 'View image {n}'
             },
             plans: {
                 badge: 'Most popular',
@@ -533,9 +549,11 @@ var i18n = {
                 title: 'Nuestros <span class="text-highlight">Proyectos</span>',
                 subtitle: 'Algunos de los proyectos que desarrollamos para nuestros clientes satisfechos.',
                 button: 'Saber Más',
+                viewGallery: 'Ver galería de imágenes',
                 p1: { title: 'Delta Monitor', description: 'Sistema Web de Generación Automática de Recibos para la empresa Delta Monitoramiento Canoinhas-SC' },
                 p2: { title: 'Alpha Automation and Robotics', description: 'Landing page moderna y responsiva para Alpha Automation and Robotics, empresa especializada en automatización industrial y robótica.' },
-                p3: { title: 'Nations Flow', description: 'Sistema Web de Control Financiero para la Iglesia Pentecostal Nações para Cristo.' }
+                p3: { title: 'Nations Flow', description: 'Sistema Web de Control Financiero para la Iglesia Pentecostal Nações para Cristo.' },
+                p4: { title: 'Próximamente', description: 'Nuevo proyecto en curso. Vuelve pronto para verlo.' }
             },
             testimonials: {
                 title: 'Lo que dicen <span class="text-highlight">nuestros clientes</span>'
@@ -580,6 +598,12 @@ var i18n = {
             modal: {
                 serviceTitle: 'Servicio',
                 closeAria: 'Cerrar modal'
+            },
+            gallery: {
+                prevAria: 'Imagen anterior',
+                nextAria: 'Siguiente imagen',
+                closeAria: 'Cerrar galería',
+                thumbTpl: 'Ver imagen {n}'
             },
             plans: {
                 badge: 'Más elegido',

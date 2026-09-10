@@ -145,9 +145,196 @@ function setupModalEvents() {
     }
 }
 
-// Global Escape key handler for modal and mobile menu
+// Project Gallery (lightbox) - Global Scope
+var GALLERY_BASE = 'src/img/projects/';
+var galleryImages = [];
+var galleryIndex = 0;
+var galleryTrigger = null;
+
+function openGallery(project, images, trigger) {
+    const modal = document.getElementById('galleryModal');
+    if (!modal) return;
+
+    if (modal.style.display === 'block') return;
+
+    galleryImages = images.map(function(file) {
+        return GALLERY_BASE + project + '/' + file;
+    });
+    galleryIndex = 0;
+    galleryTrigger = trigger || null;
+
+    // Modal title from the card's project title
+    try {
+        var card = trigger ? trigger.closest('.project-card') : null;
+        var titleEl = card ? card.querySelector('.project-title') : null;
+        var modalTitle = document.getElementById('gallery-project-title');
+        if (modalTitle && titleEl) modalTitle.textContent = titleEl.textContent.trim();
+    } catch (e) { console.error('[VWTech]', e); }
+
+    modal.classList.toggle('single', galleryImages.length <= 1);
+    renderGallery();
+
+    const floatingButtons = document.querySelector('.floating-buttons');
+    if (floatingButtons) {
+        floatingButtons.style.display = 'none';
+    }
+
+    modal.style.display = 'block';
+    lockScroll();
+
+    modal.style.opacity = '0';
+    setTimeout(() => {
+        modal.style.opacity = '1';
+    }, 10);
+
+    // Focus management for screen readers / keyboard users
+    var closeBtn = document.getElementById('gallery-modal-close');
+    if (closeBtn) closeBtn.focus();
+}
+
+function renderGallery() {
+    var img = document.getElementById('gallery-image');
+    var counter = document.getElementById('gallery-counter');
+    var thumbs = document.getElementById('gallery-thumbs');
+    if (!img || !galleryImages.length) return;
+
+    img.src = galleryImages[galleryIndex];
+
+    // Alt text from the card image when showing the first slide
+    try {
+        if (galleryIndex === 0 && galleryTrigger) {
+            var cardImg = galleryTrigger.querySelector('img');
+            if (cardImg && cardImg.alt) img.alt = cardImg.alt;
+        } else {
+            img.alt = '';
+        }
+    } catch (e) { console.error('[VWTech]', e); }
+
+    if (counter) counter.textContent = (galleryIndex + 1) + ' / ' + galleryImages.length;
+
+    if (thumbs) {
+        thumbs.innerHTML = '';
+        galleryImages.forEach(function(src, i) {
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'gallery-thumb' + (i === galleryIndex ? ' active' : '');
+            btn.setAttribute('role', 'listitem');
+            btn.setAttribute('aria-label', tt('gallery.thumbTpl', 'Ver imagem {n}').replace('{n}', String(i + 1)));
+            var thumbImg = document.createElement('img');
+            thumbImg.src = src;
+            thumbImg.alt = '';
+            thumbImg.loading = 'lazy';
+            btn.appendChild(thumbImg);
+            btn.addEventListener('click', function() {
+                goToSlide(i);
+            });
+            thumbs.appendChild(btn);
+        });
+    }
+
+    // Preload neighbors for smooth navigation
+    [galleryIndex - 1, galleryIndex + 1].forEach(function(i) {
+        var n = (i + galleryImages.length) % galleryImages.length;
+        var pre = new Image();
+        pre.src = galleryImages[n];
+    });
+}
+
+function goToSlide(n) {
+    if (!galleryImages.length) return;
+    galleryIndex = (n + galleryImages.length) % galleryImages.length;
+    renderGallery();
+}
+
+function closeGallery() {
+    const modal = document.getElementById('galleryModal');
+    if (!modal) return;
+
+    const floatingButtons = document.querySelector('.floating-buttons');
+    if (floatingButtons) {
+        floatingButtons.style.display = 'flex';
+    }
+
+    modal.style.display = 'none';
+    unlockScroll();
+
+    galleryImages = [];
+    galleryIndex = 0;
+
+    if (galleryTrigger) {
+        galleryTrigger.focus();
+        galleryTrigger = null;
+    }
+}
+
+function initGallery() {
+    try {
+        const modal = document.getElementById('galleryModal');
+        if (!modal) return;
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeGallery();
+            }
+        });
+
+        var closeBtn = document.getElementById('gallery-modal-close');
+        if (closeBtn) closeBtn.addEventListener('click', closeGallery);
+
+        var prevBtn = document.getElementById('gallery-prev');
+        if (prevBtn) prevBtn.addEventListener('click', function() { goToSlide(galleryIndex - 1); });
+
+        var nextBtn = document.getElementById('gallery-next');
+        if (nextBtn) nextBtn.addEventListener('click', function() { goToSlide(galleryIndex + 1); });
+
+        // Arrow-key navigation (Escape handled globally)
+        document.addEventListener('keydown', function(e) {
+            if (modal.style.display !== 'block') return;
+            if (e.key === 'ArrowLeft') goToSlide(galleryIndex - 1);
+            else if (e.key === 'ArrowRight') goToSlide(galleryIndex + 1);
+        });
+
+        // Touch swipe navigation
+        var touchX = null;
+        var mainBox = modal.querySelector('.gallery-main');
+        if (mainBox) {
+            mainBox.addEventListener('touchstart', function(e) {
+                if (e.touches.length === 1) touchX = e.touches[0].clientX;
+            }, { passive: true });
+            mainBox.addEventListener('touchend', function(e) {
+                if (touchX === null) return;
+                var dx = e.changedTouches[0].clientX - touchX;
+                touchX = null;
+                if (Math.abs(dx) < 40) return;
+                if (dx > 0) goToSlide(galleryIndex - 1);
+                else goToSlide(galleryIndex + 1);
+            }, { passive: true });
+        }
+
+        // Card preview triggers
+        var triggers = document.querySelectorAll('.project-preview-btn[data-project]');
+        triggers.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var files = (this.getAttribute('data-images') || 'main.webp')
+                    .split(',')
+                    .map(function(f) { return f.trim(); })
+                    .filter(Boolean);
+                openGallery(this.getAttribute('data-project'), files, this);
+            });
+        });
+    } catch (error) {
+        console.error('[VWTech]', error);
+    }
+}
+
+// Global Escape key handler for gallery, plans modal and mobile menu
 document.addEventListener('keydown', function(e) {
     if (e.key !== 'Escape') return;
+    var gallery = document.getElementById('galleryModal');
+    if (gallery && gallery.style.display === 'block') {
+        closeGallery();
+        return;
+    }
     var modal = document.getElementById('plansModal');
     if (modal && modal.style.display === 'block') {
         closePlansModal();
@@ -831,6 +1018,7 @@ function initCritical() {
         initPlanButtons();
         initWhatsAppButton();
         setupModalEvents();
+        initGallery();
         handleScrollAnimations();
         // Debounce maior (150ms) + passive: scroll suave em aparelhos fracos
         var debouncedScrollHandler = debounce(handleScrollAnimations, 150);

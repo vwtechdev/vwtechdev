@@ -349,7 +349,10 @@
                 <div data-aos="fade-up">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="src/img/projects/project-01.webp" alt="Sistema Delta Monitor - Geração de Recibos Automáticos" loading="lazy" width="400" height="200">
+                        <button type="button" class="project-preview-btn" data-project="01" data-images="main.webp" aria-label="Ver galeria de imagens" data-i18n-attr="aria-label:projects.viewGallery">
+                            <img src="src/img/projects/01/main.webp" alt="Sistema Delta Monitor - Geração de Recibos Automáticos" loading="lazy" width="400" height="200">
+                            <span class="project-preview-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                        </button>
                     </div>
                     <h3 class="project-title" data-i18n="projects.p1.title">Delta Monitor</h3>
                     <p class="project-description" data-i18n="projects.p1.description">Sistema Web de Geração de Recibos Automáticos para empresa Delta Monitoramento Canoinhas-SC</p>
@@ -361,7 +364,10 @@
                 <div data-aos="fade-up">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="src/img/projects/project-02.webp" alt="Landing page Alpha Automation and Robotics - Automação Industrial" loading="lazy" width="400" height="200">
+                        <button type="button" class="project-preview-btn" data-project="02" data-images="main.webp" aria-label="Ver galeria de imagens" data-i18n-attr="aria-label:projects.viewGallery">
+                            <img src="src/img/projects/02/main.webp" alt="Landing page Alpha Automation and Robotics - Automação Industrial" loading="lazy" width="400" height="200">
+                            <span class="project-preview-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                        </button>
                     </div>
                     <h3 class="project-title" data-i18n="projects.p2.title">Alpha Automation and Robotics</h3>
                     <p class="project-description" data-i18n="projects.p2.description">Landing page moderna e responsiva para a Alpha Automation and Robotics, empresa especializada em automação industrial e robótica.</p>
@@ -373,13 +379,31 @@
                 <div data-aos="fade-up">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="src/img/projects/project-03.webp" alt="Sistema NationsFlow - Controle Financeiro da Igreja Pentecostal Nações para Cristo" loading="lazy" width="400" height="200">
+                        <button type="button" class="project-preview-btn" data-project="03" data-images="main.webp" aria-label="Ver galeria de imagens" data-i18n-attr="aria-label:projects.viewGallery">
+                            <img src="src/img/projects/03/main.webp" alt="Sistema NationsFlow - Controle Financeiro da Igreja Pentecostal Nações para Cristo" loading="lazy" width="400" height="200">
+                            <span class="project-preview-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                        </button>
                     </div>
                     <h3 class="project-title" data-i18n="projects.p3.title">Nations Flow</h3>
                     <p class="project-description" data-i18n="projects.p3.description">Sistema Web de Controle Financeiro para a Igreja Pentecostal Nações para Cristo.</p>
                     <a href="https://www.nationsflow.com.br/" target="_blank" class="project-button" data-i18n="projects.button">Saiba Mais</a>
                 </div>
                 </div>
+
+                <!-- Project 4 (TODO: descomente quando 04/main.webp existir; preencha título/descrição/link e p4 no i18n.js)
+                <div data-aos="fade-up">
+                <div class="project-card">
+                    <div class="project-image">
+                        <button type="button" class="project-preview-btn" data-project="04" data-images="main.webp" aria-label="Ver galeria de imagens" data-i18n-attr="aria-label:projects.viewGallery">
+                            <img src="src/img/projects/04/main.webp" alt="Novo projeto VWTech Dev" loading="lazy" width="400" height="200">
+                            <span class="project-preview-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+                        </button>
+                    </div>
+                    <h3 class="project-title" data-i18n="projects.p4.title">Em breve</h3>
+                    <p class="project-description" data-i18n="projects.p4.description">Novo projeto em andamento. Volte em breve para conferir.</p>
+                </div>
+                </div>
+                -->
             </div>
         </div>
     </section>
@@ -880,6 +904,31 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
+        <div class="gallery-modal-content">
+            <div class="gallery-modal-header">
+                <h2 class="gallery-modal-title" id="gallery-modal-title"><span id="gallery-project-title">Projeto</span></h2>
+                <button class="gallery-modal-close" id="gallery-modal-close" aria-label="Fechar galeria" data-i18n-attr="aria-label:gallery.closeAria">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="gallery-modal-body">
+                <div class="gallery-main">
+                    <button type="button" class="gallery-nav gallery-prev" id="gallery-prev" aria-label="Imagem anterior" data-i18n-attr="aria-label:gallery.prevAria">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <img id="gallery-image" src="" alt="">
+                    <button type="button" class="gallery-nav gallery-next" id="gallery-next" aria-label="Próxima imagem" data-i18n-attr="aria-label:gallery.nextAria">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="gallery-counter" id="gallery-counter" aria-live="polite">1 / 1</div>
+                <div class="gallery-thumbs" id="gallery-thumbs" role="list"></div>
             </div>
         </div>
     </div>
