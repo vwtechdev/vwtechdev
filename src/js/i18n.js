@@ -75,7 +75,7 @@ var i18n = {
                 button: 'Saiba Mais',
                 viewGallery: 'Ver galeria de imagens',
                 p1: { title: 'Magno Figures', description: 'Sistema web para cadastro e gerenciamento de action figures, com vitrine online e integração com WhatsApp para iniciar compras.' },
-                p2: { title: 'Nations Flow', description: 'Sistema Web de Controle Financeiro para a Igreja Pentecostal Nações para Cristo.' },
+                p2: { title: 'Nations Flow', description: 'Sistema Web de Controle Financeiro com cadastro de entradas e saídas, dashboard e relatórios para a Igreja Pentecostal Nações para Cristo.' },
                 p3: { title: 'Alpha Automation and Robotics', description: 'Landing page moderna e responsiva para a Alpha Automation and Robotics, empresa especializada em automação industrial e robótica.' },
                 p4: { title: 'Delta Monitor', description: 'Sistema Web de Geração de Recibos Automáticos para empresa Delta Monitoramento Canoinhas-SC' }
             },
@@ -313,7 +313,7 @@ var i18n = {
                 button: 'Learn More',
                 viewGallery: 'View image gallery',
                 p1: { title: 'Magno Figures', description: 'Web system for registering and managing action figures, with an online showcase and WhatsApp integration to start purchases.' },
-                p2: { title: 'Nations Flow', description: 'Web system for Financial Control for the Pentecostal Church Nações para Cristo.' },
+                p2: { title: 'Nations Flow', description: 'Web financial control system with income and expense tracking, dashboard and reports for the Pentecostal Church Nações para Cristo.' },
                 p3: { title: 'Alpha Automation and Robotics', description: 'Modern and responsive landing page for Alpha Automation and Robotics, a company specialized in industrial automation and robotics.' },
                 p4: { title: 'Delta Monitor', description: 'Web system for Automatic Receipt Generation for Delta Monitoramento company in Canoinhas-SC' }
             },
@@ -551,7 +551,7 @@ var i18n = {
                 button: 'Saber Más',
                 viewGallery: 'Ver galería de imágenes',
                 p1: { title: 'Magno Figures', description: 'Sistema web para registro y gestión de figuras de acción, con vitrina en línea e integración con WhatsApp para iniciar compras.' },
-                p2: { title: 'Nations Flow', description: 'Sistema Web de Control Financiero para la Iglesia Pentecostal Nações para Cristo.' },
+                p2: { title: 'Nations Flow', description: 'Sistema Web de Control Financiero con registro de entradas y salidas, panel de control e informes para la Iglesia Pentecostal Nações para Cristo.' },
                 p3: { title: 'Alpha Automation and Robotics', description: 'Landing page moderna y responsiva para Alpha Automation and Robotics, empresa especializada en automatización industrial y robótica.' },
                 p4: { title: 'Delta Monitor', description: 'Sistema Web de Generación Automática de Recibos para la empresa Delta Monitoramiento Canoinhas-SC' }
             },
