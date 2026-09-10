@@ -371,7 +371,7 @@ body::before {
     justify-content: center;
     width: 2.25rem;
     height: 2.25rem;
-    border-radius: 50%;
+    border-radius: 0.5rem;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.05);
 }
@@ -399,7 +399,7 @@ body::before {
     justify-content: center;
     width: 2.25rem;
     height: 2.25rem;
-    border-radius: 50%;
+    border-radius: 0.5rem;
     background: rgba(255, 255, 255, 0.05);
     border: none;
     cursor: pointer;
