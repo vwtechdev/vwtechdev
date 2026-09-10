@@ -1475,7 +1475,7 @@ body::before {
     color: #fff;
     width: 2.25rem;
     height: 2.25rem;
-    border-radius: 50%;
+    border-radius: 0.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1555,7 +1555,7 @@ body::before {
     color: #fff;
     width: 2.25rem;
     height: 2.25rem;
-    border-radius: 50%;
+    border-radius: 0.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;
