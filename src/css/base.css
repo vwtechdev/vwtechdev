@@ -1258,7 +1258,7 @@ body::before {
     font-size: 1.25rem;
     width: 2.75rem;
     height: 2.75rem;
-    border-radius: 50%;
+    border-radius: 0.5rem;
     background: rgba(31, 41, 55, 0.3);
     border: 1px solid rgba(156, 163, 175, 0.1);
     text-decoration: none;
