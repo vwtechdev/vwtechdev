@@ -281,7 +281,7 @@ body::before {
 .logo-circle {
     width: 2.75rem;
     height: 2.75rem;
-    border-radius: 50%;
+    border-radius: 0.5rem;
     background: var(--primary-orange);
     display: flex;
     align-items: center;
@@ -1319,7 +1319,7 @@ body::before {
 .footer-logo img {
     width: 2.5rem;
     height: 2.5rem;
-    border-radius: 50%;
+    border-radius: 0.5rem;
 }
 
 .footer-logo-text {
