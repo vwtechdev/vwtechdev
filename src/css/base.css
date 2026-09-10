@@ -24,7 +24,7 @@
 
     --section-padding: 5rem 0;
 
-    --card-single-max: 960px;
+    --card-single-max: 100%;
 
     --z-navbar: 5001; /* acima do overlay p/ o botão X (fechar) ficar clicável sobre o drawer mobile */
     --z-overlay: 5000;
