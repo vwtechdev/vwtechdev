@@ -2,11 +2,11 @@
 
 Site oficial da VWTech Dev, empresa de tecnologia em Canoinhas/SC. Soluções completas para pessoas e empresas: desenvolvimento web, aplicativos mobile, PCs de alta performance, manutenção de equipamentos, suporte técnico e atendimento local e remoto.
 
-## 🚀 Sobre o Projeto
+## Sobre o Projeto
 
 Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo uma experiência de usuário excepcional em todos os dispositivos. Totalmente otimizado para performance, SEO e acessibilidade.
 
-## ✨ Características
+## Características
 
 - **Design Responsivo**: Adapta-se perfeitamente a todos os tamanhos de tela
 - **Performance Otimizada**: Carregamento rápido e eficiente
@@ -17,10 +17,11 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Animações Suaves**: Transições e efeitos visuais com AOS + CSS
 - **Integração WhatsApp**: Formulário de contato redireciona para WhatsApp
 - **Modais de Planos**: Sistema interativo com 6 categorias de serviços e preços
-- **PWA**: Instalável como aplicativo com suporte offline
+- **Galeria de Projetos**: Lightbox com setas, teclado, contador e miniaturas
+- **PWA**: Instalável como aplicativo
 - **Lazy Loading**: Carregamento otimizado de imagens e widgets terceiros
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica e acessível
 - **CSS3**: Estilos com variáveis CSS, Flexbox e Grid
@@ -31,17 +32,17 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Schema.org (JSON-LD)**: Dados estruturados para ranqueamento local
 - **Google Analytics 4**: Monitoramento de tráfego e eventos
 
-## 📱 Seções do Site
+## Seções do Site
 
 1. **Hero Section**: Slogan "Soluções em Tecnologia" com 4 diferenciais e call-to-action
 2. **Quem Somos**: História, missão e equipe de fundadores
 3. **Serviços**: 6 categorias (Web, Mobile, PC Gamer, Manutenção, Suporte Técnico, Atendimento Presencial)
 4. **Planos**: Modal com planos detalhados e preços para cada serviço
-5. **Projetos**: Casos de sucesso e trabalhos realizados
+5. **Projetos**: 4 projetos ordenados por recência (Magno Figures, Nations Flow, Alpha Automation, Delta Monitor) com galeria de imagens por projeto
 6. **Depoimentos**: Google Reviews via Elfsight (lazy load)
 7. **Contato**: Formulário com redirecionamento para WhatsApp + informações de contato
 
-## 🎨 Design System
+## Design System
 
 ### Cores
 - **Laranja Principal**: `#ca692d` - Cor de destaque e CTAs
@@ -58,7 +59,7 @@ Este site foi desenvolvido com tecnologias modernas e responsivas, oferecendo um
 - **Formulários**: Campos estilizados com validação visual
 - **Navegação**: Menu responsivo com dropdown de idiomas
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 vwtechdev/
@@ -70,7 +71,7 @@ vwtechdev/
 │   │   ├── index.js       # JavaScript principal
 │   │   └── i18n.js        # Internacionalização (pt-BR, en-US, es-ES)
 │   └── img/               # Imagens e assets
-│       ├── projects/      # Imagens dos projetos
+│       ├── projects/      # Pastas 01, 02... (main.webp + extras por projeto)
 │       └── services/      # Imagens dos serviços
 ├── robots.txt              # Regras de rastreamento para buscadores e IA
 ├── sitemap.xml             # Mapa do site para indexação
@@ -80,7 +81,7 @@ vwtechdev/
 └── LICENSE                # Licença do projeto
 ```
 
-### 📄 robots.txt
+### robots.txt
 
 Controla o comportamento dos crawlers de buscadores e IA:
 
@@ -89,12 +90,12 @@ Controla o comportamento dos crawlers de buscadores e IA:
 - **Sitemap** — Aponta para `https://vwtechdev.com.br/sitemap.xml`
 - **Crawl-delay** — 1 segundo entre requisições
 
-### 🗺️ sitemap.xml
+### sitemap.xml
 
 - URL raiz com prioridade 1.0 e atualização semanal
 - Deve ser mantido com `lastmod` atualizado sempre que o conteúdo for alterado
 
-### 📲 manifest.json
+### manifest.json
 
 Configura o site como Progressive Web App (PWA):
 
@@ -104,7 +105,7 @@ Configura o site como Progressive Web App (PWA):
 - **Shortcuts**: acesso rápido a Serviços e Contato
 - **Edge Side Panel**: painel lateral com 400px de largura no Edge
 
-## 🚀 Como Executar
+## Como Executar
 
 1. **Clone o repositório**:
    ```bash
@@ -120,18 +121,19 @@ Configura o site como Progressive Web App (PWA):
      # Acesse http://localhost:8000
      ```
 
-## 📱 Responsividade
+## Responsividade
 
 O site é totalmente responsivo e funciona perfeitamente em:
 - **Desktop**: 1200px+
 - **Tablet**: 768px - 1199px
 - **Mobile**: 320px - 767px
 
-## 🔧 Funcionalidades JavaScript
+## Funcionalidades JavaScript
 
 - **Menu Mobile**: Toggle responsivo com scroll lock
 - **Scroll Suave**: Navegação interna com animação
 - **Lazy Loading**: Carregamento otimizado de imagens e widgets via IntersectionObserver
+- **Galeria de Projetos**: Preview com setas, teclado, swipe, contador e miniaturas
 - **Formulário de Contato**: Validação de campos e e-mail, redirecionamento para WhatsApp
 - **Máscara de Telefone**: Formatação automática (XX) XXXXX-XXXX com preservação do cursor
 - **WhatsApp Flutuante**: Botão com animação de pulse
@@ -140,7 +142,7 @@ O site é totalmente responsivo e funciona perfeitamente em:
 - **Throttle RAF**: Eventos de scroll otimizados com requestAnimationFrame
 - **Two-phase Init**: Critical no DOMContentLoaded, deferred no requestIdleCallback
 
-## 🎯 SEO e Performance
+## SEO e Performance
 
 - **Meta Tags**: Título, descrição, Open Graph e Twitter Cards otimizados
 - **JSON-LD**: LocalBusiness e WebSite com horários, redes sociais e serviços
@@ -152,20 +154,20 @@ O site é totalmente responsivo e funciona perfeitamente em:
 - **Preconnect**: Redução de latência para CDNs externas
 - **Google Analytics 4**: Rastreamento de visitantes
 
-## 🌐 Hospedagem
+## Hospedagem
 
 Publicado via **GitHub Pages** com domínio próprio (`vwtechdev.com.br`). Compatível com qualquer servidor de hospedagem estática.
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 👥 Equipe
+## Equipe
 
 - **Vinicius Vieira** - Fundador e Desenvolvedor
 - **Wellinton Vieira** - Co-fundador e Desenvolvedor
 
-## 📞 Contato
+## Contato
 
 - **Email**: vwtechdev@gmail.com
 - **WhatsApp**: +5547992893609
