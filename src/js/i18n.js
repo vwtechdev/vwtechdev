@@ -77,7 +77,7 @@ var i18n = {
                 p1: { title: 'Delta Monitor', description: 'Sistema Web de Geração de Recibos Automáticos para empresa Delta Monitoramento Canoinhas-SC' },
                 p2: { title: 'Alpha Automation and Robotics', description: 'Landing page moderna e responsiva para a Alpha Automation and Robotics, empresa especializada em automação industrial e robótica.' },
                 p3: { title: 'Nations Flow', description: 'Sistema Web de Controle Financeiro para a Igreja Pentecostal Nações para Cristo.' },
-                p4: { title: 'Em breve', description: 'Novo projeto em andamento. Volte em breve para conferir.' }
+                p4: { title: 'Magno Figures', description: 'Sistema web para cadastro e gerenciamento de action figures, com vitrine online e integração com WhatsApp para iniciar compras.' }
             },
             testimonials: {
                 title: 'O que dizem <span class="text-highlight">nossos clientes</span>'
@@ -315,7 +315,7 @@ var i18n = {
                 p1: { title: 'Delta Monitor', description: 'Web system for Automatic Receipt Generation for Delta Monitoramento company in Canoinhas-SC' },
                 p2: { title: 'Alpha Automation and Robotics', description: 'Modern and responsive landing page for Alpha Automation and Robotics, a company specialized in industrial automation and robotics.' },
                 p3: { title: 'Nations Flow', description: 'Web system for Financial Control for the Pentecostal Church Nações para Cristo.' },
-                p4: { title: 'Coming soon', description: 'New project in progress. Check back soon.' }
+                p4: { title: 'Magno Figures', description: 'Web system for registering and managing action figures, with an online showcase and WhatsApp integration to start purchases.' }
             },
             testimonials: {
                 title: 'What <span class="text-highlight">our clients</span> say'
@@ -553,7 +553,7 @@ var i18n = {
                 p1: { title: 'Delta Monitor', description: 'Sistema Web de Generación Automática de Recibos para la empresa Delta Monitoramiento Canoinhas-SC' },
                 p2: { title: 'Alpha Automation and Robotics', description: 'Landing page moderna y responsiva para Alpha Automation and Robotics, empresa especializada en automatización industrial y robótica.' },
                 p3: { title: 'Nations Flow', description: 'Sistema Web de Control Financiero para la Iglesia Pentecostal Nações para Cristo.' },
-                p4: { title: 'Próximamente', description: 'Nuevo proyecto en curso. Vuelve pronto para verlo.' }
+                p4: { title: 'Magno Figures', description: 'Sistema web para registro y gestión de figuras de acción, con vitrina en línea e integración con WhatsApp para iniciar compras.' }
             },
             testimonials: {
                 title: 'Lo que dicen <span class="text-highlight">nuestros clientes</span>'
