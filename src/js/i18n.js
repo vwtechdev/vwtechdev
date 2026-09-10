@@ -110,7 +110,7 @@ var i18n = {
                     hoursText: 'Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h'
                 },
                 social: { title: 'Siga-nos nas redes sociais', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' },
-                map: { title: 'Como <span class="text-highlight">chegar</span>', iframeTitle: 'Mapa com a localização da VWTech Dev' }
+                map: { title: 'Como <span class="text-highlight">chegar</span>', subtitle: 'Nosso escritório fica em Canoinhas-SC. Confira no mapa como chegar.', iframeTitle: 'Mapa com a localização da VWTech Dev' }
             },
             footer: {
                 rights: 'Todos os direitos reservados.'
@@ -349,7 +349,7 @@ var i18n = {
                     hoursText: 'Monday to Friday: 9am to 6pm<br>Saturday: 9am to 1pm'
                 },
                 social: { title: 'Follow us on social media', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' },
-                map: { title: 'How to <span class="text-highlight">get there</span>', iframeTitle: 'Map showing the VWTech Dev location' }
+                map: { title: 'How to <span class="text-highlight">get there</span>', subtitle: 'Our office is in Canoinhas-SC. Check the map for directions.', iframeTitle: 'Map showing the VWTech Dev location' }
             },
             footer: {
                 rights: 'All rights reserved.'
@@ -588,7 +588,7 @@ var i18n = {
                     hoursText: 'Lunes a Viernes: 9h a 18h<br>Sábado: 9h a 13h'
                 },
                 social: { title: 'Síguenos en redes sociales', facebookAria: 'Facebook', instagramAria: 'Instagram', githubAria: 'GitHub' },
-                map: { title: 'Cómo <span class="text-highlight">llegar</span>', iframeTitle: 'Mapa con la ubicación de VWTech Dev' }
+                map: { title: 'Cómo <span class="text-highlight">llegar</span>', subtitle: 'Nuestra oficina está en Canoinhas-SC. Consulta el mapa para llegar.', iframeTitle: 'Mapa con la ubicación de VWTech Dev' }
             },
             footer: {
                 rights: 'Todos los derechos reservados.'
