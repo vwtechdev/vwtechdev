@@ -28,6 +28,8 @@
     <meta property="og:image:height" content="512">
     <meta property="og:site_name" content="VWTech Dev">
     <meta property="og:locale" content="pt_BR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -971,6 +973,20 @@
             "longitude": "-50.3683295"
         },
         "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-13:00",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "13:00"
+            }
+        ],
         "priceRange": "$$",
         "paymentAccepted": "Cash, Credit Card, PIX",
         "currenciesAccepted": "BRL",
