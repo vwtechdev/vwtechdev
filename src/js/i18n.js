@@ -16,6 +16,7 @@ var i18n = {
                 about: 'Quem Somos',
                 services: 'Serviços',
                 projects: 'Projetos',
+                faq: 'FAQ',
                 contact: 'Contato',
                 logoAria: 'Voltar ao início',
                 menuToggleAria: 'Abrir menu de navegação',
@@ -81,6 +82,22 @@ var i18n = {
             },
             testimonials: {
                 title: 'O que dizem <span class="text-highlight">nossos clientes</span>'
+            },
+            faq: {
+                title: 'Perguntas <span class="text-highlight">Frequentes</span>',
+                subtitle: 'Respostas rápidas sobre nossos serviços e atendimento.',
+                q1: 'Vocês oferecem assistência técnica em informática em Canoinhas?',
+                a1: 'Sim. Fazemos manutenção de computadores, notebooks e celulares, além de suporte técnico remoto e presencial para residências e empresas em Canoinhas-SC e região.',
+                q2: 'Vocês montam PC gamer?',
+                a2: 'Sim. Montamos PCs gamer sob medida, além de upgrades de peças e limpeza técnica com testes de performance e garantia de funcionamento.',
+                q3: 'Vocês desenvolvem software sob medida?',
+                a3: 'Sim. Criamos sistemas web personalizados, landing pages e aplicativos mobile para Android, com hospedagem, domínio e suporte inclusos nos planos.',
+                q4: 'Vocês cuidam de infraestrutura de redes?',
+                a4: 'Sim. Atendemos empresas com suporte em infraestrutura, redes, backups e consultoria em TI, de forma remota ou presencial.',
+                q5: 'Qual é o horário de atendimento?',
+                a5: 'Atendemos de segunda a sexta, das 9h às 18h, e aos sábados, das 9h às 13h. Fale conosco pelo WhatsApp.',
+                q6: 'Vocês atendem somente em Canoinhas?',
+                a6: 'O atendimento presencial cobre Canoinhas-SC e o Planalto Norte Catarinense. O suporte remoto via WhatsApp e AnyDesk atende clientes de qualquer lugar do Brasil.'
             },
             contact: {
                 title: 'Entre em <span class="text-highlight">Contato</span>',
@@ -255,6 +272,7 @@ var i18n = {
                 about: 'About Us',
                 services: 'Services',
                 projects: 'Projects',
+                faq: 'FAQ',
                 contact: 'Contact',
                 logoAria: 'Back to top',
                 menuToggleAria: 'Open navigation menu',
@@ -320,6 +338,22 @@ var i18n = {
             },
             testimonials: {
                 title: 'What <span class="text-highlight">our clients</span> say'
+            },
+            faq: {
+                title: 'Frequently Asked <span class="text-highlight">Questions</span>',
+                subtitle: 'Quick answers about our services and support.',
+                q1: 'Do you offer computer technical support in Canoinhas?',
+                a1: 'Yes. We maintain computers, notebooks and phones, plus remote and on-site technical support for homes and businesses in Canoinhas-SC and the region.',
+                q2: 'Do you build gaming PCs?',
+                a2: 'Yes. We build custom gaming PCs, plus parts upgrades and technical cleaning with performance testing and a working warranty.',
+                q3: 'Do you develop custom software?',
+                a3: 'Yes. We create custom web systems, landing pages and Android mobile apps, with hosting, domain and support included in the plans.',
+                q4: 'Do you handle network infrastructure?',
+                a4: 'Yes. We serve businesses with infrastructure, network, backup and IT consulting support, remotely or on-site.',
+                q5: 'What are your business hours?',
+                a5: 'We are open Monday to Friday, 9am to 6pm, and Saturdays, 9am to 1pm. Reach us on WhatsApp.',
+                q6: 'Do you only serve Canoinhas?',
+                a6: 'On-site service covers Canoinhas-SC and the Planalto Norte Catarinense region. Remote support via WhatsApp and AnyDesk serves clients anywhere in Brazil.'
             },
             contact: {
                 title: 'Contact <span class="text-highlight">US</span>',
@@ -494,6 +528,7 @@ var i18n = {
                 about: 'Quiénes Somos',
                 services: 'Servicios',
                 projects: 'Proyectos',
+                faq: 'FAQ',
                 contact: 'Contacto',
                 logoAria: 'Volver al inicio',
                 menuToggleAria: 'Abrir menú de navegación',
@@ -559,6 +594,22 @@ var i18n = {
             },
             testimonials: {
                 title: 'Lo que dicen <span class="text-highlight">nuestros clientes</span>'
+            },
+            faq: {
+                title: 'Preguntas <span class="text-highlight">Frecuentes</span>',
+                subtitle: 'Respuestas rápidas sobre nuestros servicios y atención.',
+                q1: '¿Ofrecen soporte técnico informático en Canoinhas?',
+                a1: 'Sí. Hacemos mantenimiento de computadoras, notebooks y celulares, además de soporte técnico remoto y presencial para hogares y empresas en Canoinhas-SC y la región.',
+                q2: '¿Arman PC gamer?',
+                a2: 'Sí. Armamos PC gamer a medida, además de upgrades de piezas y limpieza técnica con pruebas de rendimiento y garantía de funcionamiento.',
+                q3: '¿Desarrollan software a medida?',
+                a3: 'Sí. Creamos sistemas web personalizados, landing pages y aplicaciones móviles para Android, con hosting, dominio y soporte incluidos en los planes.',
+                q4: '¿Cuidan la infraestructura de redes?',
+                a4: 'Sí. Atendemos empresas con soporte en infraestructura, redes, copias de seguridad y consultoría de TI, de forma remota o presencial.',
+                q5: '¿Cuál es el horario de atención?',
+                a5: 'Atendemos de lunes a viernes, de 9h a 18h, y los sábados, de 9h a 13h. Escríbenos por WhatsApp.',
+                q6: '¿Solo atienden en Canoinhas?',
+                a6: 'La atención presencial cubre Canoinhas-SC y la región del Planalto Norte Catarinense. El soporte remoto por WhatsApp y AnyDesk atiende clientes de todo Brasil.'
             },
             contact: {
                 title: 'Ponte en <span class="text-highlight">Contacto</span>',
