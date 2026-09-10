@@ -1356,6 +1356,7 @@ body::before {
     width: 2.75rem;
     height: 2.75rem;
     border-radius: 1rem;
+    border: 1px solid rgba(202, 105, 45, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1385,6 +1386,7 @@ body::before {
     width: 3.25rem;
     height: 3.25rem;
     border-radius: 1rem;
+    border: 1px solid rgba(202, 105, 45, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
